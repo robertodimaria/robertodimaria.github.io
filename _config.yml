@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "default" # Currently available options are "default", "air"
+site_theme               : "air" # Currently available options are "default", "air"
 title                    : "Roberto Di Maria / Mechanical Engineering Portfolio"
 title_separator          : "-"
 name                     : &name "Roberto Di Maria"
@@ -26,7 +26,7 @@ author:
   avatar           : "profile.png"
   name             : "Your Sidebar Name"
   pronouns         : # example: "she/her"  
-  bio              : "M.S. Student | CFD/FEA Expert | ANSYS Certified in Fluid Dynamics & Structures."
+  bio              : "M.S. Student | CFD/FEA Proficient | ANSYS Certified in Fluid Dynamics & Structures."
   location         : "Catania, Italy"
   employer         : "Università degli Studi di Catania"
   uri              : # URL
