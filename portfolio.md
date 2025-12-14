@@ -100,13 +100,13 @@ Welcome to my engineering portfolio. Here you'll find a selection of research pr
 
 ---
 
-### Technical Publications
+### Research Projects & Technical Work
 
-Selected articles and research papers:
+Selected research projects and studies:
 
-- **Di Maria, R.** (2024). "Optimization of Gyroid Heat Exchangers Using Multi-Objective Genetic Algorithms." *International Journal of Heat and Mass Transfer*
-- **Di Maria, R.** (2024). "Feasibility and Performance of 3D-Printed RF Antennas: A Comprehensive Study." *IEEE Antennas and Propagation Magazine*
-- **Di Maria, R.** (2023). "Optimizing Post-Combustion Carbon Capture for Industrial Applications." *Energy & Environmental Science*
+- **Carbon Capture, Storage, and Utilization** - B.S. Thesis (Best Thesis Award)
+- **Gyroid Heat Exchanger Optimization** - Advanced thermal systems research
+- **3D-Printed RF Antenna Feasibility Study** - Additive manufacturing research
 
 Check out my [GitHub profile](https://github.com/robertodimaria) for code repositories and technical resources.
 

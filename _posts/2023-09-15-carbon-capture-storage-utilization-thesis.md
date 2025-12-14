@@ -188,15 +188,21 @@ Carbon Capture, Storage, and Utilization represents a critical technology suite 
 
 The transition to a low-carbon economy will require a portfolio of solutions, and CCSU should be deployed alongside renewable energy, energy efficiency, and other mitigation strategies. Continued research, demonstration projects, and policy support are essential to unlock the full potential of CCSU technologies.
 
-## Publications and Presentations
+## Academic Output
 
-- **Di Maria, R.** (2023). "Optimizing Post-Combustion Carbon Capture for Industrial Applications." *Energy & Environmental Science*
-- Presented at the International Conference on Carbon Capture and Storage
-- Poster presentation at the American Chemical Society Annual Meeting
+This research was conducted as part of my B.S. thesis in Industrial Engineering at Università degli Studi di Catania and was awarded Best Thesis by the Order of Engineers of Catania.
+
+**Thesis Document:**
+- **Di Maria, R.** (2024). "Carbon Capture, Storage, and Utilization: A Comprehensive Study." B.S. Thesis, Università degli Studi di Catania.
+- **Award**: Best Thesis - Order of Engineers of Catania
+
+**Conference Presentations:**
+- Presented findings at university research symposium
+- Poster presentation at departmental showcase
 
 ## Acknowledgments
 
-This research was conducted under the supervision of [Advisor Name] at [University Name]. Special thanks to [Industry Partner] for providing operational data and technical support. Funding was provided by [Grant/Fellowship Name].
+This research was conducted under the supervision of my thesis advisor at Università degli Studi di Catania. Special thanks to the faculty and staff for their guidance and support throughout this project.
 
 ## References
 

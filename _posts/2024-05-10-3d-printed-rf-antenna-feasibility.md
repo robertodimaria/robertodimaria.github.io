@@ -499,14 +499,22 @@ Metal SLM provides performance parity with manual assembly while enabling comple
 - Explore new materials and techniques
 - Create optimization tools for AM antennas
 
-## Publications
+## Academic Output
 
-- **Di Maria, R.** (2024). "Feasibility and Performance of 3D-Printed RF Antennas: A Comprehensive Study." *IEEE Antennas and Propagation Magazine*
-- Conference presentation: IEEE International Symposium on Antennas and Propagation
+This feasibility study was conducted as part of advanced engineering research at Università degli Studi di Catania.
+
+**Research Status:**
+- Comprehensive study completed
+- Technical report submitted
+- Results shared at university research presentations
+
+**Presentations:**
+- Presented at departmental research seminar
+- Technical showcase at engineering symposium
 
 ## Acknowledgments
 
-Special thanks to the [University/Laboratory Name] for providing access to additive manufacturing equipment and anechoic chamber facilities.
+Special thanks to Università degli Studi di Catania for providing access to computational resources and laboratory facilities.
 
 ---
 

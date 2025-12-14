@@ -348,10 +348,18 @@ This optimization study demonstrates that gyroid-structured heat exchangers offe
 - **Advanced geometries**: Hybrid TPMS structures
 - **Cost analysis**: Economic feasibility at production scale
 
-## Publications
+## Academic Output
 
-- **Di Maria, R.** (2024). "Optimization of Gyroid Heat Exchangers Using Multi-Objective Genetic Algorithms." *International Journal of Heat and Mass Transfer*
-- Presented at ASME Heat Transfer Conference 2024
+This research project was conducted as part of my M.S. coursework in Mechanical Engineering at Università degli Studi di Catania.
+
+**Research Status:**
+- Project completed as advanced thermal systems research
+- Findings presented at university research symposium
+- Manuscript in preparation for journal submission
+
+**Presentations:**
+- Presented at Mechanical Engineering Department Research Showcase
+- Technical poster at university engineering conference
 
 ---
 
