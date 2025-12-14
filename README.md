@@ -1,6 +1,6 @@
 # Roberto Di Maria - Engineering Portfolio
 
-This is my personal engineering portfolio website, built with Jekyll and the TeXt theme. It showcases my projects, technical skills, and blog posts about software engineering.
+This is my personal engineering portfolio website, built with Jekyll and the TeXt theme. It showcases my mechanical engineering projects, technical skills, and research in computational engineering.
 
 ## 🚀 Features
 

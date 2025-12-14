@@ -20,8 +20,8 @@ Mechanical Engineering M.S. student with top-of-class academic performance (29.7
 **September 2024 – October 2026** (Expected)
 
 - **Expected Completion**: October 2026
-- **Academic Merit**: Awarded for achieving the highest GPA (30/30 average) among all first-year students in the Mechanical Engineering program (2024-2025)
-- **GPA**: 29.7/30
+- **Academic Merit**: Awarded for achieving the highest GPA among all first-year students in the Mechanical Engineering program (2024-2025)
+- **Current GPA**: 29.7/30
 
 #### Bachelor of Science (B.S.) in Industrial Engineering
 **September 2021 – July 2024**

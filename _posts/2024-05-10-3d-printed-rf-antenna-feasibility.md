@@ -198,7 +198,7 @@ Traditional RF antenna manufacturing involves:
 **Conductivity Measurement:**
 - Four-point probe method
 - Eddy current testing
-- Comparison with bulk material
+- Comparison with bulk material properties
 
 ## Results
 
