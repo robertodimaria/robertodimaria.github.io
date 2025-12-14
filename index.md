@@ -69,7 +69,7 @@ I'm Roberto Di Maria, a Mechanical Engineering M.S. student with top-of-class ac
 </div>
 
 <div style="text-align: center; margin: 3rem 0;">
-  <a href="/portfolio.html" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 500; transition: transform 0.2s ease;">View All Projects →</a>
+  <a href="/portfolio.html" class="view-all-button">View All Projects →</a>
 </div>
 
 <div class="contact-section">

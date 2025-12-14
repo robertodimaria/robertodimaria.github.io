@@ -42,16 +42,6 @@ Welcome to my engineering portfolio. Here you'll find a selection of research pr
       <p class="project-card-description">Comprehensive investigation of additive manufacturing for radio frequency antenna production, evaluating multiple technologies and materials.</p>
     </div>
   </a>
-  
-  <a href="#" class="project-card" style="pointer-events: none; opacity: 0.8;">
-    <div class="project-card-image">
-      <span>Advanced Thermal Analysis</span>
-    </div>
-    <div class="project-card-content">
-      <h3 class="project-card-title">Thermal Analysis & Simulation</h3>
-      <p class="project-card-description">Collection of thermal analysis projects using ANSYS for various industrial applications including heat transfer optimization and thermal management systems.</p>
-    </div>
-  </a>
 </div>
 
 ---
