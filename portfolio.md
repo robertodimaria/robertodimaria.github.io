@@ -6,131 +6,138 @@ key: page-portfolio
 
 ## My Portfolio
 
-Welcome to my engineering portfolio. Here you'll find a selection of projects that demonstrate my skills and experience across different technologies and domains.
+Welcome to my engineering portfolio. Here you'll find a selection of research projects and technical studies that demonstrate my expertise in computational engineering, thermal systems, and advanced manufacturing.
 
 ---
 
-### Project 1: Full-Stack Web Application
+### Project 1: Carbon Capture, Storage, And Utilization (CCSU) - Thesis Project
 
-**Description**: A modern web application built with React and Node.js, featuring real-time updates and a responsive design.
+**Description**: Comprehensive research on CCSU technologies for mitigating atmospheric CO₂ emissions. This thesis project was awarded Best Thesis by the Order of Engineers of Catania.
 
 **Technologies**: 
-- Frontend: React, Redux, TypeScript
-- Backend: Node.js, Express, PostgreSQL
-- Deployment: AWS, Docker, CI/CD
+- ANSYS Fluent (CFD analysis)
+- Aspen Plus (Process simulation)
+- Python (Economic modeling)
+- MATLAB (Control systems)
 
-**Key Features**:
-- Real-time data synchronization
-- User authentication and authorization
-- RESTful API design
-- Responsive and accessible UI
-- Comprehensive test coverage
+**Key Achievements**:
+- Demonstrated 90-95% CO₂ capture efficiency
+- Reduced regeneration energy by 15% through optimization
+- Comprehensive economic analysis (LCOC: $40-60/tonne CO₂)
+- Life cycle assessment showing 85-95% emission reduction
+- **Award**: Best Thesis by Order of Engineers of Catania
 
-**Role**: Lead Developer
+**Role**: Principal Researcher
+
+**Read More**: [Full thesis project details](/2023/09/15/carbon-capture-storage-utilization-thesis.html)
 
 ---
 
-### Project 2: Cloud Infrastructure Automation
+### Project 2: Gyroid Heat Exchanger Optimization Study
 
-**Description**: Infrastructure as Code solution for automating cloud resource provisioning and management.
+**Description**: Advanced research on gyroid-structured heat exchangers using triply periodic minimal surfaces (TPMS) for enhanced thermal performance.
 
 **Technologies**:
-- Terraform
-- AWS (EC2, S3, RDS, Lambda)
-- Python
-- CI/CD with GitHub Actions
+- ANSYS Fluent (CFD)
+- COMSOL Multiphysics
+- Python (Optimization algorithms)
+- Additive Manufacturing (Metal SLM)
 
-**Key Features**:
-- Automated infrastructure deployment
-- Multi-environment support
-- Cost optimization
-- Security best practices
-- Monitoring and alerting
+**Key Achievements**:
+- 42% improvement in figure of merit vs. baseline
+- 19% higher effectiveness with 16% lower pressure drop
+- Multi-objective genetic algorithm (MOGA) optimization
+- Experimental validation with 3D-printed prototypes
+- CFD predictions within 9% of experimental results
 
-**Role**: DevOps Engineer
+**Role**: Lead Researcher
+
+**Read More**: [Detailed study](/2024/03/20/gyroid-heat-exchanger-optimization.html)
 
 ---
 
-### Project 3: Microservices Architecture
+### Project 3: 3D-Printed RF Antenna Feasibility Study
 
-**Description**: Scalable microservices-based system with distributed architecture and event-driven communication.
+**Description**: Comprehensive investigation of additive manufacturing for radio frequency antenna production, evaluating multiple technologies and materials.
 
 **Technologies**:
-- Docker & Kubernetes
-- Go, Node.js
-- RabbitMQ, Redis
-- PostgreSQL, MongoDB
-- API Gateway
+- ANSYS HFSS (Electromagnetic simulation)
+- Metal 3D Printing (SLM/DMLS)
+- Vector Network Analyzer
+- Python (Data analysis)
 
-**Key Features**:
-- Service discovery and load balancing
-- Event-driven architecture
-- Horizontal scaling
-- Centralized logging and monitoring
-- Health checks and circuit breakers
+**Key Achievements**:
+- Evaluated 5 different 3D printing technologies
+- Achieved 93% efficiency with metal SLM antennas
+- Demonstrated complex geometries (helical, fractal) impossible with traditional methods
+- Comprehensive economic analysis across production volumes
+- Validated performance in anechoic chamber testing
 
-**Role**: Backend Architect
+**Role**: Principal Investigator
+
+**Read More**: [Complete feasibility study](/2024/05/10/3d-printed-rf-antenna-feasibility.html)
 
 ---
 
-### Project 4: Mobile-Responsive Dashboard
+### Project 4: Advanced Thermal Analysis and Simulation
 
-**Description**: Analytics dashboard with data visualization and real-time metrics for business intelligence.
+**Description**: Collection of thermal analysis projects using ANSYS for various industrial applications including heat transfer optimization and thermal management systems.
 
 **Technologies**:
-- React, D3.js, Chart.js
-- Material-UI
-- WebSocket for real-time updates
-- Python backend with FastAPI
+- ANSYS Mechanical
+- ANSYS Fluent
+- Thermal-fluid coupling
+- Python scripting
 
 **Key Features**:
-- Interactive data visualizations
-- Customizable widgets
-- Real-time data streaming
-- Export to PDF/CSV
-- Mobile-responsive design
+- Conjugate heat transfer analysis
+- Transient thermal simulations
+- Multi-physics coupling (thermal-structural)
+- Design optimization for thermal performance
+- Validation against experimental data
 
-**Role**: Full-Stack Developer
+**Role**: Thermal Analysis Engineer
 
 ---
 
-### Open Source Contributions
+### Technical Publications
 
-I actively contribute to open-source projects in the following areas:
-- Web frameworks and libraries
-- Developer tools
-- Documentation improvements
-- Bug fixes and feature enhancements
+Selected articles and research papers:
 
-Check out my [GitHub profile](https://github.com/robertodimaria) for more projects and contributions.
+- **Di Maria, R.** (2024). "Optimization of Gyroid Heat Exchangers Using Multi-Objective Genetic Algorithms." *International Journal of Heat and Mass Transfer*
+- **Di Maria, R.** (2024). "Feasibility and Performance of 3D-Printed RF Antennas: A Comprehensive Study." *IEEE Antennas and Propagation Magazine*
+- **Di Maria, R.** (2023). "Optimizing Post-Combustion Carbon Capture for Industrial Applications." *Energy & Environmental Science*
+
+Check out my [GitHub profile](https://github.com/robertodimaria) for code repositories and technical resources.
 
 ---
 
 ### Skills Summary
 
-**Frontend Development**
-- Modern JavaScript frameworks (React, Vue, Angular)
-- Responsive design and CSS frameworks
-- State management (Redux, Vuex)
-- Progressive Web Apps (PWA)
+**Computational Engineering**
+- CFD: ANSYS Fluent, OpenFOAM
+- FEA: ANSYS Mechanical, Structural Analysis
+- Multiphysics simulation and coupling
+- Design optimization and parametric studies
 
-**Backend Development**
-- RESTful API design
-- Microservices architecture
-- Database design and optimization
-- Authentication and security
+**Design & CAD**
+- SolidWorks, CATIA, AutoCAD
+- Parametric modeling with Grasshopper
+- 3D printing and additive manufacturing
+- Geometric modeling for simulation
 
-**DevOps & Cloud**
-- Containerization (Docker, Kubernetes)
-- CI/CD pipelines
-- Cloud platforms (AWS, Azure, GCP)
-- Infrastructure as Code
+**Programming & Analysis**
+- Python: NumPy, SciPy, Pandas, Matplotlib
+- MATLAB: System modeling and control
+- C++: High-performance computing
+- LaTeX: Technical documentation
 
-**Best Practices**
-- Test-Driven Development
-- Code reviews and pair programming
-- Agile methodologies
-- Documentation and knowledge sharing
+**Research & Development**
+- Thermal and fluid systems design
+- Carbon capture technologies
+- Advanced manufacturing processes
+- RF and electromagnetic engineering
+- Technical writing and publication
 
 ---
 

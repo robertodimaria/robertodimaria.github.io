@@ -5,8 +5,9 @@ url: https://robertodimaria.github.io
 baseurl: ""
 title: Roberto Di Maria
 description: > # this means to ignore newlines until "baseurl:"
-  Engineering Portfolio - Software Engineer specializing in modern web development,
-  cloud architecture, and innovative solutions.
+  Engineering Portfolio - Mechanical Engineering M.S. student specializing in CFD/FEA,
+  thermal systems, and computational engineering. Best Thesis Award winner with expertise
+  in ANSYS simulation and advanced engineering analysis.
 
 # Theme
 remote_theme: kitian616/jekyll-text-theme
@@ -25,7 +26,7 @@ author:
   name: Roberto Di Maria
   url: https://robertodimaria.github.io
   avatar: /assets/images/avatar.jpg
-  bio: Software Engineer passionate about building scalable applications and elegant solutions.
+  bio: Mechanical Engineering M.S. student | CFD & FEA Expert | ANSYS Certified | Top Academic Performance (29.7/30) | Best Thesis Award Winner
   email: 
   facebook: 
   twitter: 
