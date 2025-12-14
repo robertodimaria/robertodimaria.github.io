@@ -8,101 +8,17 @@ key: page-about
 
 <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
 
-## About Roberto Di Maria
+## About Me
 
-I am a Mechanical Engineering M.S. student with top-of-class academic performance and proven expertise in computational engineering. My focus is on applying advanced technical and analytical skills to solve real-world industrial challenges through innovative engineering solutions.
+I am an M.S. student in Mechanical Engineering at the Università degli Studi di Catania, Italy, building upon a strong foundation from my Bachelor of Science in Industrial Engineering, which I completed with 110/110 Full Honors. My studies are concentrated on computational engineering, allowing me to develop deep expertise in Finite Element Analysis (FEA) and Computational Fluid Dynamics (CFD).
 
-## Professional Summary
+## Technical Expertise and Achievements
 
-Mechanical Engineering M.S. student with top-of-class academic performance (29.7/30 average) and a 110/110 B.S. in Industrial Engineering. Italian native speaker, fluent in English, with proven expertise in CFD and FEA modeling using ANSYS Fluent and Mechanical, validated by a comprehensive suite of professional certifications. Recognized for excellence with the Best Thesis Award from the Order of Engineers and the highest GPA in the Master's program. Seeking an entry-level engineering role to apply advanced technical and analytical skills to real-world industrial challenges.
+I am proficient in using industry-standard software, including ANSYS Fluent, ANSYS Mechanical, and Creo Parametric. My programming skills include intermediate proficiency in Python and C#, complementing my analytical work. I hold multiple professional certifications from Ansys, Inc., including the Ansys Professional Certification: Getting Started with Ansys Fluent. My commitment to engineering excellence was recognized with the Best Thesis Award from the Order of Engineers of Catania for my thesis on CO2 Recovery.
 
-## Education
+## International Experience
 
-### UNIVERSITÀ DEGLI STUDI DI CATANIA | CATANIA, ITALY
-
-#### Master of Science (M.S.) in Mechanical Engineering
-**September 2024 – October 2026** (Expected)
-
-- **Expected Completion**: October 2026
-- **Academic Merit**: Awarded for achieving the highest GPA among all first-year students in the Mechanical Engineering program (2024-2025)
-- **Current GPA**: 29.7/30
-
-#### Bachelor of Science (B.S.) in Industrial Engineering
-**September 2021 – July 2024**
-
-- **Final Degree Mark**: 110/110 (Full Honors)
-- **Thesis**: CO₂ Recovery – Awarded Best Thesis by the Order of Engineers of Catania
-- Recognition for outstanding academic achievement and research contribution
-
-### Technical Expertise
-
-#### Engineering Simulation & Analysis
-- **CFD (Computational Fluid Dynamics)**: ANSYS Fluent, OpenFOAM
-- **FEA (Finite Element Analysis)**: ANSYS Mechanical, Structural Analysis
-- **CAD/CAM**: SolidWorks, CATIA, AutoCAD
-- **Multiphysics Simulation**: Thermal-fluid coupling, FSI (Fluid-Structure Interaction)
-- **Optimization**: Design optimization, parametric studies, genetic algorithms
-
-#### Programming & Computational Tools
-- **Python**: Data analysis, automation, optimization algorithms
-- **MATLAB**: Numerical methods, system modeling, control systems
-- **C++**: High-performance computing applications
-- **Grasshopper/Rhino**: Parametric design and generative modeling
-- **LaTeX**: Technical documentation and thesis writing
-
-#### Engineering Software
-- **ANSYS Suite**: Fluent, Mechanical, CFX, Workbench
-- **Design Tools**: SolidWorks, CATIA, Inventor
-- **Data Analysis**: Python (NumPy, SciPy, Pandas), MATLAB
-- **Visualization**: ParaView, Tecplot, Matplotlib
-
-#### Certifications
-- Comprehensive suite of professional certifications in ANSYS Fluent and Mechanical
-- Validated expertise in CFD and FEA modeling
-
-#### Core Competencies
-- Thermal and fluid systems design
-- Heat transfer analysis and optimization
-- Structural mechanics and stress analysis
-- Carbon capture and utilization technologies
-- Additive manufacturing and advanced materials
-- RF and antenna engineering
-- Research methodology and technical writing
-
-### Research Interests
-
-My research focuses on:
-- **Sustainable Energy Systems**: Carbon capture, storage, and utilization (CCSU)
-- **Advanced Heat Transfer**: Gyroid structures and lattice heat exchangers
-- **Additive Manufacturing**: 3D printing applications in engineering
-- **Computational Engineering**: CFD and FEA for design optimization
-- **RF Engineering**: Antenna design and electromagnetic analysis
-
-### Values & Approach
-
-I believe in:
-- **Engineering Excellence**: Rigorous analysis and validation of engineering solutions
-- **Continuous Learning**: Staying updated with the latest technologies and research
-- **Interdisciplinary Collaboration**: Bridging mechanical, electrical, and materials engineering
-- **Problem Solving**: Finding innovative solutions to complex engineering challenges
-- **Sustainability**: Developing technologies that address environmental concerns
-- **Academic Rigor**: Maintaining high standards in research and technical work
-
-### Awards & Recognition
-
-- **Best Thesis Award** - Order of Engineers of Catania (2024)
-  - Recognized for outstanding research in CO₂ Recovery
-- **Academic Merit Award** - Highest GPA in Mechanical Engineering M.S. program (2024-2025)
-- **Full Honors Degree** - 110/110 Bachelor's degree with distinction
-
-### Beyond Engineering
-
-When I'm not working on engineering projects, I enjoy:
-- Writing technical articles and research papers
-- Exploring emerging technologies in computational engineering
-- Contributing to academic and professional communities
-- Staying current with advances in sustainable engineering
-- Mentoring fellow students in engineering subjects
+I have sought out international exposure, participating in the Blended Intensive Programme (BIP) on "Positive Energy Districts" at Dalarna University in Sweden. There, I collaborated with a diverse team of European students to analyze strategies for creating sustainable, energy-positive districts.
 
 ### Let's Connect
 
