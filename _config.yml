@@ -60,6 +60,10 @@ comments:
 analytics:
   provider: false
 
+# Custom CSS
+custom_css:
+  - /assets/css/custom.css
+
 # Extensions
 plugins:
   - jekyll-feed
