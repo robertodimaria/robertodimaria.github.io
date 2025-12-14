@@ -25,7 +25,7 @@ author:
   type: person
   name: Roberto Di Maria
   url: https://robertodimaria.github.io
-  avatar: /assets/images/avatar.jpg
+  avatar: 
   bio: Mechanical Engineering M.S. student | CFD & FEA Expert | ANSYS Certified | Top Academic Performance (29.7/30) | Best Thesis Award Winner
   email: 
   facebook: 
@@ -36,7 +36,7 @@ author:
 # Navigation
 header:
   theme: dark
-  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+  background: '#2c3e50'
 
 navigation:
   - title: Home
