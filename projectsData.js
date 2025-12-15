@@ -8,7 +8,7 @@ const projectsData = [
     id: "rf-antenna", 
     title: "3D Printed RF Antenna & Material Selection",
     thumbnail: "assets/images/thumbnail_rfantenna.jpg", 
-    shortDescription: "Investigation into the feasibility of 3D-printed Radio-Frequency (RF) antennas, focusing on dielectric material selection using Ansys Granta EduPack and validation through CST simulations.",
+    shortDescription: "Investigation into the feasibility of 3D-printed Radio-Frequency (RF) antennas.",
     
     fullContent: `
       <h2>1. Summary</h2>
@@ -83,9 +83,9 @@ const projectsData = [
   // --- PROJECT 2: Carbon Capture, Storage, And Utilization (CCSU) Thesis ---
   {
     id: "ccsu-thesis",
-    title: "Carbon Capture, Storage, And Utilization (CCSU) Thesis: Best Thesis Award Winner",
+    title: "Carbon Capture, Storage, And Utilization (CCSU) Thesis",
     thumbnail: "assets/images/thumbnail_CCUS.jpg", 
-    shortDescription: "In-depth technical report, awarded Best Thesis by the Order of Engineers of Catania, evaluating the role, feasibility, and innovative energy vector applications of Carbon Capture, Storage, and Utilization (CCSU).",
+    shortDescription: "In-depth technical report, awarded Best Thesis by the Order of Engineers of Catania.",
     fullContent: `
       <h2>The Role of CCS in the Ecological Transition</h2>
       <p>The 20th century saw rapid industrial development and incredible technological innovation, but also caused significant environmental degradation. Climate change has emerged as one of the most serious global problems of our time. In this context, this thesis examines Carbon Capture, Storage, and Utilization (CCS), which is configured as a possible solution to reduce the impact of industrial activities on climate change, particularly those related to energy production.</p>
@@ -145,7 +145,7 @@ const projectsData = [
     id: "gyroid-heatexchanger",
     title: "Additive Manufacturing Analysis for a Heat Exchanger with Gyroid Internal Geometry",
     thumbnail: "assets/images/thumbnail_hex.jpg", 
-    shortDescription: "Feasibility and manufacturing optimization study of a highly innovative Fuel-Cooled Oil Cooler (FCOC) based on complex Gyroid TPMS architecture, detailing LPBF parameters, material selection, and cost factors.",
+    shortDescription: "Feasibility and manufacturing optimization study of a highly innovative Fuel-Cooled Oil Cooler (FCOC).",
     fullContent: `
       <h2>Introduction and Analysis Objectives</h2>
       <p>This case study analyzes the feasibility and manufacturing optimization of a highly innovative heat exchanger, based on a complex Gyroid Triply Periodic Minimal Surface (TPMS) architecture. This design is essential to maximize thermal exchange efficiency, with performance increases that can exceed 150% compared to conventional designs. ]</p>
