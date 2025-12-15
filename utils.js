@@ -4,7 +4,7 @@ const RESPONSIVE_WIDTH = 1024;
 
 // Theme Management
 function initTheme() {
-    const isMobile = window.innerWidth < 768; // Mobile devices
+    const isMobile = window.matchMedia('(max-width: 767px)').matches; // Mobile devices
     
     // For mobile: default to dark mode unless user explicitly chose light mode
     if (isMobile) {
@@ -12,10 +12,6 @@ function initTheme() {
             document.documentElement.classList.remove('tw-dark');
         } else {
             document.documentElement.classList.add('tw-dark');
-            // Set localStorage if not already set
-            if (!localStorage.getItem('color-mode')) {
-                localStorage.setItem('color-mode', 'dark');
-            }
         }
     } else {
         // For desktop: use existing logic
