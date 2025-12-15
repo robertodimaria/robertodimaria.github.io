@@ -1,11 +1,18 @@
 /* Custom styles for Roberto Di Maria Portfolio */
 
+/* Dark theme background and text colors */
+body {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
 /* Center main content */
 .page__content,
 .article__content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  background-color: #1a1a1a;
 }
 
 /* Section spacing for cleaner look */
@@ -15,7 +22,7 @@
 .article__content > h3 {
   margin-top: 3rem;
   margin-bottom: 1.5rem;
-  color: #2c3e50;
+  color: #e0e0e0;
 }
 
 .page__content > p,
@@ -23,6 +30,19 @@
 .article__content > p,
 .article__content > ul {
   margin-bottom: 1.5rem;
+  color: #e0e0e0;
+}
+
+/* Fix all link colors to be white/gray instead of red */
+a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #ffffff;
 }
 
 /* Project cards grid */
@@ -37,31 +57,32 @@
 .project-card {
   display: flex;
   flex-direction: column;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #3a3a3a;
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: #fff;
+  background: #2a2a2a;
   text-decoration: none;
-  color: inherit;
+  color: #e0e0e0;
   height: 100%;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.15);
   text-decoration: none;
+  color: #ffffff;
 }
 
 .project-card-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  background: #34495e;
+  background: #1a1a1a;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #e0e0e0;
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
@@ -85,12 +106,12 @@
   font-size: 1.3rem;
   font-weight: bold;
   margin: 0 0 0.75rem 0;
-  color: #2c3e50;
+  color: #e0e0e0;
 }
 
 .project-card-description {
   font-size: 0.95rem;
-  color: #666;
+  color: #b0b0b0;
   line-height: 1.5;
   margin: 0;
   flex: 1;
@@ -98,17 +119,18 @@
 
 /* Contact section styling */
 .contact-section {
-  background: #34495e;
-  color: white;
+  background: #2a2a2a;
+  color: #e0e0e0;
   padding: 3rem 2rem;
   border-radius: 12px;
   margin: 3rem 0;
   text-align: center;
+  border: 1px solid #3a3a3a;
 }
 
 .contact-section h2 {
   margin-top: 0;
-  color: white;
+  color: #ffffff;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
@@ -116,7 +138,7 @@
 .contact-section p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  opacity: 0.95;
+  color: #b0b0b0;
 }
 
 .contact-links {
@@ -131,39 +153,40 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
-  color: white;
+  color: #e0e0e0;
   text-decoration: none;
   font-weight: 500;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .contact-link:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
   text-decoration: none;
-  color: white;
+  color: #ffffff;
 }
 
 /* View All Projects button */
 .view-all-button {
   display: inline-block;
-  background: #2c3e50;
-  color: white;
+  background: #3a3a3a;
+  color: #e0e0e0;
   padding: 1rem 2rem;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .view-all-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(44, 62, 80, 0.4);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
   text-decoration: none;
-  color: white;
+  color: #ffffff;
+  background: #4a4a4a;
 }
 
 /* Landing page hero adjustments */

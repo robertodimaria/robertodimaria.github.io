@@ -7,7 +7,7 @@ const projectsData = [
   {
     id: "rf-antenna", 
     title: "3D Printed RF Antenna & Material Selection",
-    thumbnail: "assets/images/rf-antenna-thumbnail.jpg", 
+    thumbnail: "assets/images/thumbnail_rfantenna.jpg", 
     shortDescription: "Investigation into the feasibility of 3D-printed Radio-Frequency (RF) antennas, focusing on dielectric material selection using Ansys Granta EduPack and validation through CST simulations.",
     
     fullContent: `
