@@ -217,81 +217,13 @@
         </footer>
 
         <script src="./projectsData.js"></script>
+        <script src="./utils.js"></script>
         <script>
-            // Theme management
-            const RESPONSIVE_WIDTH = 1024;
-            let isHeaderCollapsed = window.innerWidth < RESPONSIVE_WIDTH;
-            const collapseBtn = document.getElementById("collapse-btn");
-            const collapseHeaderItems = document.getElementById("collapsed-header-items");
-
-            function onHeaderClickOutside(e) {
-                if (!collapseHeaderItems.contains(e.target)) {
-                    toggleHeader();
-                }
-            }
-
-            function toggleHeader() {
-                if (isHeaderCollapsed) {
-                    collapseHeaderItems.classList.add("max-lg:!tw-opacity-100", "tw-min-h-[90vh]");
-                    collapseHeaderItems.style.height = "90vh";
-                    collapseBtn.classList.remove("bi-list");
-                    collapseBtn.classList.add("bi-x", "max-lg:tw-fixed");
-                    isHeaderCollapsed = false;
-                    document.body.classList.add("modal-open");
-                    setTimeout(() => window.addEventListener("click", onHeaderClickOutside), 1);
-                } else {
-                    collapseHeaderItems.classList.remove("max-lg:!tw-opacity-100", "tw-min-h-[90vh]");
-                    collapseHeaderItems.style.height = "0vh";
-                    collapseBtn.classList.remove("bi-x", "max-lg:tw-fixed");
-                    collapseBtn.classList.add("bi-list");
-                    document.body.classList.remove("modal-open");
-                    isHeaderCollapsed = true;
-                    window.removeEventListener("click", onHeaderClickOutside);
-                }
-            }
-
-            function responsive() {
-                if (!isHeaderCollapsed) {
-                    toggleHeader();
-                }
-                if (window.innerWidth > RESPONSIVE_WIDTH) {
-                    collapseHeaderItems.style.height = "";
-                } else {
-                    isHeaderCollapsed = true;
-                }
-            }
-            responsive();
-            window.addEventListener("resize", responsive);
-
-            if (localStorage.getItem('color-mode') === 'dark' || (!('color-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('tw-dark');
-                updateToggleModeBtn();
-            } else {
-                document.documentElement.classList.remove('tw-dark');
-                updateToggleModeBtn();
-            }
-
-            function toggleMode() {
-                document.documentElement.classList.toggle("tw-dark");
-                updateToggleModeBtn();
-            }
-
-            function updateToggleModeBtn() {
-                const toggleIcon = document.querySelector("#toggle-mode-icon");
-                if (document.documentElement.classList.contains("tw-dark")) {
-                    toggleIcon.classList.remove("bi-sun");
-                    toggleIcon.classList.add("bi-moon");
-                    localStorage.setItem("color-mode", "dark");
-                } else {
-                    toggleIcon.classList.add("bi-sun");
-                    toggleIcon.classList.remove("bi-moon");
-                    localStorage.setItem("color-mode", "light");
-                }
-            }
-
             // Load project details
             const urlParams = new URLSearchParams(window.location.search);
-            const projectId = urlParams.get('id');
+            // Sanitize the projectId parameter - only allow alphanumeric characters and hyphens
+            const rawProjectId = urlParams.get('id');
+            const projectId = rawProjectId ? rawProjectId.replace(/[^a-zA-Z0-9-]/g, '') : null;
             
             const project = projectsData.find(p => p.id === projectId);
             const detailDiv = document.getElementById('project-detail');
@@ -301,6 +233,9 @@
                 titleElement.textContent = project.title;
                 
                 const contentDiv = document.createElement('div');
+                // Note: projectsData.js is a trusted, controlled data source maintained by the site owner.
+                // The fullContent contains intentional HTML formatting (figures, lists, etc.) for rich
+                // project descriptions. This is safe as the data is not user-generated.
                 contentDiv.innerHTML = project.fullContent;
                 
                 document.title = project.title + ' - Roberto Di Maria';
