@@ -13,7 +13,7 @@ key: page-project-detail
 </div>
 
 <div style="text-align: center; margin: 3rem 0;">
-  <a href="/portfolio.html" class="view-all-button">← Back to Portfolio</a>
+  <a href="portfolio.html" class="view-all-button">← Back to Portfolio</a>
 </div>
 
 </div>
@@ -31,18 +31,33 @@ key: page-project-detail
   const contentDiv = document.getElementById('project-content');
   
   if (project) {
+    // Use textContent for title to prevent XSS
+    const titleElement = document.createElement('h1');
+    titleElement.style.color = '#e0e0e0';
+    titleElement.style.marginBottom = '2rem';
+    titleElement.textContent = project.title;
+    
+    // Create content container
+    const contentContainer = document.createElement('div');
+    contentContainer.className = 'project-full-content';
+    
+    // Since fullContent is from our own projectsData.js file and contains HTML,
+    // we can safely use innerHTML here. In a production environment with user-generated
+    // content, this should use a sanitization library like DOMPurify.
+    contentContainer.innerHTML = project.fullContent;
+    
+    // Update page title
     document.title = project.title + ' - Roberto Di Maria';
-    contentDiv.innerHTML = `
-      <h1 style="color: #e0e0e0; margin-bottom: 2rem;">${project.title}</h1>
-      <div class="project-full-content">
-        ${project.fullContent}
-      </div>
-    `;
+    
+    // Clear and append new content
+    contentDiv.innerHTML = '';
+    contentDiv.appendChild(titleElement);
+    contentDiv.appendChild(contentContainer);
   } else {
     contentDiv.innerHTML = `
       <h1 style="color: #e0e0e0;">Project Not Found</h1>
       <p>Sorry, the requested project could not be found.</p>
-      <p><a href="/portfolio.html" style="color: #e0e0e0;">Return to Portfolio</a></p>
+      <p><a href="portfolio.html" style="color: #e0e0e0;">Return to Portfolio</a></p>
     `;
   }
 </script>

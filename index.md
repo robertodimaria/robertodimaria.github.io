@@ -23,7 +23,7 @@ I am a Mechanical Engineering M.S. student with a background in Industrial Engin
 ## Featured Projects
 
 <div class="projects-grid">
-  <a href="/project-detail.html?id=ccsu-thesis" class="project-card">
+  <a href="project-detail.html?id=ccsu-thesis" class="project-card">
     <div class="project-card-image">
       <span>Carbon Capture, Storage, And Utilization</span>
     </div>
@@ -33,7 +33,7 @@ I am a Mechanical Engineering M.S. student with a background in Industrial Engin
     </div>
   </a>
   
-  <a href="/project-detail.html?id=gyroid-heatexchanger" class="project-card">
+  <a href="project-detail.html?id=gyroid-heatexchanger" class="project-card">
     <div class="project-card-image">
       <span>Gyroid Heat Exchanger</span>
     </div>
@@ -43,7 +43,7 @@ I am a Mechanical Engineering M.S. student with a background in Industrial Engin
     </div>
   </a>
   
-  <a href="/project-detail.html?id=rf-antenna" class="project-card">
+  <a href="project-detail.html?id=rf-antenna" class="project-card">
     <div class="project-card-image">
       <span>3D-Printed RF Antenna</span>
     </div>

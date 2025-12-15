@@ -13,7 +13,7 @@ key: page-portfolio
 Welcome to my engineering portfolio. Here you'll find a selection of research projects and technical studies that demonstrate my expertise in computational engineering, thermal systems, and advanced manufacturing.
 
 <div class="projects-grid" style="margin: 3rem 0;">
-  <a href="/project-detail.html?id=ccsu-thesis" class="project-card">
+  <a href="project-detail.html?id=ccsu-thesis" class="project-card">
     <div class="project-card-image">
       <span>Carbon Capture, Storage, And Utilization</span>
     </div>
@@ -23,7 +23,7 @@ Welcome to my engineering portfolio. Here you'll find a selection of research pr
     </div>
   </a>
   
-  <a href="/project-detail.html?id=gyroid-heatexchanger" class="project-card">
+  <a href="project-detail.html?id=gyroid-heatexchanger" class="project-card">
     <div class="project-card-image">
       <span>Gyroid Heat Exchanger</span>
     </div>
@@ -33,7 +33,7 @@ Welcome to my engineering portfolio. Here you'll find a selection of research pr
     </div>
   </a>
   
-  <a href="/project-detail.html?id=rf-antenna" class="project-card">
+  <a href="project-detail.html?id=rf-antenna" class="project-card">
     <div class="project-card-image">
       <span>3D-Printed RF Antenna</span>
     </div>
