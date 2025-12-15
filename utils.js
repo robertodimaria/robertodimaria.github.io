@@ -4,11 +4,23 @@ const RESPONSIVE_WIDTH = 1024;
 
 // Theme Management
 function initTheme() {
-    if (localStorage.getItem('color-mode') === 'dark' || 
-        (!('color-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('tw-dark');
+    const isMobile = window.matchMedia('(max-width: 767px)').matches; // Mobile devices
+    
+    // For mobile: default to dark mode unless user explicitly chose light mode
+    if (isMobile) {
+        if (localStorage.getItem('color-mode') === 'light') {
+            document.documentElement.classList.remove('tw-dark');
+        } else {
+            document.documentElement.classList.add('tw-dark');
+        }
     } else {
-        document.documentElement.classList.remove('tw-dark');
+        // For desktop: use existing logic
+        if (localStorage.getItem('color-mode') === 'dark' || 
+            (!('color-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('tw-dark');
+        } else {
+            document.documentElement.classList.remove('tw-dark');
+        }
     }
     updateToggleModeBtn();
 }
