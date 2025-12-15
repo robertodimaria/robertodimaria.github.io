@@ -215,3 +215,54 @@ a:hover {
     align-items: center;
   }
 }
+
+/* Additional dark theme overrides for Jekyll Text Theme */
+.hero__content h1,
+.hero__content h2,
+.hero__content p {
+  color: #e0e0e0 !important;
+}
+
+.page,
+.article {
+  background-color: #1a1a1a;
+}
+
+/* Navigation header dark theme */
+.header {
+  background-color: #1a1a1a !important;
+}
+
+.header .navigation a {
+  color: #e0e0e0 !important;
+}
+
+.header .navigation a:hover {
+  color: #ffffff !important;
+}
+
+/* Footer dark theme */
+.footer {
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
+}
+
+.footer a {
+  color: #e0e0e0 !important;
+}
+
+.footer a:hover {
+  color: #ffffff !important;
+}
+
+/* Hero actions buttons */
+.hero__actions .button {
+  background-color: #3a3a3a !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #4a4a4a !important;
+}
+
+.hero__actions .button:hover {
+  background-color: #4a4a4a !important;
+  color: #ffffff !important;
+}

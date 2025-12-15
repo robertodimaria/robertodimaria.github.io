@@ -20,13 +20,6 @@ I am proficient in using industry-standard software, including ANSYS Fluent, ANS
 
 I have sought out international exposure, participating in the Blended Intensive Programme (BIP) on "Positive Energy Districts" at Dalarna University in Sweden. There, I collaborated with a diverse team of European students to analyze strategies for creating sustainable, energy-positive districts.
 
-### Let's Connect
-
-I'm always interested in new opportunities, collaborations, and conversations about technology. Feel free to reach out!
-
-- **GitHub**: [@robertodimaria](https://github.com/robertodimaria)
-- **Email**: Contact through GitHub
-
 <div class="contact-section">
   <h2>Let's Connect</h2>
   <p>I'm always interested in new opportunities, collaborations, and conversations about technology. Feel free to reach out!</p>
