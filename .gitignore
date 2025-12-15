@@ -27,3 +27,5 @@ tmp
 .ruby-version
 .ruby-gemset
 node_modules/
+new/package-lock.json
+new/node_modules/

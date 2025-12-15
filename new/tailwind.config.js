@@ -6,6 +6,8 @@ module.exports = {
 		"**/*.{html, jsx, js}",
 		"**/*.js",
 		"**/*.html",
+		"../*.html",
+		"../*.js",
 	],
 	darkMode: 'class',
 	theme: {
