@@ -21,9 +21,6 @@ function loadProjects() {
                          alt="${project.title}">
                 </div>
                 <h2 class="tw-text-3xl max-md:tw-text-2xl tw-font-medium">${project.title}</h2>
-                <p class="tw-text-base tw-leading-normal tw-text-gray-800 dark:tw-text-gray-200">
-                    ${project.shortDescription}
-                </p>
                 <div class="tw-flex tw-items-center tw-gap-2 tw-mt-auto">
                     <span>Learn more</span>
                     <i class="bi bi-arrow-right tw-transform tw-transition-transform tw-duration-300 group-hover/card:tw-translate-x-2"></i>
