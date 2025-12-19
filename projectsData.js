@@ -148,7 +148,7 @@ const projectsData = [
     shortDescription: "Feasibility and manufacturing optimization study of a highly innovative Fuel-Cooled Oil Cooler (FCOC).",
     fullContent: `
       <h2>Introduction and Analysis Objectives</h2>
-      <p>This case study analyzes the feasibility and manufacturing optimization of a highly innovative heat exchanger, based on a complex Gyroid Triply Periodic Minimal Surface (TPMS) architecture. This design is essential to maximize thermal exchange efficiency, with performance increases that can exceed 150% compared to conventional designs. ]</p>
+      <p>This case study analyzes the feasibility and manufacturing optimization of a highly innovative heat exchanger, based on a complex Gyroid Triply Periodic Minimal Surface (TPMS) architecture. This design is essential to maximize thermal exchange efficiency, with performance increases that can exceed 150% compared to conventional designs.</p>
       <figure>
         <img src="assets/images/1_hex.jpg" alt="Figure 1. Fuel Cooled oil cooler. [1]" style="max-width: 100%; display: block; margin: 0 auto;">
         <figcaption>Figure 1. Fuel Cooled oil cooler. [1]</figcaption>
@@ -238,6 +238,110 @@ const projectsData = [
       <h2>7. Strategic Recommendation: AM vs. Conventional</h2>
       <p>Additive Manufacturing (LPBF) is strongly recommended over any conventional production solution. The primary reason is the impossibility of manufacturing the gyroid surface with traditional processes. Processes like machining or traditional casting/molding cannot create complex, interconnected, non-discontinuous lattice. LPBF is therefore the preferred technology that ensures the structural integrity and functional efficiency required by the design.</p>
       <p>While the MoldJet process (and Binder Jetting) boasts better prospects for high-volume mass production, until the achieved structural integrity and density are equivalent to those of laser fusion, LPBF remains the only option that simultaneously solves the geometric constraints and the critical performance requirements of the component.</p>
+    `
+  },
+
+  // --- PROJECT 4: ANSYS Fluent Simulation of the ONERA M6 Wing ---
+  {
+    id: "onera-m6-wing",
+    title: "ANSYS Fluent Simulation of the ONERA M6 Wing",
+    thumbnail: "assets/images/image1.jpeg", 
+    shortDescription: "Numerical analysis and CFD validation of the ONERA M6 wing, replicating NASA experimental data for transonic flows.",
+    fullContent: `
+      <h2>Introduction and Objectives</h2>
+      <p>The Onera M6 wing is a classic CFD validation case for external flows due to its simple geometry combined with transonic flow complexities such as local supersonic flow, pressure shocks, and turbulent boundary layer separation.</p>
+      <figure>
+        <img src="assets/images/image1.jpeg" alt="Onera M6 wing" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 1: Onera M6 wing.</figcaption>
+      </figure>
+      <ul>
+        <li><strong>Objectives:</strong> Replicate NASA wind tunnel experimental data and compare them with ANSYS Fluent simulations.</li>
+        <li><strong>Analysis:</strong> Study of transonic and compressible flow, identifying shock waves and boundary layer separation.</li>
+      </ul>
+
+      <h2>Flow Conditions and Wing Geometry</h2>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
+        <img src="assets/images/image2.png" alt="Flow parameters" style="max-width: 30%; height: auto;">
+        <img src="assets/images/image3.png" alt="Geometrical properties" style="max-width: 30%; height: auto;">
+        <img src="assets/images/image4.png" alt="Onera M6 Geometrical properties" style="max-width: 30%; height: auto;">
+      </div>
+
+      <h2>Geometry and Domain Setup (SpaceClaim)</h2>
+      <p>A fluid domain extending approximately 20 chord lengths was created to ensure undisturbed free-stream boundary conditions. A Body of Influence (BOI) was established around the wing profile for localized mesh refinement.</p>
+      <figure>
+        <img src="assets/images/image5.png" alt="Geometry on Ansys Spaceclaim" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 5: Geometry on Ansys Spaceclaim.</figcaption>
+      </figure>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
+        <img src="assets/images/image6.png" alt="Fluid domain" style="max-width: 45%;">
+        <img src="assets/images/image7.png" alt="Body of Influence" style="max-width: 45%;">
+      </div>
+
+      <h2>Mesh Generation</h2>
+      <p>Local refinements were applied to critical regions: Leading/Trailing Edges (0.001 m) and Wing Faces (0.003 m). To accurately predict flow separation and aerodynamic forces, a 15-layer Smooth Transition boundary layer was utilized.</p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
+        <img src="assets/images/image8.png" alt="Surface Mesh" style="max-width: 45%;">
+        <img src="assets/images/image9.jpeg" alt="Details of the Surface Mesh" style="max-width: 45%;">
+      </div>
+      <figure>
+        <img src="assets/images/image10.png" alt="Boundary Layer" style="max-width: 80%; display: block; margin: 0 auto;">
+        <figcaption>Figure 10: Boundary Layer discretization.</figcaption>
+      </figure>
+      <p>The volume mesh utilizes polyhedral cells with an average orthogonal quality of 0.9546, indicating high mesh quality.</p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
+        <img src="assets/images/image11.png" alt="Volume Mesh" style="max-width: 45%;">
+        <img src="assets/images/image12.png" alt="Mesh Properties" style="max-width: 45%;">
+      </div>
+
+      <h2>Mathematical and Turbulence Model</h2>
+      <p>The simulation is governed by Continuity, Energy, and RANS equations. For turbulence modeling, the <strong>SST k-omega model</strong> was used for superior accuracy in predicting separation.</p>
+      <figure>
+        <img src="assets/images/image13.png" alt="Governing Equations" style="max-width: 70%; display: block; margin: 0 auto;">
+        <figcaption>Figure 13: Governing Equations.</figcaption>
+      </figure>
+
+      <h2>Numerical Solution Setup</h2>
+      <p>For the Inlet, Outlet, and Far side, the <strong>pressure far-field</strong> condition was used. The Coupled solver was used with a convergence criterion of 10e-3. Residuals converged after 193 iterations.</p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
+        <img src="assets/images/image14.png" alt="Boundary conditions overview" style="max-width: 45%;">
+        <img src="assets/images/image15.png" alt="Conditions Visualizations" style="max-width: 45%;">
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
+        <img src="assets/images/image16.png" alt="Scaled Residuals" style="max-width: 30%;">
+        <img src="assets/images/image17.png" alt="Lift and Drag Plots" style="max-width: 30%;">
+        <img src="assets/images/image18.png" alt="Comparison of results from NASA" style="max-width: 30%;">
+      </div>
+
+      <h2>Post Processing and Results Analysis</h2>
+      <p>The Mach Number and Pressure Coefficient contours show excellent qualitative agreement with NASA reference simulations.</p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
+        <img src="assets/images/image19.png" alt="Mach Number Contours" style="max-width: 45%;">
+        <img src="assets/images/image20.png" alt="Pressure Coefficient Contours" style="max-width: 45%;">
+      </div>
+      <h3>Shock Waves and Separation</h3>
+      <p>In the transonic regime, a clear shock wave is identified by a sharp velocity reduction and pressure increase, leading to fluid vein separation evidenced by boundary layer thickening.</p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
+        <img src="assets/images/image21.png" alt="Shock Wave" style="max-width: 45%;">
+        <img src="assets/images/image22.png" alt="Flow separation" style="max-width: 45%;">
+      </div>
+      <h3>Vortex Dynamics</h3>
+      <p>Trailing edge and lift-induced vortices are visible at the wing tips due to the high and low-pressure interaction.</p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
+        <img src="assets/images/image23.png" alt="Trailing Edge Vortex" style="max-width: 45%;">
+        <img src="assets/images/image24.gif" alt="Vortex animation" style="max-width: 45%;">
+      </div>
+
+      <h2>ANSYS Workbench Workflow: Design Points</h2>
+      <p>Integration with Static Structural analysis allowed for evaluating wing deformation under aerodynamic loads for different Angles of Attack (AoA).</p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
+        <img src="assets/images/image25.png" alt="Design Points" style="max-width: 30%;">
+        <img src="assets/images/image26.png" alt="Ansys Workbench Workflow" style="max-width: 30%;">
+        <img src="assets/images/image27.png" alt="Ansys Mechanical Mesh" style="max-width: 30%;">
+      </div>
+      <figure>
+        <img src="assets/images/image28.gif" alt="Wing Deformation" style="max-width: 70%; display: block; margin: 0 auto;">
+        <figcaption>Figure 28: Structural deformation analysis using AL 7075-T6.</figcaption>
+      </figure>
     `
   }
 ];
