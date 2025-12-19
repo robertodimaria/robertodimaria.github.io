@@ -118,6 +118,12 @@
                 transform: translateX(-5px);
             }
             
+            /* Ensure flex containers with images work responsively */
+            .project-content div[style*="display: flex"] img {
+                max-width: 100%;
+                height: auto;
+            }
+            
             @media (max-width: 768px) {
                 .project-content {
                     padding: 1rem;
@@ -129,6 +135,16 @@
                 
                 .project-content h2 {
                     font-size: 1.5rem;
+                }
+                
+                /* Stack images on mobile devices */
+                .project-content div[style*="display: flex"] {
+                    flex-direction: column !important;
+                }
+                
+                .project-content div[style*="display: flex"] img {
+                    max-width: 100% !important;
+                    width: 100% !important;
                 }
             }
         </style>
