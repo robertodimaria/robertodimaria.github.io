@@ -91,16 +91,16 @@ const projectsData = [
       <p>The 20th century saw rapid industrial development and incredible technological innovation, but also caused significant environmental degradation. Climate change has emerged as one of the most serious global problems of our time. In this context, this thesis examines Carbon Capture, Storage, and Utilization (CCS), which is configured as a possible solution to reduce the impact of industrial activities on climate change, particularly those related to energy production.</p>
       
       <h3>CCS as a Bridge Technology</h3>
-      <p>Although the long-term solution for reducing greenhouse gas emissions consists of decoupling energy production from $\text{CO}_2$ release, it is unlikely that alternative energy sources can completely replace fossil fuels in the short term. Therefore, CCS technology represents an effective measure to mitigate carbon dioxide emissions, until renewable energy sources are able to fully meet global energy demand.</p>
+      <p>Although the long-term solution for reducing greenhouse gas emissions consists of decoupling energy production from CO2 release, it is unlikely that alternative energy sources can completely replace fossil fuels in the short term. Therefore, CCS technology represents an effective measure to mitigate carbon dioxide emissions, until renewable energy sources are able to fully meet global energy demand.</p>
       
       <h3>Decarbonization of "Hard-to-Abate" Sectors</h3>
       <p>It is important to note that, in some industrial sectors defined as "hard to abate," complete decarbonization is an unattainable goal. Processes such as natural gas sweetening and the production of cement, steel, and ammonia are intrinsically dependent on the use of fossil fuels and chemical processes that generate $\text{CO}_2$ as a by-product. CCS not only represents a mitigation resource but allows these hard-to-abate sectors to continue operating using fossil fuels more sustainably.</p>
 
-      <h2>$\text{CO}_2$ Capture Technologies</h2>
-      <p>$\text{CO}_2$ capture technologies are classified based on their positioning within the industrial process, distinguishing between upstream and downstream capture. Three main types of capture are identified:</p>
+      <h2>CO2 Capture Technologies</h2>
+      <p>CO2 capture technologies are classified based on their positioning within the industrial process, distinguishing between upstream and downstream capture. Three main types of capture are identified:</p>
 
       <h3>Post-Combustion Capture (Downstream)</h3>
-      <p>Post-combustion capture occurs downstream of the process and is applied directly to industrial flue gases, making it possible to retain $\text{CO}_2$ without requiring significant modifications to existing plants. This feature makes it the most widespread capture technology.</p>
+      <p>Post-combustion capture occurs downstream of the process and is applied directly to industrial flue gases, making it possible to retain CO2 without requiring significant modifications to existing plants. This feature makes it the most widespread capture technology.</p>
       
       <h3>Pre-Combustion and Oxy-Fuel Combustion (Upstream)</h3>
       <p>These technologies operate upstream of the industrial process, limiting their application mainly to new-generation plants.</p>
@@ -110,31 +110,31 @@ const projectsData = [
       </ul>
       <p>These approaches are further distinguished by the separation methods adopted: absorption with solvents and the use of membranes are the most widespread for their efficiency and economic convenience.</p>
 
-      <h2>$\text{CO}_2$ Storage and Utilization (CCUS)</h2>
-      <p>The captured $\text{CO}_2$ is brought to a supercritical state to facilitate its transport (mainly through pipelines) and then follows two distinct paths: utilization or permanent storage.</p>
+      <h2>CO2 Storage and Utilization (CCUS)</h2>
+      <p>The captured CO2 is brought to a supercritical state to facilitate its transport (mainly through pipelines) and then follows two distinct paths: utilization or permanent storage.</p>
 
       <h3>Utilization Applications</h3>
-      <p>$\text{CO}_2$ can be directed towards utilization plants and finds application in various industrial sectors, such as Enhanced Hydrocarbon Recovery (EHR), where it is exploited to increase extraction efficiency, or as an energy vector. It can also be transformed into synthetic fuels, used in the production of polymers, or employed in the food industry.</p>
+      <p>CO2 can be directed towards utilization plants and finds application in various industrial sectors, such as Enhanced Hydrocarbon Recovery (EHR), where it is exploited to increase extraction efficiency, or as an energy vector. It can also be transformed into synthetic fuels, used in the production of polymers, or employed in the food industry.</p>
 
       <h3>Permanent Storage</h3>
-      <p>More commonly, the $\text{CO}_2$ is conveyed to permanent storage sites, including deep geological formations, depleted oil/gas reservoirs, or saline aquifers. The $\text{CO}_2$ remains in a supercritical state, reducing the risk of dispersion.</p>
+      <p>More commonly, the CO2 is conveyed to permanent storage sites, including deep geological formations, depleted oil/gas reservoirs, or saline aquifers. The $\text{CO}_2$ remains in a supercritical state, reducing the risk of dispersion.</p>
       
       <h4>Trapping Mechanisms</h4>
       <p>The analysis of storage sites focuses on physical and chemical trapping dynamics:</p>
       <ul>
-        <li><strong>Physical Trapping (Short-Term):</strong> Guaranteed by the presence of impermeable rock layers overlying the injection site, preventing supercritical $\text{CO}_2$ from rising to the surface.</li>
+        <li><strong>Physical Trapping (Short-Term):</strong> Guaranteed by the presence of impermeable rock layers overlying the injection site, preventing supercritical CO2 from rising to the surface.</li>
         <li><strong>Chemical Trapping (Long-Term):</strong> Occurs through mineral carbonation processes, which make the confinement stable and permanent over a wider time horizon.</li>
       </ul>
 
-      <h2>$\text{CO}_2$ Utilization as an Energy Vector</h2>
-      <p>One of the most innovative aspects explored in the thesis work is the potential of $\text{CO}_2$ as an energy vector, with specific application to the **“$\text{CO}_2$ Battery”** created by Energy Dome. The operating principle is conceptually similar to pumped hydro storage but uses carbon dioxide instead of water.</p>
+      <h2>CO2 Utilization as an Energy Vector</h2>
+      <p>One of the most innovative aspects explored in the thesis work is the potential of CO2 as an energy vector, with specific application to the **“CO2 Battery”** created by Energy Dome. The operating principle is conceptually similar to pumped hydro storage but uses carbon dioxide instead of water.</p>
       
       <h3>Energy Transition Combined Cycle (ETCC)</h3>
       <p>An interesting application is the coupling with a gas turbine plant in the so-called Energy Transition Combined Cycle (ETCC). The ETCC exploits the $\text{CO}_2$ battery to optimize the performance of a gas turbine in a combined cycle, which can operate in three different scenarios:</p>
       <ul>
-        <li><strong>Charge Mode:</strong> $\text{CO}_2$ is compressed and liquefied (stored).</li>
-        <li><strong>Boost Mode:</strong> Exhaust gases from the gas turbine are recovered, heating the gaseous $\text{CO}_2$ from the Dome, which is expanded in the turbine.</li>
-        <li><strong>Super Boost Mode:</strong> The gas cycle is combined with the discharge phase of the $\text{CO}_2$ battery, using the liquefied $\text{CO}_2$ to maximize power generation.</li>
+        <li><strong>Charge Mode:</strong> CO2 is compressed and liquefied (stored).</li>
+        <li><strong>Boost Mode:</strong> Exhaust gases from the gas turbine are recovered, heating the gaseous CO2 from the Dome, which is expanded in the turbine.</li>
+        <li><strong>Super Boost Mode:</strong> The gas cycle is combined with the discharge phase of the CO2 battery, using the liquefied CO2 to maximize power generation.</li>
       </ul>
       <p>This innovative approach underlines how CCS not only represents a strategy to mitigate emissions but also constitutes a way to transform an environmental criticality into a useful resource.</p>
     `
