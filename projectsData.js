@@ -23,22 +23,26 @@ const projectsData = [
       <h2>4. Proposed solution</h2>
       <p>The proposed solution involved utilizing 3D printing to realize Risley prisms. This technique offers an innovative, lightweight, and potentially low-cost solution for dynamically directing the beam by exploiting local control over sub-wavelength dielectric structures to modulate the wavefront phase. The material selection methodology employed Ansys Granta EduPack 2025 in a multi-stage process:</p>
       <ul>
-          <li>**Stage 1 - Initial Filtering:** Constraints included thermal stability (T<sub>g</sub> ≥ 100°C), adequate insulating properties (&epsilon;<sub>r</sub> ≥ 2), minimal dissipation factor (tan &delta; ≤ 0.005), and FDM compatibility.</li>
-          <li>**Stage 2 - Adding New Records:** Key materials (e.g., Zetamix Epsilon, ABS-BaTiO<sub>3</sub>, and COC-TiO<sub>2</sub>) were manually added to the database.</li>
-          <li>**Stage 3 - Ashby Chart:** An &epsilon;<sub>r</sub> vs. tan &delta; chart was used to evaluate the balance between electric field energy storage and dielectric loss.</li>
-          <li>**Stage 4 - Ka-band Selection:** A refinement box was introduced, based on typical Ka-band values: 2.5 ≤ &epsilon;<sub>r</sub> ≤ 3.2 and tan &delta; ≤ 0.003.</li>
+          <li>Stage 1 - Initial Filtering: Constraints included thermal stability (T<sub>g</sub> ≥ 100°C), adequate insulating properties (&epsilon;<sub>r</sub> ≥ 2), minimal dissipation factor (tan &delta; ≤ 0.005), and FDM compatibility.</li>
+          <li>Stage 2 - Adding New Records: Key materials (e.g., Zetamix Epsilon, ABS-BaTiO<sub>3</sub>, and COC-TiO<sub>2</sub>) were manually added to the database.</li>
+          <li>Stage 3 - Ashby Chart: An &epsilon;<sub>r</sub> vs. tan &delta; chart was used to evaluate the balance between electric field energy storage and dielectric loss.</li>
+          <li>Stage 4 - Ka-band Selection: A refinement box was introduced, based on typical Ka-band values: 2.5 ≤ &epsilon;<sub>r</sub> ≤ 3.2 and tan &delta; ≤ 0.003.</li>
       </ul>
 
       <h2>5. Results and conclusions</h2>
       <p>The screening process successfully identified the COC-TiO<sub>2</sub> composite, marketed as Zetamix Epsilon®, as the most promising candidate due to its moderate relative permittivity and exceptionally low dissipation factor. A simulation study comparing two sub-wavelength diffractive prisms (made from standard ABS and COC-TiO<sub>2</sub>) highlighted the material's benefits at 30 GHz:</p>
       <ul>
-          <li>**Thickness Reduction:** A 50% reduction in thickness was achieved (11 mm vs. 22 mm).</li>
-          <li>**Directivity Improvement:** A 1 dB increase in directivity was observed (34.8 dBi vs. 33.8 dBi).</li>
+          <li>Thickness Reduction: A 50% reduction in thickness was achieved (11 mm vs. 22 mm).</li>
+          <li>Directivity Improvement: A 1 dB increase in directivity was observed (34.8 dBi vs. 33.8 dBi).</li>
       </ul>
       <p>These results confirm the growing potential of additive manufacturing to produce complex RF structures and modify base material dielectric properties through filler integration, achieving superior performance in a significantly lighter and smaller package.</p>
 
       <h2>6. References</h2>
-      <p>The full list of references can be found in the original project report.</p>
+      <p>[1] Thi Quynh Van Hoang, Matthieu Bertrand, Erika Vandelle, Brigitte Loiseaux. Low-Profile Highly Directive 2D-Beam-Steering Antenna in Ka-band with 3D-printed All-dielectric Sub-wavelength Deflectors. 2022 52nd European Microwave Conference (EuMC), Sep 2022, Milan, Italy. ⟨10.23919/EuMC54642.2022.9924439⟩. ⟨hal-03839508v2⟩
+[2] High Permittivity, Low Loss, and Printable Thermoplastic Composite Material for RF and Microwave Applications
+[3] https://zetamix.fr/en/produit/zetamix-%C9%9B-filament/ (data sheet)
+[4] R. Czarny et al., "High Permittivity, Low Loss, and Printable Thermoplastic Composite Material for RF and Microwave Applications," 2018 IEEE Conference on Antenna Measurements & Applications (CAMA), V�sterås, Sweden, 2018, pp. 1-4, doi: 10.1109/CAMA.2018.8530660.
+</p>
 
       <h2>7. Appendix</h2>
       <p>The following figures detail the material selection process and simulation results:</p>
