@@ -97,7 +97,7 @@ const projectsData = [
       <p>Although the long-term solution for reducing greenhouse gas emissions consists of decoupling energy production from CO2 release, it is unlikely that alternative energy sources can completely replace fossil fuels in the short term. Therefore, CCS technology represents an effective measure to mitigate carbon dioxide emissions, until renewable energy sources are able to fully meet global energy demand.</p>
       
       <h3>Decarbonization of "Hard-to-Abate" Sectors</h3>
-      <p>It is important to note that, in some industrial sectors defined as "hard to abate," complete decarbonization is an unattainable goal. Processes such as natural gas sweetening and the production of cement, steel, and ammonia are intrinsically dependent on the use of fossil fuels and chemical processes that generate $\text{CO}_2$ as a by-product. CCS not only represents a mitigation resource but allows these hard-to-abate sectors to continue operating using fossil fuels more sustainably.</p>
+      <p>It is important to note that, in some industrial sectors defined as "hard to abate," complete decarbonization is an unattainable goal. Processes such as natural gas sweetening and the production of cement, steel, and ammonia are intrinsically dependent on the use of fossil fuels and chemical processes that generate CO2 as a by-product. CCS not only represents a mitigation resource but allows these hard-to-abate sectors to continue operating using fossil fuels more sustainably.</p>
 
       <h2>CO2 Capture Technologies</h2>
       <p>CO2 capture technologies are classified based on their positioning within the industrial process, distinguishing between upstream and downstream capture. Three main types of capture are identified:</p>
