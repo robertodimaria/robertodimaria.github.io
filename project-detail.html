@@ -347,16 +347,18 @@
                 detailDiv.appendChild(contentDiv);
                 
                 // Trigger MathJax to process the newly added content
-                // Wait for MathJax to be ready before typesetting
-                if (window.MathJax && MathJax.typesetPromise) {
-                    MathJax.typesetPromise([detailDiv]).catch((err) => console.log('MathJax typeset error:', err));
+                function typesetMath() {
+                    if (window.MathJax && MathJax.typesetPromise) {
+                        MathJax.typesetPromise([detailDiv]).catch((err) => console.log('MathJax typeset error:', err));
+                    }
+                }
+                
+                // Try to typeset immediately, or wait for MathJax to load
+                if (window.MathJax) {
+                    typesetMath();
                 } else {
-                    // If MathJax isn't loaded yet, wait for it
-                    window.addEventListener('load', function() {
-                        if (window.MathJax && MathJax.typesetPromise) {
-                            MathJax.typesetPromise([detailDiv]).catch((err) => console.log('MathJax typeset error:', err));
-                        }
-                    });
+                    // MathJax not loaded yet, wait for it
+                    document.getElementById('MathJax-script').addEventListener('load', typesetMath, { once: true });
                 }
             } else {
                 detailDiv.innerHTML = `
