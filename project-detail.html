@@ -119,33 +119,26 @@
             }
             
             /* Ensure flex containers with images work responsively */
+            .project-content div[style*="display: flex"] {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center;
+                gap: 20px;
+                margin: 20px 0;
+            }
+            
             .project-content div[style*="display: flex"] img {
-                max-width: 100%;
+                max-width: 800px;
+                width: 100%;
                 height: auto;
             }
             
-            /* Standardize specific images to uniform size */
-            .project-content img[src*="image4.png"],
-            .project-content img[src*="image5.png"],
-            .project-content img[src*="image6.png"],
-            .project-content img[src*="image7.png"],
-            .project-content img[src*="image8.png"],
-            .project-content img[src*="image9.jpeg"],
-            .project-content img[src*="image10.png"],
-            .project-content img[src*="image11.png"],
-            .project-content img[src*="image12.png"],
-            .project-content img[src*="image14.png"],
-            .project-content img[src*="image18.png"],
-            .project-content img[src*="image22.png"],
-            .project-content img[src*="image23.png"],
-            .project-content img[src*="image25.png"],
-            .project-content img[src*="image26.png"],
-            .project-content img[src*="image27.png"] {
-                max-width: 400px;
-                width: 100%;
-                height: auto;
+            /* Center all images */
+            .project-content img {
                 display: block;
                 margin: 0 auto;
+                max-width: 100%;
+                height: auto;
             }
             
             /* Center all images in flex containers */
