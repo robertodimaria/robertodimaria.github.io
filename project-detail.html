@@ -124,6 +124,35 @@
                 height: auto;
             }
             
+            /* Standardize specific images to uniform size */
+            .project-content img[src*="image4.png"],
+            .project-content img[src*="image5.png"],
+            .project-content img[src*="image6.png"],
+            .project-content img[src*="image7.png"],
+            .project-content img[src*="image8.png"],
+            .project-content img[src*="image9.jpeg"],
+            .project-content img[src*="image10.png"],
+            .project-content img[src*="image11.png"],
+            .project-content img[src*="image12.png"],
+            .project-content img[src*="image14.png"],
+            .project-content img[src*="image18.png"],
+            .project-content img[src*="image22.png"],
+            .project-content img[src*="image23.png"],
+            .project-content img[src*="image25.png"],
+            .project-content img[src*="image26.png"],
+            .project-content img[src*="image27.png"] {
+                max-width: 400px;
+                width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+            
+            /* Center all images in flex containers */
+            .project-content div[style*="display: flex"] {
+                align-items: center;
+            }
+            
             @media (max-width: 768px) {
                 .project-content {
                     padding: 1rem;
