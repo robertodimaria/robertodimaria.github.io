@@ -250,13 +250,13 @@ const projectsData = [
     fullContent: `
       <figure>
         <img src="assets/images/image1.jpeg" alt="Onera M6 wing" style="max-width: 100%; display: block; margin: 0 auto;">
-        [cite_start]<figcaption>Figure 1: Onera M6 wing[cite: 158].</figcaption>
+        <figcaption>Figure 1: Onera M6 wing.</figcaption>
       </figure>
 
       <h2>Introduction and Objectives</h2>
-      [cite_start]<p>The Onera M6 wing is a classic CFD validation case for external flows due to its simple geometry combined with transonic flow complexities such as local supersonic flow, pressure shocks, and turbulent boundary layer separation[cite: 164, 165, 166].</p>
+      <p>The Onera M6 wing is a classic CFD validation case for external flows due to its simple geometry combined with transonic flow complexities such as local supersonic flow, pressure shocks, and turbulent boundary layer separation.</p>
       <ul>
-        [cite_start]<li><strong>Objectives:</strong> Replicate NASA wind tunnel experimental data, analyze transonic/compressible flow, and identify shock waves and boundary layer separation[cite: 160, 161, 162, 163].</li>
+        <li><strong>Objectives:</strong> Replicate NASA wind tunnel experimental data, analyze transonic/compressible flow, and identify shock waves and boundary layer separation.</li>
       </ul>
 
       <h2>Flow Conditions and Wing Geometry</h2>
@@ -265,83 +265,83 @@ const projectsData = [
         <img src="assets/images/image3.png" alt="Geometrical properties" style="max-width: 30%; height: auto;">
         <img src="assets/images/image4.png" alt="Onera M6 Geometrical properties" style="max-width: 30%; height: auto;">
       </div>
-      [cite_start]<p>The simulation was conducted with a Mach number of 0.8395, a Reynolds number of 1.17E+07, and an Angle of Attack (AoA) of 3.06°[cite: 168, 169]. [cite_start]The wing is a semi-span, un-twisted swept wing with an aspect ratio of 3.8 and a mean aerodynamic chord of 646.07 mm[cite: 170, 171].</p>
+      <p>The simulation was conducted with a Mach number of 0.8395, a Reynolds number of 1.17E+07, and an Angle of Attack (AoA) of 3.06°. The wing is a semi-span, un-twisted swept wing with an aspect ratio of 3.8 and a mean aerodynamic chord of 646.07 mm.</p>
 
       <h2>Geometry and Domain Setup (SpaceClaim)</h2>
-      [cite_start]<p>The fluid domain was created extending approximately 20 chord lengths to ensure undisturbed free-stream boundary conditions[cite: 208, 209]. [cite_start]A Body of Influence (BOI) was established around the wing profile for localized mesh refinement[cite: 214].</p>
+      <p>The fluid domain was created extending approximately 20 chord lengths to ensure undisturbed free-stream boundary conditions. A Body of Influence (BOI) was established around the wing profile for localized mesh refinement.</p>
       <figure>
-        <img src="assets/images/image5.png" alt="Geometry on Ansys Spaceclaim" style="max-width: 100%; display: block; margin: 0 auto;">
-        [cite_start]<figcaption>Figure 5: Geometry on Ansys Spaceclaim[cite: 207].</figcaption>
+        <img src="assets/images/image5.png" alt="Geometry on Ansys Spaceclaim" style="max-width: 60%; display: block; margin: 0 auto;">
+        <figcaption>Figure 5: Geometry on Ansys Spaceclaim.</figcaption>
       </figure>
       <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image6.png" alt="Fluid domain" style="max-width: 45%;">
-        <img src="assets/images/image7.png" alt="Body of Influence" style="max-width: 45%;">
+        <img src="assets/images/image6.png" alt="Fluid domain" style="max-width: 45%; height: auto;">
+        <img src="assets/images/image7.png" alt="Body of Influence" style="max-width: 45%; height: auto;">
       </div>
 
       <h2>Mesh Generation</h2>
-      [cite_start]<p>Surface mesh refinements were applied to leading/trailing edges (0.001 m) and wing faces (0.003 m)[cite: 225, 227, 228]. [cite_start]A Smooth Transition boundary layer with 15 prism layers was utilized for accurate flow separation prediction[cite: 233, 234].</p>
+      <p>Surface mesh refinements were applied to leading/trailing edges (0.001 m) and wing faces (0.003 m). A Smooth Transition boundary layer with 15 prism layers was utilized for accurate flow separation prediction.</p>
       <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image8.png" alt="Surface Mesh" style="max-width: 45%;">
-        <img src="assets/images/image9.jpeg" alt="Details of the Surface Mesh" style="max-width: 45%;">
+        <img src="assets/images/image8.png" alt="Surface Mesh" style="max-width: 45%; height: auto;">
+        <img src="assets/images/image9.jpeg" alt="Details of the Surface Mesh" style="max-width: 45%; height: auto;">
       </div>
       <figure>
-        <img src="assets/images/image10.png" alt="Boundary Layer" style="max-width: 80%; display: block; margin: 0 auto;">
-        [cite_start]<figcaption>Figure 10: Boundary Layer discretization[cite: 234].</figcaption>
+        <img src="assets/images/image10.png" alt="Boundary Layer" style="max-width: 60%; display: block; margin: 0 auto;">
+        <figcaption>Figure 10: Boundary Layer discretization.</figcaption>
       </figure>
-      [cite_start]<p>The volume mesh uses polyhedral cells with an average orthogonal quality of 0.9546, confirming high quality[cite: 239, 240, 243]. [cite_start]Total cell count is approximately 757,348[cite: 245].</p>
+      <p>The volume mesh uses polyhedral cells with an average orthogonal quality of 0.9546, confirming high quality. Total cell count is approximately 757,348.</p>
       <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image11.png" alt="Volume Mesh" style="max-width: 45%;">
-        <img src="assets/images/image12.png" alt="Mesh Properties" style="max-width: 45%;">
+        <img src="assets/images/image11.png" alt="Volume Mesh" style="max-width: 45%; height: auto;">
+        <img src="assets/images/image12.png" alt="Mesh Properties" style="max-width: 45%; height: auto;">
       </div>
 
       <h2>Mathematical and Turbulence Model</h2>
-      [cite_start]<p>The simulation uses Reynolds-averaged Navier-Stokes (RANS) equations[cite: 248, 249]. [cite_start]While NASA utilized the Spalart-Allmaras model, this study employs the <strong>SST k-omega model</strong>[cite: 250, 251].</p>
+      <p>The simulation uses Reynolds-averaged Navier-Stokes (RANS) equations. While NASA utilized the Spalart-Allmaras model, this study employs the <strong>SST k-omega model</strong>.</p>
       <figure>
         <img src="assets/images/image13.png" alt="Governing Equations" style="max-width: 70%; display: block; margin: 0 auto;">
-        [cite_start]<figcaption>Figure 13: Governing Equations[cite: 255].</figcaption>
+        <figcaption>Figure 13: Governing Equations.</figcaption>
       </figure>
 
       <h2>Numerical Solution Setup</h2>
-      [cite_start]<p>Pressure far-field boundary conditions were applied to the Inlet, Outlet, and Far side[cite: 257]. [cite_start]The Coupled method was used with a convergence criterion of 10e-3[cite: 273, 275]. [cite_start]Residuals reached convergence after 193 iterations[cite: 278, 298].</p>
+      <p>Pressure far-field boundary conditions were applied to the Inlet, Outlet, and Far side. The Coupled method was used with a convergence criterion of 10e-3. Residuals reached convergence after 193 iterations.</p>
       <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image14.png" alt="Boundary conditions overview" style="max-width: 45%;">
-        <img src="assets/images/image15.png" alt="Conditions Visualizations" style="max-width: 45%;">
+        <img src="assets/images/image14.png" alt="Boundary conditions overview" style="max-width: 45%; height: auto;">
+        <img src="assets/images/image15.png" alt="Conditions Visualizations" style="max-width: 45%; height: auto;">
       </div>
       <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image16.png" alt="Scaled Residuals" style="max-width: 30%;">
-        <img src="assets/images/image17.png" alt="Lift and Drag Plots" style="max-width: 30%;">
-        <img src="assets/images/image18.png" alt="Comparison of results from NASA" style="max-width: 30%;">
+        <img src="assets/images/image16.png" alt="Scaled Residuals" style="max-width: 30%; height: auto;">
+        <img src="assets/images/image17.png" alt="Lift and Drag Plots" style="max-width: 30%; height: auto;">
+        <img src="assets/images/image18.png" alt="Comparison of results from NASA" style="max-width: 30%; height: auto;">
       </div>
 
       <h2>Post Processing and Results Analysis</h2>
-      [cite_start]<p>Model validation showed high accuracy: Fluent lift coefficient (Cl) was 0.1312 compared to NASA's 0.141, with a minimal drag coefficient (Cd) difference of 0.177%[cite: 328, 329, 331].</p>
+      <p>Model validation showed high accuracy: Fluent lift coefficient (Cl) was 0.1312 compared to NASA's 0.141, with a minimal drag coefficient (Cd) difference of 0.177%.</p>
       <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image19.png" alt="Mach Number Contours" style="max-width: 45%;">
-        <img src="assets/images/image20.png" alt="Pressure Coefficient Contours" style="max-width: 45%;">
+        <img src="assets/images/image19.png" alt="Mach Number Contours" style="max-width: 45%; height: auto;">
+        <img src="assets/images/image20.png" alt="Pressure Coefficient Contours" style="max-width: 45%; height: auto;">
       </div>
       <h3>Shock Waves and Separation</h3>
-      [cite_start]<p>Transonic shock waves were identified by sharp velocity reductions and pressure increases, resulting in boundary layer thickening and flow separation[cite: 387, 388, 432, 433].</p>
+      <p>Transonic shock waves were identified by sharp velocity reductions and pressure increases, resulting in boundary layer thickening and flow separation.</p>
       <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image21.png" alt="Shock Wave" style="max-width: 45%;">
-        <img src="assets/images/image22.png" alt="Flow separation" style="max-width: 45%;">
+        <img src="assets/images/image21.png" alt="Shock Wave" style="max-width: 45%; height: auto;">
+        <img src="assets/images/image22.png" alt="Flow separation" style="max-width: 45%; height: auto;">
       </div>
       <h3>Vortex Dynamics</h3>
-      [cite_start]<p>Trailing edge and lift-induced vortices are graphically captured at the wing tips where high and low pressure regions interact[cite: 448, 449].</p>
+      <p>Trailing edge and lift-induced vortices are graphically captured at the wing tips where high and low pressure regions interact.</p>
       <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image23.png" alt="Trailing Edge Vortex" style="max-width: 45%;">
-        <img src="assets/images/image24.gif" alt="Vortex animation" style="max-width: 45%;">
+        <img src="assets/images/image23.png" alt="Trailing Edge Vortex" style="max-width: 45%; height: auto;">
+        <img src="assets/images/image24.gif" alt="Vortex animation" style="max-width: 45%; height: auto;">
       </div>
 
       <h2>ANSYS Workbench Workflow: Design Points</h2>
-      [cite_start]<p>Using Workbench, design points were solved for different angles of attack (3.06°, 15.0°, 25.0°)[cite: 461, 463]. [cite_start]Pressures calculated by Fluent were imported into a Static Structural block for structural analysis using AL 7075-T6[cite: 461, 494, 495].</p>
+      <p>Using Workbench, design points were solved for different angles of attack (3.06°, 15.0°, 25.0°). Pressures calculated by Fluent were imported into a Static Structural block for structural analysis using AL 7075-T6.</p>
       <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image25.png" alt="Design Points" style="max-width: 30%;">
-        <img src="assets/images/image26.png" alt="Ansys Workbench Workflow" style="max-width: 30%;">
-        <img src="assets/images/image27.png" alt="Ansys Mechanical Mesh" style="max-width: 30%;">
+        <img src="assets/images/image25.png" alt="Design Points" style="max-width: 60%; height: auto;">
+        <img src="assets/images/image26.png" alt="Ansys Workbench Workflow" style="max-width: 60%; height: auto;">
+        <img src="assets/images/image27.png" alt="Ansys Mechanical Mesh" style="max-width: 60%; height: auto;">
       </div>
       <figure>
         <img src="assets/images/image28.gif" alt="Wing Deformation" style="max-width: 70%; display: block; margin: 0 auto;">
-        [cite_start]<figcaption>Figure 28: Total structural deformation analysis[cite: 518].</figcaption>
+        <figcaption>Figure 28: Total structural deformation analysis.</figcaption>
       </figure>
     `
   }

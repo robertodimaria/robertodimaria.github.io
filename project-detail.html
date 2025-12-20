@@ -119,9 +119,31 @@
             }
             
             /* Ensure flex containers with images work responsively */
+            .project-content div[style*="display: flex"] {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center;
+                gap: 20px;
+                margin: 20px 0;
+            }
+            
             .project-content div[style*="display: flex"] img {
+                max-width: 800px;
+                width: 100%;
+                height: auto;
+            }
+            
+            /* Center all images */
+            .project-content img {
+                display: block;
+                margin: 0 auto;
                 max-width: 100%;
                 height: auto;
+            }
+            
+            /* Center all images in flex containers */
+            .project-content div[style*="display: flex"] {
+                align-items: center;
             }
             
             @media (max-width: 768px) {
@@ -166,7 +188,7 @@
                     class="tw-relative tw-flex tw-h-full max-lg:tw-h-max tw-w-max tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col 
                                 max-lg:tw-gap-5 lg:tw-mx-auto tw-place-items-center"
                 >
-                    <a class="header-links" href="index.html#about"> About </a>
+                    <a class="header-links" href="about.html"> About </a>
                     <a class="header-links" href="index.html#projects"> Projects </a>
                     <a class="header-links" href="index.html#contact"> Contact </a>
                 </nav>
