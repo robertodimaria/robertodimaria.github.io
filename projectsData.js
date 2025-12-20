@@ -359,195 +359,283 @@ const projectsData = [
     `
   },
   
-  // --- PROJECT 5: Experimental Characterization and Damage Modeling of MTC-1300T ---
+// --- PROJECT 5: Experimental Characterization and Damage Modeling of MTC-1300T Material ---
   {
-    id: "mtc1300t-characterization",
+    id: "mtc1300t-damage-modeling",
     title: "Experimental Characterization and Damage Modeling of MTC-1300T Material",
     thumbnail: "assets/images/img (4).png", 
-    shortDescription: "Mechanical characterization of MTC-1300T through image analysis, MLR correction, and FEM validation using the Bao-Wierzbicki damage model and Fortran subroutines.",
+    shortDescription: "FEM Validation, MLR Correction, and B-W Damage Analysis on Smooth and Notched Specimens of MTC-1300T material.",
     fullContent: `
-      <h1>CHARACTERIZATION AND NUMERICAL VALIDATION OF MTC-1300T MATERIAL</h1>
-      
-      <h2>1. Introduction</h2>
-      <p>The objective of this activity is the mechanical characterization of the MTC-1300T material through the integration of experimental image analysis techniques and numerical finite element modeling (FEM). Starting from tensile test data, the real plastic curve was determined, the model was validated on MSC Marc/Mentat software, and the critical damage parameters were identified according to the Bao-Wierzbicki (B-W) model.</p>
-      
-      <figure style="text-align: center;">
-        <img src="assets/images/img (1).png" alt="MTC-1300T Specimen" style="width: 80%; max-width: 600px; height: auto;">
-        <figcaption>Figure 1: MTC-1300T Specimen.</figcaption>
-      </figure>
+      <div class="engineering-report">
+        <h1>CHARACTERIZATION AND NUMERICAL VALIDATION OF MTC-1300T MATERIAL</h1>
+        
+        <h2>1. Introduction</h2>
+        <p>The objective of this activity is the mechanical characterization of the MTC-1300T material through the integration of experimental image analysis techniques and numerical finite element modeling (FEM). Starting from tensile test data, the real plastic curve was determined, the model was validated on MSC Marc/Mentat software, and the critical damage parameters were identified according to the Bao-Wierzbicki (B-W) model.</p>
 
-      <h2>2. Experimental Analysis and Post-Processing</h2>
-      <p>The specimen under examination has a rectangular cross-section with width $W_0=3.02$ mm, thickness $T_0=1.3$ mm, and a gauge length $L_0=10$ mm.</p>
-
-      <h3>2.1 Image Processing and Engineering Curves</h3>
-      <p>Through photographic sampling of the test (0.5 fps), engineering and true curves were obtained using the following relations:</p>
-      <ul>
-        <li><strong>Engineering Curve:</strong> $\\sigma_{\\text{eng}} = \\frac{P}{W_0 T_0}$ ; $\\varepsilon_{\\text{eng}} = \\frac{L - L_0}{L_0}$</li>
-        <li><strong>True Stress-Strain (from Length):</strong> $\\sigma_{\\text{true,L}} = \\sigma_{\\text{eng}} \\frac{L}{L_0}$ ; $\\varepsilon_{\\text{true,L}} = \\ln \\frac{L}{L_0}$</li>
-        <li><strong>True Stress-Strain (from Area):</strong> $\\varepsilon_{\\text{true,A}} = 2 \\ln \\frac{W_0}{W}$ ; $\\sigma_{\\text{true,A}} = \\frac{P}{W^2 T_0 / W_0}$</li>
-      </ul>
-      
-      <figure style="text-align: center;">
-        <img src="assets/images/img (2).png" alt="Experimental Curves" style="width: 80%; max-width: 600px; height: auto;">
-        <figcaption>Figure 2: Experimental Curves.</figcaption>
-      </figure>
-
-      <h3>2.2 MLR Correction (Mirone-Lo Riso)</h3>
-      <p>To compensate for triaxiality after necking, the flow stress ($\\sigma_{\\text{flow}}$) was obtained via the corrective factor $C_{\\text{MLR}}$:</p>
-      <p>If $\\varepsilon_{\\text{true,A}} \\geq \\varepsilon_{\\text{necking}}$: $C_{\\text{MLR}} = 1 - 0.5058\\Delta^2 + 0.6317\\Delta^3 - 0.02107\\Delta^4$ (where $\\Delta = \\varepsilon_{\\text{true,A}} - \\varepsilon_{\\text{necking}}$).</p>
-      
-      <figure style="text-align: center;">
-        <img src="assets/images/img (3).png" alt="Estimate of Flow Stress" style="width: 80%; max-width: 600px; height: auto;">
-        <figcaption>Figure 3: Estimate of $\\sigma_{\\text{Flow}}$ and trend line for best-fit.</figcaption>
-      </figure>
-
-      <h2>3. Numerical Modeling (MSC Marc)</h2>
-      <p>Exploiting double symmetry, 1/8 of the geometry was modeled using RBE2 elements for displacement control and refined mesh in the necking zone.</p>
-      
-      <figure style="text-align: center;">
-        <img src="assets/images/img (4).png" alt="Model realized on MSC-Marc" style="width: 80%; max-width: 600px; height: auto;">
-        <figcaption>Figure 4: Model realized on MSC-Marc.</figcaption>
-      </figure>
-
-      <h2>4. Validation and Results</h2>
-      <p>The overlap of Force-Displacement curves confirms the accuracy of the plastic curve derived from the MLR correction.</p>
-      
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (5).png" alt="FEM Area Comparison" style="width: 100%;">
-          <figcaption>Figure 5: Experimental FEM-True Area Based Comparison.</figcaption>
+        <h2>2. Experimental Analysis and Post-Processing</h2>
+        <p>The specimen under examination has a rectangular cross-section with width $W_0=3.02$ mm, thickness $T_0=1.3$ mm, and a gauge length $L_0=10$ mm.</p>
+        
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (1).png" alt="Figure 1" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 1 MTC-1300T Specimen</figcaption>
         </figure>
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (6).png" alt="FEM Length Comparison" style="width: 100%;">
-          <figcaption>Figure 6: Experimental FEM-True L Based Comparison.</figcaption>
+
+        <h3>2.1 Image Processing and Engineering Curves</h3>
+        <p>Through photographic sampling of the test (0.5 fps), the images were scaled and analyzed in the AutoCAD environment to measure the evolution of length (L) and width (W). Combining these measurements with the load (P) recorded by the testing machine, three types of curves were obtained:</p>
+        
+        <p><strong>Engineering Curve:</strong><br>
+        $\\sigma_{\\text{eng}} = \\frac{P}{W_0 T_0} \\quad ; \\quad \\varepsilon_{\\text{eng}} = \\frac{L - L_0}{L_0}$</p>
+        
+        <p><strong>True Stress-Strain (from Length):</strong> Valid until the onset of necking.<br>
+        $\\sigma_{\\text{true,L}} = \\sigma_{\\text{eng}} \\frac{L}{L_0} \\quad ; \\quad \\varepsilon_{\\text{true,L}} = \\ln \\frac{L}{L_0}$</p>
+        
+        <p><strong>True Stress-Strain (from Area):</strong> Calculated by monitoring the reduction of the cross-section.<br>
+        $\\varepsilon_{\\text{true,A}} = 2 \\ln \\frac{W_0}{W} \\quad ; \\quad \\sigma_{\\text{true,A}} = \\frac{P}{W^2 T_0 / W_0}$</p>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (2).png" alt="Figure 2" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 2 Experimental Curves</figcaption>
         </figure>
+
+        <h3>2.2 MLR Correction (Mirone-Lo Riso)</h3>
+        <p>To compensate for the stress state triaxiality that arises after necking, the MLR correction was applied. The flow stress ($\\sigma_{\\text{flow}}$) was obtained by multiplying $\\sigma_{\\text{true,A}}$ by a corrective factor $C_{\\text{MLR}}$:</p>
+        <ul>
+          <li>If $\\varepsilon_{\\text{true,A}} < \\varepsilon_{\\text{necking}}$: $C_{\\text{MLR}}=1$</li>
+          <li>If $\\varepsilon_{\\text{true,A}} \\geq \\varepsilon_{\\text{necking}}$:<br>
+          $C_{\\text{MLR}} = 1 - 0.5058\\Delta^2 + 0.6317\\Delta^3 - 0.02107\\Delta^4$<br>
+          (where $\\Delta = \\varepsilon_{\\text{true,A}} - \\varepsilon_{\\text{necking}}$)</li>
+        </ul>
+        <p>The data obtained were interpolated with a trend line (Best Fit) to generate the normalized plastic curve to be included in the numerical solver.</p>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (3).png" alt="Figure 3" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 3 Estimate of $\\sigma_{\\text{Flow}}$ and trend line for best-fit</figcaption>
+        </figure>
+
+        <h2>3. Numerical Modeling (MSC Marc)</h2>
+        <h3>3.1 Geometry and Mesh</h3>
+        <p>Exploiting the double symmetry of the specimen and the load, 1/8 of the total geometry was modeled. This choice drastically reduced the number of elements and calculation times without loss of accuracy. The mesh was refined in the central zone (where necking is expected).</p>
+
+        <h3>3.2 Boundary Conditions and Load</h3>
+        <ul>
+          <li><strong>Symmetry:</strong> Symmetry constraints applied on the planes corresponding to the internal cut faces.</li>
+          <li><strong>RBE2 Elements:</strong> The nodes of the external face were constrained to a pilot node via a rigid RBE2 element, to which displacement was imposed (load in displacement control).</li>
+          <li><strong>Material Properties:</strong> Insertion of the previously corrected and filtered experimental $\\sigma-\\varepsilon$ curve.</li>
+        </ul>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (4).png" alt="Figure 4" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 4 Model realized on MSC-Marc</figcaption>
+        </figure>
+
+        <h2>4. Validation and Results</h2>
+        <h3>4.1 Numerical-Experimental Comparison</h3>
+        <p>The model was validated by comparing the global Force-Displacement curve obtained from the software with the one measured experimentally. The overlap of the curves confirms the accuracy of the plastic curve derived from the MLR correction.</p>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (5).png" alt="Figure 5" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 5 Experimental FEM-True Area Based Comparison</figcaption>
+        </figure>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (6).png" alt="Figure 6" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 6 Experimental FEM-True L Based Comparison</figcaption>
+        </figure>
+
+        <h3>4.2 Critical Damage Analysis</h3>
+        <p>From the post-processing analysis, the following values were extracted:</p>
+        <ul>
+          <li><strong>Triaxiality Factor:</strong> Evolution of the ratio between hydrostatic pressure and equivalent stress in the necking core.</li>
+        </ul>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (7).png" alt="Figure 7" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 7 Triaxiality Factor Node 1</figcaption>
+        </figure>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (8).png" alt="Figure 8" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 8 Triaxiality Factor Node to compare</figcaption>
+        </figure>
+
+        <ul>
+          <li><strong>Bao-Wierzbicki Damage (B-W):</strong> Damage variable accumulated during the deformation process.</li>
+        </ul>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (9).png" alt="Figure 9" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 9 Damage over Increment</figcaption>
+        </figure>
+
+        <p>To identify the Critical Damage ($D_c$), the following procedure was adopted:</p>
+        <ol>
+          <li>Identification of the photographic frame corresponding to the physical fracture of the specimen.</li>
+          <li>Measurement of L and W at the moment of fracture.</li>
+          <li>Identification of the simulation increment (step) corresponding to the same geometric values.</li>
+        </ol>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (10).png" alt="Figure 10" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 10 Variation of specimen length</figcaption>
+        </figure>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (11).png" alt="Figure 11" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 11 Variation of specimen width</figcaption>
+        </figure>
+
+        <p>4. Reading of the B-W Damage value at that precise increment.</p>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (12).png" alt="Figure 12" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 12 Critical damage value</figcaption>
+        </figure>
+
+        <p>The critical damage value averaged for both the two increment values and the L and W values at fracture is: $D_c=0.331$.</p>
+
+        <h2>5. Conclusions</h2>
+        <p>The procedure allowed for the complete characterization of the MTC-1300T material. The validation of the numerical model guarantees the possibility of using these parameters (plastic curve and critical damage) for more complex structural simulations on components made with the same material, allowing for the prediction of failure with high confidence.</p>
+
+        <hr style="margin: 50px 0; border: 1px solid #444;">
+
+        <h1>AXISYMMETRIC ANALYSIS AND DAMAGE MODELING USING FORTRAN SUBROUTINE</h1>
+        
+        <h2>1. Analysis Objective</h2>
+        <p>The activity concerned the study of the fracture behavior of the MTC-1300T material through the use of axisymmetric specimens. The main objective was the implementation of the Bao-Wierzbicki (B-W) damage criterion via an external subroutine to simulate the element deletion process (deactivation of elements) upon reaching the previously identified critical damage value.</p>
+
+        <h2>2. Numerical Modeling (MSC Marc)</h2>
+        <h3>2.1 Geometry and Discretization</h3>
+        <p>An axisymmetric (AXI) formulation was adopted for both specimens, modeling only half of the specimen to exploit symmetry:</p>
+        <ul>
+          <li><strong>Smooth Specimen:</strong> Nominal dimensions D0=5 mm, L0=30 mm. The numerical model was created with a length of 15mm.</li>
+        </ul>
+        
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (13).png" alt="Figure 13" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 13 Smooth Specimen modeled on MSC-Marc</figcaption>
+        </figure>
+
+        <ul>
+          <li><strong>Notched Specimen:</strong> Characterized by a notch with a curvature radius R = 12mm and a minimum diameter at the neck section equal to 2.5 mm.</li>
+        </ul>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (14).png" alt="Figure 14" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 14 Notched Specimen modeled on MSC-Marc</figcaption>
+        </figure>
+
+        <p><strong>Elements:</strong> Quad 10 elements were used for both models.</p>
+
+        <h3>2.2 Boundary Conditions and Load</h3>
+        <p>Constraint conditions were set to ensure axial and transverse symmetry. The load was applied in displacement control on the upper face via rigid RBE2 elements connected to a pilot node, ensuring a uniform distribution of deformation.</p>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (15).png" alt="Figure 15" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 15 Smooth specimen mesh and boundary conditions</figcaption>
+        </figure>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (16).png" alt="Figure 16" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 16 Notched specimen mesh and boundary conditions</figcaption>
+        </figure>
+
+        <h2>3. Damage Criterion Implementation (Fortran Subroutine)</h2>
+        <p>The core of the simulation is represented by the integration of an ad hoc Fortran subroutine. This function operated in real-time during the calculation to:</p>
+        <ul>
+          <li>Calculate the local Triaxiality Factor (TF).</li>
+          <li>Update the accumulated B-W Damage value at each integration point.</li>
+          <li>Compare the local damage with the material's Critical Damage ($D_c$).</li>
+          <li>Command the "turn off" (de-activation) of elements whose damage has exceeded the critical threshold, allowing the simulation of crack initiation and propagation.</li>
+        </ul>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (17).png" alt="Figure 17" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 17 User Subroutines Implementation</figcaption>
+        </figure>
+
+        <h2>4. Results Analysis and Node Monitoring</h2>
+        <p>To understand the evolution of the stress state and damage, three specific nodes in the specimen section were monitored:</p>
+        <ul>
+          <li>Node 1 (Axis): Center of the specimen (maximum triaxiality).</li>
+          <li>Node 2 (Mid): Intermediate position halfway through the radius.</li>
+          <li>Node 3 (External): Outer surface of the specimen.</li>
+        </ul>
+
+        <h3>4.1 Extracted Relationships</h3>
+        <p>For each of the nodes mentioned above, for both the Smooth and Notched specimens, the following functional relationships were obtained:</p>
+        <ul>
+          <li><strong>B-W Damage vs Total Equivalent Plastic Strain:</strong> To evaluate the growth rate of damage with respect to plasticity.</li>
+        </ul>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (18).png" alt="Figure 18" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 18 Damage smooth specimen</figcaption>
+        </figure>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (19).png" alt="Figure 19" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 19 Damage notched specimen</figcaption>
+        </figure>
+
+        <ul>
+          <li><strong>B-W Damage vs Increment:</strong> To monitor the temporal evolution of the fracture during the simulation.</li>
+        </ul>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (20).png" alt="Figure 20" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 20 Damage per increment smooth specimen</figcaption>
+        </figure>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (21).png" alt="Figure 21" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 21 Damage per increment notched specimen</figcaption>
+        </figure>
+
+        <ul>
+          <li><strong>Total Equivalent Plastic Strain vs Increment.</strong></li>
+        </ul>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (22).png" alt="Figure 22" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 22 Total equivalent plastic strain smooth specimen</figcaption>
+        </figure>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (23).png" alt="Figure 23" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 23 Total equivalent plastic strain notched specimen</figcaption>
+        </figure>
+
+        <ul>
+          <li><strong>Triaxiality Factor vs Total Equivalent Plastic Strain:</strong> Fundamental to highlight how the geometry (Smooth vs Notched) influences the triaxial stress state.</li>
+        </ul>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (24).png" alt="Figure 24" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 24 Triaxiality factor smooth specimen</figcaption>
+        </figure>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (25).png" alt="Figure 25" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 25 Triaxiality factor notched specimen</figcaption>
+        </figure>
+
+        <ul>
+          <li><strong>True Stress-Strain Curve (from area):</strong> Numerically derived for comparison with input data.</li>
+        </ul>
+
+        <figure style="text-align: center; margin: 30px auto;">
+          <img src="assets/images/img (26).png" alt="Figure 26" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+          <figcaption>Figure 26 True curves area based</figcaption>
+        </figure>
+
+        <h2>5. Smooth vs Notched Comparison and Conclusions</h2>
+        <p>The simulations clearly show the effect of the notch:</p>
+        <ul>
+          <li>In the Notched specimen, the presence of the curvature radius induces a triaxiality factor value that is initially higher than the Smooth one, accelerating the accumulation of damage and leading to a premature fracture in terms of global deformation.</li>
+          <li>The use of the subroutine allowed for the physical visualization of the specimen's fracture in the software, with the central elements "turning off" first, faithfully simulating the initiation of ductile fracture that starts from the core of the specimen (where the TF is maximum) and propagates outwards.</li>
+        </ul>
+        <p>This advanced numerical approach confirms that the correct calibration of damage on different specimens is essential for predicting the failure of complex structural components made of MTC-1300T material.</p>
       </div>
-
-      <h3>4.2 Critical Damage Analysis</h3>
-      <p>Bao-Wierzbicki (B-W) damage variable was extracted to identify the Critical Damage ($D_c$).</p>
-      
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (7).png" alt="Triaxiality Node 1" style="width: 100%;">
-          <figcaption>Figure 7: Triaxiality Factor Node 1.</figcaption>
-        </figure>
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (8).png" alt="Triaxiality Comparison" style="width: 100%;">
-          <figcaption>Figure 8: Triaxiality Factor Node to compare.</figcaption>
-        </figure>
-      </div>
-
-      <figure style="text-align: center;">
-        <img src="assets/images/img (9).png" alt="Damage over Increment" style="width: 80%; max-width: 600px; height: auto;">
-        <figcaption>Figure 9: Damage over Increment.</figcaption>
-      </figure>
-
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (10).png" alt="Specimen Length Variation" style="width: 100%;">
-          <figcaption>Figure 10: Variation of specimen length.</figcaption>
-        </figure>
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (11).png" alt="Specimen Width Variation" style="width: 100%;">
-          <figcaption>Figure 11: Variation of specimen width.</figcaption>
-        </figure>
-      </div>
-
-      <figure style="text-align: center;">
-        <img src="assets/images/img (12).png" alt="Critical Damage" style="width: 60%; max-width: 400px; height: auto;">
-        <figcaption>Figure 12: Critical damage value identification ($D_c=0.331$).</figcaption>
-      </figure>
-
-      <hr>
-
-      <h1>AXISYMMETRIC ANALYSIS AND DAMAGE MODELING USING FORTRAN SUBROUTINE</h1>
-      
-      <h2>1. Analysis Objective</h2>
-      <p>Implementation of the B-W damage criterion via an external Fortran subroutine to simulate element deletion upon reaching $D_c$.</p>
-
-      <h2>2. Numerical Modeling (MSC Marc)</h2>
-      <p>Axisymmetric formulation using Quad 10 elements for smooth and notched specimens.</p>
-      
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (13).png" alt="Smooth Specimen" style="width: 100%;">
-          <figcaption>Figure 13: Smooth Specimen modeled on MSC-Marc.</figcaption>
-        </figure>
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (14).png" alt="Notched Specimen" style="width: 100%;">
-          <figcaption>Figure 14: Notched Specimen modeled on MSC-Marc.</figcaption>
-        </figure>
-      </div>
-
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (15).png" alt="Smooth Mesh" style="width: 100%;">
-          <figcaption>Figure 15: Smooth specimen mesh and boundary conditions.</figcaption>
-        </figure>
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (16).png" alt="Notched Mesh" style="width: 100%;">
-          <figcaption>Figure 16: Notched specimen mesh and boundary conditions.</figcaption>
-        </figure>
-      </div>
-
-      <figure style="text-align: center;">
-        <img src="assets/images/img (17).png" alt="Fortran Subroutine" style="width: 80%; max-width: 600px; height: auto;">
-        <figcaption>Figure 17: User Subroutines Implementation.</figcaption>
-      </figure>
-
-      <h2>4. Results Analysis and Node Monitoring</h2>
-      
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (18).png" alt="Damage smooth" style="width: 100%;">
-          <figcaption>Figure 18: Damage smooth specimen.</figcaption>
-        </figure>
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (19).png" alt="Damage notched" style="width: 100%;">
-          <figcaption>Figure 19: Damage notched specimen.</figcaption>
-        </figure>
-      </div>
-
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (20).png" alt="Damage per increment smooth" style="width: 100%;">
-          <figcaption>Figure 20: Damage per increment smooth specimen.</figcaption>
-        </figure>
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (21).png" alt="Damage per increment notched" style="width: 100%;">
-          <figcaption>Figure 21: Damage per increment notched specimen.</figcaption>
-        </figure>
-      </div>
-
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (22).png" alt="Strain increment smooth" style="width: 100%;">
-          <figcaption>Figure 22: Total equivalent plastic strain smooth specimen.</figcaption>
-        </figure>
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (23).png" alt="Strain increment notched" style="width: 100%;">
-          <figcaption>Figure 23: Total equivalent plastic strain notched specimen.</figcaption>
-        </figure>
-      </div>
-
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (24).png" alt="Triaxiality smooth" style="width: 100%;">
-          <figcaption>Figure 24: Triaxiality factor smooth specimen.</figcaption>
-        </figure>
-        <figure style="text-align: center; width: 45%;">
-          <img src="assets/images/img (25).png" alt="Triaxiality notched" style="width: 100%;">
-          <figcaption>Figure 25: Triaxiality factor notched specimen.</figcaption>
-        </figure>
-      </div>
-
-      <figure style="text-align: center;">
-        <img src="assets/images/img (26).png" alt="True curves area" style="width: 80%; max-width: 600px; height: auto;">
-        <figcaption>Figure 26: True curves area based comparison.</figcaption>
-      </figure>
-
-      <h2>5. Smooth vs Notched Comparison and Conclusions</h2>
-      <p>The Notched specimen accelerations damage accumulation due to higher triaxiality. The Fortran subroutine allowed for physical visualization of crack initiation starting from the core.</p>
     `
   }
 ];
