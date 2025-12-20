@@ -90,11 +90,21 @@ const projectsData = [
     thumbnail: "assets/images/thumbnail_CCUS.jpg", 
     shortDescription: "In-depth technical report, awarded Best Thesis by the Order of Engineers of Catania.",
     fullContent: `
+      <figure>
+        <img src="assets/images/thumbnail_CCUS.jpg" alt="CCUS Thesis Project" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <figcaption>Carbon Capture, Storage, And Utilization (CCUS) Overview</figcaption>
+      </figure>
+
       <h2>The Role of CCS in the Ecological Transition</h2>
       <p>The 20th century saw rapid industrial development and incredible technological innovation, but also caused significant environmental degradation. Climate change has emerged as one of the most serious global problems of our time. In this context, this thesis examines Carbon Capture, Storage, and Utilization (CCS), which is configured as a possible solution to reduce the impact of industrial activities on climate change, particularly those related to energy production.</p>
       
       <h3>CCS as a Bridge Technology</h3>
       <p>Although the long-term solution for reducing greenhouse gas emissions consists of decoupling energy production from CO2 release, it is unlikely that alternative energy sources can completely replace fossil fuels in the short term. Therefore, CCS technology represents an effective measure to mitigate carbon dioxide emissions, until renewable energy sources are able to fully meet global energy demand.</p>
+      
+      <figure>
+        <img src="assets/images/CCUS_projects.jpg" alt="CO2 storage projects in Europe" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <figcaption>CO2 storage projects in Europe</figcaption>
+      </figure>
       
       <h3>Decarbonization of "Hard-to-Abate" Sectors</h3>
       <p>It is important to note that, in some industrial sectors defined as "hard to abate," complete decarbonization is an unattainable goal. Processes such as natural gas sweetening and the production of cement, steel, and ammonia are intrinsically dependent on the use of fossil fuels and chemical processes that generate CO2 as a by-product. CCS not only represents a mitigation resource but allows these hard-to-abate sectors to continue operating using fossil fuels more sustainably.</p>
@@ -105,12 +115,27 @@ const projectsData = [
       <h3>Post-Combustion Capture (Downstream)</h3>
       <p>Post-combustion capture occurs downstream of the process and is applied directly to industrial flue gases, making it possible to retain CO2 without requiring significant modifications to existing plants. This feature makes it the most widespread capture technology.</p>
       
+      <figure>
+        <img src="assets/images/postcombustion.png" alt="Post-combustion capture process" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <figcaption>Post-combustion capture process</figcaption>
+      </figure>
+      
       <h3>Pre-Combustion and Oxy-Fuel Combustion (Upstream)</h3>
       <p>These technologies operate upstream of the industrial process, limiting their application mainly to new-generation plants.</p>
-      <ul>
-        <li><strong>Pre-Combustion:</strong> Involves a chemical transformation of the fuel into syngas (hydrogen and carbon monoxide), which is then converted into hydrogen and CO2. The CO2 is separated before the final combustion of the hydrogen.</li>
-        <li><strong>Oxy-Fuel Combustion:</strong> Uses pure oxygen as the oxidizer, avoiding the dilution with nitrogen typical of combustion with air. The fuel combustion produces mainly CO2 and water vapor, which are subsequently separated.</li>
-      </ul>
+      
+      <p><strong>Pre-Combustion:</strong> Involves a chemical transformation of the fuel into syngas (hydrogen and carbon monoxide), which is then converted into hydrogen and CO2. The CO2 is separated before the final combustion of the hydrogen.</p>
+      
+      <figure>
+        <img src="assets/images/precombustion.png" alt="Pre-combustion capture process" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <figcaption>Pre-combustion capture process</figcaption>
+      </figure>
+      
+      <p><strong>Oxy-Fuel Combustion:</strong> Uses pure oxygen as the oxidizer, avoiding the dilution with nitrogen typical of combustion with air. The fuel combustion produces mainly CO2 and water vapor, which are subsequently separated.</p>
+      
+      <figure>
+        <img src="assets/images/oxyfuel.png" alt="Oxy-fuel combustion process" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <figcaption>Oxy-fuel combustion process</figcaption>
+      </figure>
       <p>These approaches are further distinguished by the separation methods adopted: absorption with solvents and the use of membranes are the most widespread for their efficiency and economic convenience.</p>
 
       <h2>CO2 Storage and Utilization (CCUS)</h2>
@@ -118,6 +143,11 @@ const projectsData = [
 
       <h3>Utilization Applications</h3>
       <p>CO2 can be directed towards utilization plants and finds application in various industrial sectors, such as Enhanced Hydrocarbon Recovery (EHR), where it is exploited to increase extraction efficiency, or as an energy vector. It can also be transformed into synthetic fuels, used in the production of polymers, or employed in the food industry.</p>
+
+      <figure>
+        <img src="assets/images/eor.png" alt="Enhanced Oil Recovery process" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <figcaption>Enhanced Oil Recovery (EOR) using CO2</figcaption>
+      </figure>
 
       <h3>Permanent Storage</h3>
       <p>More commonly, the CO2 is conveyed to permanent storage sites, including deep geological formations, depleted oil/gas reservoirs, or saline aquifers. The CO2 remains in a supercritical state, reducing the risk of dispersion.</p>
@@ -131,6 +161,11 @@ const projectsData = [
 
       <h2>CO2 Utilization as an Energy Vector</h2>
       <p>One of the most innovative aspects explored in the thesis work is the potential of CO2 as an energy vector, with specific application to the **“CO2 Battery”** created by Energy Dome. The operating principle is conceptually similar to pumped hydro storage but uses carbon dioxide instead of water.</p>
+      
+      <figure>
+        <img src="assets/images/energydome.jpg" alt="Energy Dome CO2 Battery" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        <figcaption>Energy Dome CO2 Battery system</figcaption>
+      </figure>
       
       <h3>Energy Transition Combined Cycle (ETCC)</h3>
       <p>An interesting application is the coupling with a gas turbine plant in the so-called Energy Transition Combined Cycle (ETCC). The ETCC exploits the CO2 battery to optimize the performance of a gas turbine in a combined cycle, which can operate in three different scenarios:</p>
