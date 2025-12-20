@@ -402,7 +402,7 @@ const projectsData = [
     shortDescription: "FEM Validation, MLR Correction, and B-W Damage Analysis on Smooth and Notched Specimens of MTC-1300T material.",
     fullContent: `
       <div class="engineering-report">
-        <h1>CHARACTERIZATION AND NUMERICAL VALIDATION OF MTC-1300T MATERIAL</h1>
+        <h1>CHARACTERIZATION AND NUMERICAL VALIDATION</h1>
         
         <h2>1. Introduction</h2>
         <p>The objective of this activity is the mechanical characterization of the MTC-1300T material through the integration of experimental image analysis techniques and numerical finite element modeling (FEM). Starting from tensile test data, the real plastic curve was determined, the model was validated on MSC Marc/Mentat software, and the critical damage parameters were identified according to the Bao-Wierzbicki (B-W) model.</p>
