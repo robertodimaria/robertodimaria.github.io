@@ -270,7 +270,7 @@ const projectsData = [
       <h2>Geometry and Domain Setup (SpaceClaim)</h2>
       <p>The fluid domain was created extending approximately 20 chord lengths to ensure undisturbed free-stream boundary conditions. A Body of Influence (BOI) was established around the wing profile for localized mesh refinement.</p>
       <figure>
-        <img src="assets/images/image5.png" alt="Geometry on Ansys Spaceclaim" style="max-width: 100%; display: block; margin: 0 auto;">
+        <img src="assets/images/image5.png" alt="Geometry on Ansys Spaceclaim" style="max-width: 60%; display: block; margin: 0 auto;">
         <figcaption>Figure 5: Geometry on Ansys Spaceclaim.</figcaption>
       </figure>
       <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
@@ -285,7 +285,7 @@ const projectsData = [
         <img src="assets/images/image9.jpeg" alt="Details of the Surface Mesh" style="max-width: 45%; height: auto;">
       </div>
       <figure>
-        <img src="assets/images/image10.png" alt="Boundary Layer" style="max-width: 80%; display: block; margin: 0 auto;">
+        <img src="assets/images/image10.png" alt="Boundary Layer" style="max-width: 60%; display: block; margin: 0 auto;">
         <figcaption>Figure 10: Boundary Layer discretization.</figcaption>
       </figure>
       <p>The volume mesh uses polyhedral cells with an average orthogonal quality of 0.9546, confirming high quality. Total cell count is approximately 757,348.</p>
@@ -335,9 +335,9 @@ const projectsData = [
       <h2>ANSYS Workbench Workflow: Design Points</h2>
       <p>Using Workbench, design points were solved for different angles of attack (3.06°, 15.0°, 25.0°). Pressures calculated by Fluent were imported into a Static Structural block for structural analysis using AL 7075-T6.</p>
       <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image25.png" alt="Design Points" style="max-width: 30%; height: auto;">
-        <img src="assets/images/image26.png" alt="Ansys Workbench Workflow" style="max-width: 30%; height: auto;">
-        <img src="assets/images/image27.png" alt="Ansys Mechanical Mesh" style="max-width: 30%; height: auto;">
+        <img src="assets/images/image25.png" alt="Design Points" style="max-width: 60%; height: auto;">
+        <img src="assets/images/image26.png" alt="Ansys Workbench Workflow" style="max-width: 60%; height: auto;">
+        <img src="assets/images/image27.png" alt="Ansys Mechanical Mesh" style="max-width: 60%; height: auto;">
       </div>
       <figure>
         <img src="assets/images/image28.gif" alt="Wing Deformation" style="max-width: 70%; display: block; margin: 0 auto;">
