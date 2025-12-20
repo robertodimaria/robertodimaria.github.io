@@ -8,20 +8,20 @@ function loadProjects() {
 
     projectsData.forEach(project => {
         const projectCard = document.createElement('div');
-        projectCard.className = 'reveal-up tw-w-[280px] tw-h-[420px] tw-flex max-md:tw-w-full';
+        projectCard.className = 'reveal-up tw-w-[240px] tw-h-[340px] tw-flex max-md:tw-w-full';
         
         projectCard.innerHTML = `
             <a href="project-detail.html?id=${encodeURIComponent(project.id)}" 
-               class="tw-relative tw-p-6 tw-transition-all tw-duration-300 tw-group/card tw-gap-4 tw-flex 
-                      tw-flex-col tw-w-full tw-h-full tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl 
+               class="tw-relative tw-p-4 tw-transition-all tw-duration-300 tw-group/card tw-gap-3 tw-flex 
+                      tw-flex-col tw-w-full tw-h-full tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-2xl 
                       hover:tw-scale-[1.02]">
-                <div class="tw-overflow-hidden tw-w-full tw-min-h-[140px] tw-h-[140px] tw-rounded-xl">
+                <div class="tw-overflow-hidden tw-w-full tw-min-h-[120px] tw-h-[120px] tw-rounded-lg">
                     <img src="${project.thumbnail}" 
                          class="tw-w-full tw-h-full tw-object-cover" 
                          alt="${project.title}">
                 </div>
-                <h2 class="tw-text-2xl max-md:tw-text-xl tw-font-medium">${project.title}</h2>
-                <div class="tw-flex tw-items-center tw-gap-2 tw-mt-auto">
+                <h2 class="tw-text-lg max-md:tw-text-base tw-font-medium tw-line-clamp-3">${project.title}</h2>
+                <div class="tw-flex tw-items-center tw-gap-2 tw-mt-auto tw-text-sm">
                     <span>Learn more</span>
                     <i class="bi bi-arrow-right tw-transform tw-transition-transform tw-duration-300 group-hover/card:tw-translate-x-2"></i>
                 </div>
