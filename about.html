@@ -19,14 +19,78 @@
         />
         
         <style>
-            .about-content {
-                max-width: 1200px;
+            body {
+                padding-top: 80px;
+            }
+            
+            .about-container {
+                display: flex;
+                max-width: 1400px;
                 margin: 0 auto;
+                gap: 2rem;
                 padding: 2rem;
+            }
+            
+            .table-of-contents {
+                position: sticky;
+                top: 100px;
+                width: 250px;
+                height: fit-content;
+                padding: 1.5rem;
+                background-color: #171717;
+                border-radius: 12px;
+                border: 1px solid #2a2a2a;
+                flex-shrink: 0;
+            }
+            
+            .table-of-contents h3 {
+                font-size: 1.25rem;
+                font-weight: 600;
+                color: #ffffff;
+                margin-bottom: 1rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 2px solid #6366f1;
+            }
+            
+            .table-of-contents ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .table-of-contents li {
+                margin-bottom: 0.75rem;
+            }
+            
+            .table-of-contents a {
+                color: #b0b0b0;
+                text-decoration: none;
+                transition: color 0.3s, padding-left 0.3s;
+                display: block;
+                padding: 0.5rem 0;
+                font-size: 0.95rem;
+            }
+            
+            .table-of-contents a:hover {
+                color: #6366f1;
+                padding-left: 0.5rem;
+            }
+            
+            .table-of-contents a.active {
+                color: #6366f1;
+                font-weight: 600;
+                padding-left: 0.5rem;
+                border-left: 3px solid #6366f1;
+            }
+            
+            .about-content {
+                flex: 1;
+                max-width: 1000px;
             }
             
             .about-section {
                 margin-bottom: 4rem;
+                scroll-margin-top: 100px;
             }
             
             .about-section h2 {
@@ -174,8 +238,26 @@
             }
             
             @media (max-width: 768px) {
+                body {
+                    padding-top: 60px;
+                }
+                
+                .about-container {
+                    flex-direction: column;
+                    padding: 1rem;
+                }
+                
+                .table-of-contents {
+                    position: static;
+                    width: 100%;
+                }
+                
                 .about-content {
                     padding: 1rem;
+                }
+                
+                .about-section {
+                    scroll-margin-top: 80px;
                 }
                 
                 .about-section h2 {
@@ -223,20 +305,33 @@
             ></button>
         </header>
 
-        <main class="tw-mt-[100px] tw-mb-[50px] about-content">
-            <!-- Professional Summary -->
-            <section class="about-section">
-                <h2>Professional Summary</h2>
-                <p>
-                    I am a Mechanical Engineering M.S. student with a background in Industrial Engineering, graduating with 110/110 Full Honors. 
-                    I possess proven expertise in CFD and FEA modeling using industry-leading tools like ANSYS Fluent and Mechanical, 
-                    supported by a comprehensive suite of professional certifications.
-                </p>
-            </section>
+        <main class="tw-mb-[50px]">
+            <div class="about-container">
+                <!-- Table of Contents -->
+                <nav class="table-of-contents">
+                    <h3>Contents</h3>
+                    <ul id="toc-list">
+                        <li><a href="#professional-summary">Professional Summary</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#international-experience">International Academic Experience</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="about-content">
+                    <!-- Professional Summary -->
+                    <section class="about-section" id="professional-summary">
+                        <h2>Professional Summary</h2>
+                        <p>
+                            I am a Mechanical Engineering M.S. student with a background in Industrial Engineering, graduating with 110/110 Full Honors. 
+                            I possess proven expertise in CFD and FEA modeling using industry-leading tools like ANSYS Fluent and Mechanical, 
+                            supported by a comprehensive suite of professional certifications.
+                        </p>
+                    </section>
 
-            <!-- Licenses & Certifications -->
-            <section class="about-section">
-                <h2>Licenses & Certifications</h2>
+                    <!-- Licenses & Certifications -->
+                    <section class="about-section" id="certifications">
+                        <h2>Licenses & Certifications</h2>
                 
                 <!-- DataCamp Certification -->
                 <div class="certification-card">
@@ -428,11 +523,11 @@
                         </div>
                     </div>
                 </div>
-            </section>
+                    </section>
 
-            <!-- Education -->
-            <section class="about-section">
-                <h2>Education</h2>
+                    <!-- Education -->
+                    <section class="about-section" id="education">
+                        <h2>Education</h2>
                 
                 <div class="education-item">
                     <h3>UNIVERSITÀ DEGLI STUDI DI CATANIA | CATANIA, ITALY</h3>
@@ -448,11 +543,11 @@
                     <p><strong>Final Degree Mark:</strong> 110/110 (Full Honors)</p>
                     <p><strong>Thesis:</strong> CO2 Recovery – Awarded Best Thesis by the Order of Engineers of Catania.</p>
                 </div>
-            </section>
+                    </section>
 
-            <!-- International Academic Experience -->
-            <section class="about-section">
-                <h2>International Academic Experience</h2>
+                    <!-- International Academic Experience -->
+                    <section class="about-section" id="international-experience">
+                        <h2>International Academic Experience</h2>
                 
                 <div class="education-item">
                     <h3>DALARNA UNIVERSITY | DALARNA, SWEDEN | 2025</h3>
@@ -460,7 +555,9 @@
                     <p>• Selected to participate in an intensive, international program focused on the integration of renewable energy and efficiency within urban environments.</p>
                     <p>• Collaborated with a diverse team of European students to analyze strategies for creating sustainable, energy-positive districts.</p>
                 </div>
-            </section>
+                    </section>
+                </div>
+            </div>
         </main>
 
         <footer
@@ -476,5 +573,51 @@
         </footer>
 
         <script src="./utils.js"></script>
+        <script>
+            // Scroll spy for table of contents
+            const sections = document.querySelectorAll('.about-section');
+            const tocLinks = document.querySelectorAll('.table-of-contents a');
+            
+            function updateActiveLink() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop - 150) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                tocLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+            
+            // Update active link on scroll
+            window.addEventListener('scroll', updateActiveLink);
+            
+            // Update active link on page load
+            updateActiveLink();
+            
+            // Smooth scroll for TOC links
+            tocLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        const offsetTop = targetSection.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
