@@ -29,7 +29,6 @@
                 font-size: 2.5rem;
                 font-weight: 600;
                 margin-bottom: 2rem;
-                color: #ffffff;
             }
             
             .project-content h2 {
@@ -37,8 +36,6 @@
                 font-weight: 600;
                 margin-top: 3rem;
                 margin-bottom: 1.5rem;
-                color: #ffffff;
-                border-bottom: 2px solid #3a3a3a;
                 padding-bottom: 0.5rem;
             }
             
@@ -47,7 +44,6 @@
                 font-weight: 600;
                 margin-top: 2rem;
                 margin-bottom: 1rem;
-                color: #e0e0e0;
             }
             
             .project-content h4 {
@@ -55,13 +51,11 @@
                 font-weight: 600;
                 margin-top: 1.5rem;
                 margin-bottom: 0.75rem;
-                color: #e0e0e0;
             }
             
             .project-content p {
                 line-height: 1.8;
                 margin-bottom: 1.5rem;
-                color: #b0b0b0;
             }
             
             .project-content ul,
@@ -69,7 +63,6 @@
                 line-height: 1.8;
                 margin-bottom: 1.5rem;
                 padding-left: 2rem;
-                color: #b0b0b0;
             }
             
             .project-content li {
@@ -85,19 +78,78 @@
                 max-width: 100%;
                 height: auto;
                 border-radius: 8px;
-                border: 1px solid #3a3a3a;
             }
             
             .project-content figcaption {
                 margin-top: 1rem;
                 font-size: 0.9rem;
-                color: #888;
                 font-style: italic;
             }
             
             .project-content strong {
-                color: #e0e0e0;
                 font-weight: 600;
+            }
+            
+            /* Light mode styles */
+            .project-content h1,
+            .project-content h2,
+            .project-content h3,
+            .project-content h4 {
+                color: #1a1a1a;
+            }
+            
+            .project-content h2 {
+                border-bottom: 2px solid #e0e0e0;
+            }
+            
+            .project-content p,
+            .project-content ul,
+            .project-content ol,
+            .project-content li {
+                color: #4a4a4a;
+            }
+            
+            .project-content strong {
+                color: #1a1a1a;
+            }
+            
+            .project-content figcaption {
+                color: #666;
+            }
+            
+            .project-content figure img {
+                border: 1px solid #e0e0e0;
+            }
+            
+            /* Dark mode overrides */
+            .dark .project-content h1,
+            .dark .project-content h2,
+            .dark .project-content h3,
+            .dark .project-content h4 {
+                color: #ffffff;
+            }
+            
+            .dark .project-content h2 {
+                border-bottom: 2px solid #3a3a3a;
+            }
+            
+            .dark .project-content p,
+            .dark .project-content ul,
+            .dark .project-content ol,
+            .dark .project-content li {
+                color: #ffffff;
+            }
+            
+            .dark .project-content strong {
+                color: #ffffff;
+            }
+            
+            .dark .project-content figcaption {
+                color: #cccccc;
+            }
+            
+            .dark .project-content figure img {
+                border: 1px solid #3a3a3a;
             }
             
             .back-button {

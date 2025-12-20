@@ -8,7 +8,7 @@ function loadProjects() {
 
     projectsData.forEach(project => {
         const projectCard = document.createElement('div');
-        projectCard.className = 'reveal-up tw-w-[350px] tw-h-[540px] tw-flex max-md:tw-w-full';
+        projectCard.className = 'reveal-up tw-w-[320px] tw-h-[500px] tw-flex max-md:tw-w-full';
         
         projectCard.innerHTML = `
             <a href="project-detail.html?id=${encodeURIComponent(project.id)}" 
