@@ -122,18 +122,15 @@ const projectsData = [
       
       <h3>Pre-Combustion and Oxy-Fuel Combustion (Upstream)</h3>
       <p>These technologies operate upstream of the industrial process, limiting their application mainly to new-generation plants.</p>
-      <ul>
-        <li><strong>Pre-Combustion:</strong> Involves a chemical transformation of the fuel into syngas (hydrogen and carbon monoxide), which is then converted into hydrogen and CO2. The CO2 is separated before the final combustion of the hydrogen.</li>
-      </ul>
+      
+      <p><strong>Pre-Combustion:</strong> Involves a chemical transformation of the fuel into syngas (hydrogen and carbon monoxide), which is then converted into hydrogen and CO2. The CO2 is separated before the final combustion of the hydrogen.</p>
       
       <figure>
         <img src="assets/images/precombustion.png" alt="Pre-combustion capture process" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
         <figcaption>Pre-combustion capture process</figcaption>
       </figure>
       
-      <ul>
-        <li><strong>Oxy-Fuel Combustion:</strong> Uses pure oxygen as the oxidizer, avoiding the dilution with nitrogen typical of combustion with air. The fuel combustion produces mainly CO2 and water vapor, which are subsequently separated.</li>
-      </ul>
+      <p><strong>Oxy-Fuel Combustion:</strong> Uses pure oxygen as the oxidizer, avoiding the dilution with nitrogen typical of combustion with air. The fuel combustion produces mainly CO2 and water vapor, which are subsequently separated.</p>
       
       <figure>
         <img src="assets/images/oxyfuel.png" alt="Oxy-fuel combustion process" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
