@@ -19,6 +19,14 @@
         />
         
         <!-- MathJax for LaTeX rendering -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+                }
+            };
+        </script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         
         <style>
@@ -337,6 +345,19 @@
                 detailDiv.innerHTML = '';
                 detailDiv.appendChild(titleElement);
                 detailDiv.appendChild(contentDiv);
+                
+                // Trigger MathJax to process the newly added content
+                // Wait for MathJax to be ready before typesetting
+                if (window.MathJax && MathJax.typesetPromise) {
+                    MathJax.typesetPromise([detailDiv]).catch((err) => console.log('MathJax typeset error:', err));
+                } else {
+                    // If MathJax isn't loaded yet, wait for it
+                    window.addEventListener('load', function() {
+                        if (window.MathJax && MathJax.typesetPromise) {
+                            MathJax.typesetPromise([detailDiv]).catch((err) => console.log('MathJax typeset error:', err));
+                        }
+                    });
+                }
             } else {
                 detailDiv.innerHTML = `
                     <h1>Project Not Found</h1>
