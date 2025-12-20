@@ -308,9 +308,9 @@ const projectsData = [
         <img src="assets/images/image15.png" alt="Conditions Visualizations" style="max-width: 70%; height: auto;">
       </div>
       <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image16.png" alt="Scaled Residuals" style="max-width: 60%; height: auto;">
-        <img src="assets/images/image17.png" alt="Lift and Drag Plots" style="max-width: 60%; height: auto;">
-        <img src="assets/images/image18.png" alt="Comparison of results from NASA" style="max-width: 60%; height: auto;">
+        <img src="assets/images/image16.png" alt="Scaled Residuals" style="max-width: 70%; height: auto;">
+        <img src="assets/images/image17.png" alt="Lift and Drag Plots" style="max-width: 70%; height: auto;">
+        <img src="assets/images/image18.png" alt="Comparison of results from NASA" style="max-width: 70%; height: auto;">
       </div>
 
       <h2>Post Processing and Results Analysis</h2>
