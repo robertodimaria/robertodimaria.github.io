@@ -260,11 +260,18 @@ const projectsData = [
       </ul>
 
       <h2>Flow Conditions and Wing Geometry</h2>
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image2.png" alt="Flow parameters" style="max-width: 30%; height: auto;">
-        <img src="assets/images/image3.png" alt="Geometrical properties" style="max-width: 30%; height: auto;">
-        <img src="assets/images/image4.png" alt="Onera M6 Geometrical properties" style="max-width: 30%; height: auto;">
-      </div>
+      <figure>
+        <img src="assets/images/image2.png" alt="Flow parameters" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 2: Flow parameters.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/image3.png" alt="Geometrical properties" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 3: Geometrical properties.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/image4.png" alt="Onera M6 Geometrical properties" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 4: Onera M6 Geometrical properties.</figcaption>
+      </figure>
 
       <h2>Geometry and Domain Setup (SpaceClaim)</h2>
       <p>A fluid domain extending approximately 20 chord lengths was created to ensure undisturbed free-stream boundary conditions. A Body of Influence (BOI) was established around the wing profile for localized mesh refinement.</p>
@@ -272,26 +279,38 @@ const projectsData = [
         <img src="assets/images/image5.png" alt="Geometry on Ansys Spaceclaim" style="max-width: 100%; display: block; margin: 0 auto;">
         <figcaption>Figure 5: Geometry on Ansys Spaceclaim.</figcaption>
       </figure>
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image6.png" alt="Fluid domain" style="max-width: 45%;">
-        <img src="assets/images/image7.png" alt="Body of Influence" style="max-width: 45%;">
-      </div>
+      <figure>
+        <img src="assets/images/image6.png" alt="Fluid domain" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 6: Fluid domain.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/image7.png" alt="Body of Influence" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 7: Body of Influence.</figcaption>
+      </figure>
 
       <h2>Mesh Generation</h2>
       <p>Local refinements were applied to critical regions: Leading/Trailing Edges (0.001 m) and Wing Faces (0.003 m). To accurately predict flow separation and aerodynamic forces, a 15-layer Smooth Transition boundary layer was utilized.</p>
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image8.png" alt="Surface Mesh" style="max-width: 45%;">
-        <img src="assets/images/image9.jpeg" alt="Details of the Surface Mesh" style="max-width: 45%;">
-      </div>
+      <figure>
+        <img src="assets/images/image8.png" alt="Surface Mesh" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 8: Surface Mesh.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/image9.jpeg" alt="Details of the Surface Mesh" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 9: Details of the Surface Mesh.</figcaption>
+      </figure>
       <figure>
         <img src="assets/images/image10.png" alt="Boundary Layer" style="max-width: 80%; display: block; margin: 0 auto;">
         <figcaption>Figure 10: Boundary Layer discretization.</figcaption>
       </figure>
       <p>The volume mesh utilizes polyhedral cells with an average orthogonal quality of 0.9546, indicating high mesh quality.</p>
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image11.png" alt="Volume Mesh" style="max-width: 45%;">
-        <img src="assets/images/image12.png" alt="Mesh Properties" style="max-width: 45%;">
-      </div>
+      <figure>
+        <img src="assets/images/image11.png" alt="Volume Mesh" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 11: Volume Mesh.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/image12.png" alt="Mesh Properties" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 12: Mesh Properties.</figcaption>
+      </figure>
 
       <h2>Mathematical and Turbulence Model</h2>
       <p>The simulation is governed by Continuity, Energy, and RANS equations. For turbulence modeling, the <strong>SST k-omega model</strong> was used for superior accuracy in predicting separation.</p>
@@ -302,42 +321,72 @@ const projectsData = [
 
       <h2>Numerical Solution Setup</h2>
       <p>For the Inlet, Outlet, and Far side, the <strong>pressure far-field</strong> condition was used. The Coupled solver was used with a convergence criterion of 10e-3. Residuals converged after 193 iterations.</p>
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image14.png" alt="Boundary conditions overview" style="max-width: 45%;">
-        <img src="assets/images/image15.png" alt="Conditions Visualizations" style="max-width: 45%;">
-      </div>
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image16.png" alt="Scaled Residuals" style="max-width: 30%;">
-        <img src="assets/images/image17.png" alt="Lift and Drag Plots" style="max-width: 30%;">
-        <img src="assets/images/image18.png" alt="Comparison of results from NASA" style="max-width: 30%;">
-      </div>
+      <figure>
+        <img src="assets/images/image14.png" alt="Boundary conditions overview" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 14: Boundary conditions overview.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/image15.png" alt="Conditions Visualizations" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 15: Conditions Visualizations.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/image16.png" alt="Scaled Residuals" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 16: Scaled Residuals.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/image17.png" alt="Lift and Drag Plots" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 17: Lift and Drag Plots.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/image18.png" alt="Comparison of results from NASA" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 18: Comparison of results from NASA.</figcaption>
+      </figure>
 
       <h2>Post Processing and Results Analysis</h2>
       <p>The Mach Number and Pressure Coefficient contours show excellent qualitative agreement with NASA reference simulations.</p>
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image19.png" alt="Mach Number Contours" style="max-width: 45%;">
-        <img src="assets/images/image20.png" alt="Pressure Coefficient Contours" style="max-width: 45%;">
-      </div>
+      <figure>
+        <img src="assets/images/image19.png" alt="Mach Number Contours" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 19: Mach Number Contours.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/image20.png" alt="Pressure Coefficient Contours" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 20: Pressure Coefficient Contours.</figcaption>
+      </figure>
       <h3>Shock Waves and Separation</h3>
       <p>In the transonic regime, a clear shock wave is identified by a sharp velocity reduction and pressure increase, leading to fluid vein separation evidenced by boundary layer thickening.</p>
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image21.png" alt="Shock Wave" style="max-width: 45%;">
-        <img src="assets/images/image22.png" alt="Flow separation" style="max-width: 45%;">
-      </div>
+      <figure>
+        <img src="assets/images/image21.png" alt="Shock Wave" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 21: Shock Wave.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/image22.png" alt="Flow separation" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 22: Flow separation.</figcaption>
+      </figure>
       <h3>Vortex Dynamics</h3>
       <p>Trailing edge and lift-induced vortices are visible at the wing tips due to the high and low-pressure interaction.</p>
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image23.png" alt="Trailing Edge Vortex" style="max-width: 45%;">
-        <img src="assets/images/image24.gif" alt="Vortex animation" style="max-width: 45%;">
-      </div>
+      <figure>
+        <img src="assets/images/image23.png" alt="Trailing Edge Vortex" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 23: Trailing Edge Vortex.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/image24.gif" alt="Vortex animation" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 24: Vortex animation.</figcaption>
+      </figure>
 
       <h2>ANSYS Workbench Workflow: Design Points</h2>
       <p>Integration with Static Structural analysis allowed for evaluating wing deformation under aerodynamic loads for different Angles of Attack (AoA).</p>
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 10px; margin: 20px 0;">
-        <img src="assets/images/image25.png" alt="Design Points" style="max-width: 30%;">
-        <img src="assets/images/image26.png" alt="Ansys Workbench Workflow" style="max-width: 30%;">
-        <img src="assets/images/image27.png" alt="Ansys Mechanical Mesh" style="max-width: 30%;">
-      </div>
+      <figure>
+        <img src="assets/images/image25.png" alt="Design Points" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 25: Design Points.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/image26.png" alt="Ansys Workbench Workflow" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 26: Ansys Workbench Workflow.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/image27.png" alt="Ansys Mechanical Mesh" style="max-width: 100%; display: block; margin: 0 auto;">
+        <figcaption>Figure 27: Ansys Mechanical Mesh.</figcaption>
+      </figure>
       <figure>
         <img src="assets/images/image28.gif" alt="Wing Deformation" style="max-width: 70%; display: block; margin: 0 auto;">
         <figcaption>Figure 28: Structural deformation analysis using AL 7075-T6.</figcaption>
