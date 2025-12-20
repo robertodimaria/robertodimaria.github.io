@@ -38,11 +38,10 @@ const projectsData = [
       <p>These results confirm the growing potential of additive manufacturing to produce complex RF structures and modify base material dielectric properties through filler integration, achieving superior performance in a significantly lighter and smaller package.</p>
 
       <h2>6. References</h2>
-      <p>[1] Thi Quynh Van Hoang, Matthieu Bertrand, Erika Vandelle, Brigitte Loiseaux. Low-Profile Highly Directive 2D-Beam-Steering Antenna in Ka-band with 3D-printed All-dielectric Sub-wavelength Deflectors. 2022 52nd European Microwave Conference (EuMC), Sep 2022, Milan, Italy. ⟨10.23919/EuMC54642.2022.9924439⟩. ⟨hal-03839508v2⟩
-[2] High Permittivity, Low Loss, and Printable Thermoplastic Composite Material for RF and Microwave Applications
-[3] https://zetamix.fr/en/produit/zetamix-%C9%9B-filament/ (data sheet)
-[4] R. Czarny et al., "High Permittivity, Low Loss, and Printable Thermoplastic Composite Material for RF and Microwave Applications," 2018 IEEE Conference on Antenna Measurements & Applications (CAMA), V�sterås, Sweden, 2018, pp. 1-4, doi: 10.1109/CAMA.2018.8530660.
-</p>
+      <p>[1] Thi Quynh Van Hoang, Matthieu Bertrand, Erika Vandelle, Brigitte Loiseaux. Low-Profile Highly Directive 2D-Beam-Steering Antenna in Ka-band with 3D-printed All-dielectric Sub-wavelength Deflectors. 2022 52nd European Microwave Conference (EuMC), Sep 2022, Milan, Italy.</p>
+      <p>[2] High Permittivity, Low Loss, and Printable Thermoplastic Composite Material for RF and Microwave Applications</p>
+      <p>[3] https://zetamix.fr/en/produit/zetamix-%C9%9B-filament/ (data sheet)</p>
+      <p>[4] R. Czarny et al., "High Permittivity, Low Loss, and Printable Thermoplastic Composite Material for RF and Microwave Applications," 2018 IEEE Conference on Antenna Measurements & Applications (CAMA), Sweden, 2018, pp. 1-4, doi: 10.1109/CAMA.2018.8530660.</p>
 
       <h2>7. Appendix</h2>
       <p>The following figures detail the material selection process and simulation results:</p>
@@ -109,8 +108,8 @@ const projectsData = [
       <h3>Pre-Combustion and Oxy-Fuel Combustion (Upstream)</h3>
       <p>These technologies operate upstream of the industrial process, limiting their application mainly to new-generation plants.</p>
       <ul>
-        <li><strong>Pre-Combustion:</strong> Involves a chemical transformation of the fuel into syngas (hydrogen and carbon monoxide), which is then converted into hydrogen and $\text{CO}_2$. The $\text{CO}_2$ is separated before the final combustion of the hydrogen.</li>
-        <li><strong>Oxy-Fuel Combustion:</strong> Uses pure oxygen as the oxidizer, avoiding the dilution with nitrogen typical of combustion with air. The fuel combustion produces mainly $\text{CO}_2$ and water vapor, which are subsequently separated.</li>
+        <li><strong>Pre-Combustion:</strong> Involves a chemical transformation of the fuel into syngas (hydrogen and carbon monoxide), which is then converted into hydrogen and CO2. The CO2 is separated before the final combustion of the hydrogen.</li>
+        <li><strong>Oxy-Fuel Combustion:</strong> Uses pure oxygen as the oxidizer, avoiding the dilution with nitrogen typical of combustion with air. The fuel combustion produces mainly CO2 and water vapor, which are subsequently separated.</li>
       </ul>
       <p>These approaches are further distinguished by the separation methods adopted: absorption with solvents and the use of membranes are the most widespread for their efficiency and economic convenience.</p>
 
@@ -121,7 +120,7 @@ const projectsData = [
       <p>CO2 can be directed towards utilization plants and finds application in various industrial sectors, such as Enhanced Hydrocarbon Recovery (EHR), where it is exploited to increase extraction efficiency, or as an energy vector. It can also be transformed into synthetic fuels, used in the production of polymers, or employed in the food industry.</p>
 
       <h3>Permanent Storage</h3>
-      <p>More commonly, the CO2 is conveyed to permanent storage sites, including deep geological formations, depleted oil/gas reservoirs, or saline aquifers. The $\text{CO}_2$ remains in a supercritical state, reducing the risk of dispersion.</p>
+      <p>More commonly, the CO2 is conveyed to permanent storage sites, including deep geological formations, depleted oil/gas reservoirs, or saline aquifers. The CO2 remains in a supercritical state, reducing the risk of dispersion.</p>
       
       <h4>Trapping Mechanisms</h4>
       <p>The analysis of storage sites focuses on physical and chemical trapping dynamics:</p>
@@ -134,7 +133,7 @@ const projectsData = [
       <p>One of the most innovative aspects explored in the thesis work is the potential of CO2 as an energy vector, with specific application to the **“CO2 Battery”** created by Energy Dome. The operating principle is conceptually similar to pumped hydro storage but uses carbon dioxide instead of water.</p>
       
       <h3>Energy Transition Combined Cycle (ETCC)</h3>
-      <p>An interesting application is the coupling with a gas turbine plant in the so-called Energy Transition Combined Cycle (ETCC). The ETCC exploits the $\text{CO}_2$ battery to optimize the performance of a gas turbine in a combined cycle, which can operate in three different scenarios:</p>
+      <p>An interesting application is the coupling with a gas turbine plant in the so-called Energy Transition Combined Cycle (ETCC). The ETCC exploits the CO2 battery to optimize the performance of a gas turbine in a combined cycle, which can operate in three different scenarios:</p>
       <ul>
         <li><strong>Charge Mode:</strong> CO2 is compressed and liquefied (stored).</li>
         <li><strong>Boost Mode:</strong> Exhaust gases from the gas turbine are recovered, heating the gaseous CO2 from the Dome, which is expanded in the turbine.</li>
