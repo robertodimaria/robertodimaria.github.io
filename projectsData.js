@@ -299,7 +299,7 @@ const projectsData = [
           <figcaption>Figure 11 2D packing in Netfabb</figcaption>
         </figure>
         <figure style="text-align: center; max-width: 45%;">
-          <img src="assets/images/laser.gif" alt="Toolpath visualization" style="width: 100%; height: auto;">
+          <img src="assets/images/Laser.gif" alt="Toolpath visualization" style="width: 100%; height: auto;">
           <figcaption>Figure 12 Toolpath visualization</figcaption>
         </figure>
       </div>
@@ -311,7 +311,7 @@ const projectsData = [
       <p>The simulation mapped the temperature trends throughout the entire process. Monitoring the thermal gradient is essential for identifying potential "hot spots" or heat accumulation zones, especially given the high energy input of the quad-laser system.</p>
 
       <figure style="text-align: center; margin: 30px auto;">
-        <img src="assets/images/temperature.gif" alt="Temperature Trend" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+        <img src="assets/images/Temperature.gif" alt="Temperature Trend" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
         <figcaption>Figure 13 Temperature Trend during the Build (8x Speed)</figcaption>
       </figure>
       <p>This visualization shows the thermal management of the EOS M400-4 system as it progresses upward, highlighting how the heat is distributed across the optimized geometry.</p>
@@ -324,7 +324,7 @@ const projectsData = [
       </ul>
 
       <figure style="text-align: center; margin: 30px auto;">
-        <img src="assets/images/vonmises.gif" alt="Von Mises Stresses" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+        <img src="assets/images/VonMises.gif" alt="Von Mises Stresses" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
         <figcaption>Figure 14 Evolution of Von Mises Stresses (8x Speed)</figcaption>
       </figure>
       <p>The video illustrates the accumulation of mechanical tensions; the results validate the necessity of the post-build stress-relief heat treatment already accounted for in the economic analysis in Section 5.</p>
