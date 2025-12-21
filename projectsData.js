@@ -283,7 +283,7 @@ const projectsData = [
       
       <figure style="text-align: center; margin: 30px auto;">
         <img src="assets/images/fcocnetfabb.png" alt="FCOC mesh in Netfabb" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
-        <figcaption>Figura 10 FCOC mesh in Netfabb</figcaption>
+        <figcaption>Figure 10 FCOC mesh in Netfabb</figcaption>
       </figure>
 
       <h3>7.1 Analysis of Positioning and Support Strategy</h3>
@@ -296,11 +296,11 @@ const projectsData = [
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 30px 0;">
         <figure style="text-align: center; max-width: 45%;">
           <img src="assets/images/2dpacking.png" alt="2D packing in Netfabb" style="width: 100%; height: auto;">
-          <figcaption>Figura 11 2D packing in Netfabb</figcaption>
+          <figcaption>Figure 11 2D packing in Netfabb</figcaption>
         </figure>
         <figure style="text-align: center; max-width: 45%;">
           <img src="assets/images/laser.gif" alt="Toolpath visualization" style="width: 100%; height: auto;">
-          <figcaption>Figura 12 Toolpath visualization</figcaption>
+          <figcaption>Figure 12 Toolpath visualization</figcaption>
         </figure>
       </div>
 
@@ -312,7 +312,7 @@ const projectsData = [
 
       <figure style="text-align: center; margin: 30px auto;">
         <img src="assets/images/temperature.gif" alt="Temperature Trend" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
-        <figcaption>Figura 13 Temperature Trend during the Build (8x Speed)</figcaption>
+        <figcaption>Figure 13 Temperature Trend during the Build (8x Speed)</figcaption>
       </figure>
       <p>This visualization shows the thermal management of the EOS M400-4 system as it progresses upward, highlighting how the heat is distributed across the optimized geometry.</p>
 
@@ -325,7 +325,7 @@ const projectsData = [
 
       <figure style="text-align: center; margin: 30px auto;">
         <img src="assets/images/vonmises.gif" alt="Von Mises Stresses" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
-        <figcaption>Figura 14 Evolution of Von Mises Stresses (8x Speed)</figcaption>
+        <figcaption>Figure 14 Evolution of Von Mises Stresses (8x Speed)</figcaption>
       </figure>
       <p>The video illustrates the accumulation of mechanical tensions; the results validate the necessity of the post-build stress-relief heat treatment already accounted for in the economic analysis in Section 5.</p>
     `
