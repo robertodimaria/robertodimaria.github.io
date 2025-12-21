@@ -276,8 +276,61 @@ const projectsData = [
       <h2>6. Strategic Recommendation: AM vs. Conventional</h2>
       <p>Additive Manufacturing (LPBF) is strongly recommended over any conventional production solution. The primary reason is the impossibility of manufacturing the gyroid surface with traditional processes. Processes like machining or traditional casting/molding cannot create complex, interconnected, non-discontinuous lattice. LPBF is therefore the preferred technology that ensures the structural integrity and functional efficiency required by the design.</p>
       <p>While the MoldJet process (and Binder Jetting) boasts better prospects for high-volume mass production, until the achieved structural integrity and density are equivalent to those of laser fusion, LPBF remains the only option that simultaneously solves the geometric constraints and the critical performance requirements of the component.</p>
+
+     
+      <h2>7. Process Validation through Numerical Simulation</h2>
+      <p>To validate the design hypotheses and the production feasibility of the FCOC component, an advanced process simulation was conducted using Autodesk Netfabb software, setting the EOS M400-4 as the reference system. This phase is crucial to confirm that the Design for Additive Manufacturing (DfAM) choices are compatible with the physical realities of laser powder bed fusion.</p>
+      
+      <figure style="text-align: center; margin: 30px auto;">
+        <img src="assets/images/fcocnetfabb.png" alt="FCOC mesh in Netfabb" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+        <figcaption>Figura 10 FCOC mesh in Netfabb</figcaption>
+      </figure>
+
+      <h3>7.1 Analysis of Positioning and Support Strategy</h3>
+      <p>The first step of the simulation involved spatial orientation and support verification using the EOS M400-4 as the target system:</p>
+      <ul>
+        <li><strong>Self-Supporting Verification:</strong> The component was positioned within the build volume to verify the effectiveness of the geometric optimization. The analysis confirmed that the internal gyroid structure is completely self-supporting, eliminating the need for internal supports that would have been mechanically impossible to remove.</li>
+        <li><strong>2D Packing and Productivity:</strong> A 2D Packing test was performed on the large EOS M400-4 platform ($400 \times 400 \text{ mm}$). The spatial analysis confirmed that the number of parts per build (21 units) assumed in the Excel cost model is physically achievable.</li>
+      </ul>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 30px 0;">
+        <figure style="text-align: center; max-width: 45%;">
+          <img src="assets/images/2dpacking.png" alt="2D packing in Netfabb" style="width: 100%; height: auto;">
+          <figcaption>Figura 11 2D packing in Netfabb</figcaption>
+        </figure>
+        <figure style="text-align: center; max-width: 45%;">
+          <img src="assets/images/laser.gif" alt="Toolpath visualization" style="width: 100%; height: auto;">
+          <figcaption>Figura 12 Toolpath visualization</figcaption>
+        </figure>
+      </div>
+
+      <h3>7.2 Thermo-Mechanical Build Analysis</h3>
+      <p>A simulation of the layer-by-layer part growth was executed to evaluate the structural integrity during the laser melting process.</p>
+      
+      <h4>Thermal Monitoring</h4>
+      <p>The simulation mapped the temperature trends throughout the entire process. Monitoring the thermal gradient is essential for identifying potential "hot spots" or heat accumulation zones, especially given the high energy input of the quad-laser system.</p>
+
+      <figure style="text-align: center; margin: 30px auto;">
+        <img src="assets/images/temperature.gif" alt="Temperature Trend" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+        <figcaption>Figura 13 Temperature Trend during the Build (8x Speed)</figcaption>
+      </figure>
+      <p>This visualization shows the thermal management of the EOS M400-4 system as it progresses upward, highlighting how the heat is distributed across the optimized geometry.</p>
+
+      <h4>Evolution of Von Mises Stresses</h4>
+      <p>The mechanical analysis highlights the residual stresses induced by the rapid heating and cooling cycles typical of LPBF.</p>
+      <ul>
+        <li><strong>Stress Distribution:</strong> Stresses are most concentrated in the interface zones with the build plate.</li>
+        <li><strong>Geometric Stability:</strong> The gyroid geometry, thanks to its periodic nature, helps distribute stresses relatively uniformly. The simulation confirms that despite the high productivity of the M400-4, the risk of macroscopic deformations (warping) remains within acceptable tolerances.</li>
+      </ul>
+
+      <figure style="text-align: center; margin: 30px auto;">
+        <img src="assets/images/vonmises.gif" alt="Von Mises Stresses" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+        <figcaption>Figura 14 Evolution of Von Mises Stresses (8x Speed)</figcaption>
+      </figure>
+      <p>The video illustrates the accumulation of mechanical tensions; the results validate the necessity of the post-build stress-relief heat treatment already accounted for in the economic analysis in Section 5.</p>
     `
   },
+
 
  // --- PROJECT 4: ANSYS Fluent Simulation of the ONERA M6 Wing ---
   {
