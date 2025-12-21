@@ -273,7 +273,7 @@ const projectsData = [
       </figure>
 
 
-      <h2>7. Strategic Recommendation: AM vs. Conventional</h2>
+      <h2>6. Strategic Recommendation: AM vs. Conventional</h2>
       <p>Additive Manufacturing (LPBF) is strongly recommended over any conventional production solution. The primary reason is the impossibility of manufacturing the gyroid surface with traditional processes. Processes like machining or traditional casting/molding cannot create complex, interconnected, non-discontinuous lattice. LPBF is therefore the preferred technology that ensures the structural integrity and functional efficiency required by the design.</p>
       <p>While the MoldJet process (and Binder Jetting) boasts better prospects for high-volume mass production, until the achieved structural integrity and density are equivalent to those of laser fusion, LPBF remains the only option that simultaneously solves the geometric constraints and the critical performance requirements of the component.</p>
     `
