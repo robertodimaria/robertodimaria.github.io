@@ -328,6 +328,71 @@ const projectsData = [
         <figcaption>Figure 14 Evolution of Von Mises Stresses (8x Speed)</figcaption>
       </figure>
       <p>The video illustrates the accumulation of mechanical tensions; the results validate the necessity of the post-build stress-relief heat treatment already accounted for in the economic analysis in Section 5.</p>
+    <h2>8. CFD Validation and Performance Analysis</h2>
+      <p>To evaluate the thermal-hydraulic efficiency of the FCOC, a CFD simulation was performed using Ansys Fluent. The objective was to validate the pressure drop ($\Delta P$) and temperature distribution across the complex gyroid architecture.</p>
+
+      <h3>8.1 Meshing Workflow: From nTopology to Fluent</h3>
+      <p>The transition from generative design to simulation required a robust meshing strategy to capture the intricate curvature of the gyroid cells:</p>
+      <ul>
+        <li><strong>FE Mesh Generation:</strong> Utilizing nTopology, the geometry was discretized into a finite element mesh. Specific boundaries for the hot fluid, cold fluid, and the solid HEX core were defined using the FE Mesh block. Inlet and outlet faces were explicitly labeled to ensure seamless recognition within the Fluent environment.</li>
+        <li><strong>Msh Export:</strong> The domains were exported in the .msh format, preserving the boundary face tags required for setting up boundary conditions.</li>
+        <li><strong>Fault-Tolerant Meshing (FTM):</strong> Within Ansys Workbench, the Fluent with Fluent Meshing workflow was utilized. The Fault-Tolerant Meshing approach was selected to handle the high complexity of the gyroid surfaces.</li>
+      </ul>
+
+      <figure style="text-align: center; margin: 30px auto;">
+        <img src="assets/images/hex_workflow.png" alt="Fluent Meshing Workflow" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+        <figcaption>Figure 15 Fluent Meshing Workflow</figcaption>
+      </figure>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 30px 0;">
+        <figure style="text-align: center; max-width: 45%;">
+          <img src="assets/images/hex_surfacemesh.png" alt="Surface Mesh (Hex Core)" style="width: 100%; height: auto;">
+          <figcaption>Figure 16 Surface Mesh (Hex Core)</figcaption>
+        </figure>
+        <figure style="text-align: center; max-width: 45%;">
+          <img src="assets/images/hex_volumemesh.png" alt="Detail of the Volume mesh" style="width: 100%; height: auto;">
+          <figcaption>Figure 17 Detail of the Volume mesh</figcaption>
+        </figure>
+      </div>
+
+      <h3>8.2 Simulation Results and Discussion</h3>
+      <p>The simulation was solved under steady-state conditions to extract the primary performance indicators:</p>
+      
+      <h4>Pressure Drop ($\Delta P$) Analysis</h4>
+      <p>The pressure contours were analyzed for both the hot and cold fluid circuits. The smooth, continuous curvature of the gyroid architecture minimizes flow separation and dead zones, which are typical causes of parasitic pressure losses in traditional heat exchangers.</p>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 30px 0;">
+        <figure style="text-align: center; max-width: 45%;">
+          <img src="assets/images/coldfluidpressure.png" alt="Cold Fluid pressure contour" style="width: 100%; height: auto;">
+          <figcaption>Figure 18 Cold Fluid pressure contour</figcaption>
+        </figure>
+        <figure style="text-align: center; max-width: 45%;">
+          <img src="assets/images/hotfluidpressure.png" alt="Hot Fluid pressure contour" style="width: 100%; height: auto;">
+          <figcaption>Figure 19 Hot Fluid pressure contour</figcaption>
+        </figure>
+      </div>
+
+      <h4>Thermal Distribution</h4>
+      <p>Temperature contours were extracted to visualize the heat exchange efficiency between the two counter-flow circuits. The gradients show a uniform temperature transition along the HEX core, validating the high surface-area-to-volume ratio provided by the TPMS design.</p>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 30px 0;">
+        <figure style="text-align: center; max-width: 45%;">
+          <img src="assets/images/coldfluidtemperature.png" alt="Cold fluid temperature contour" style="width: 100%; height: auto;">
+          <figcaption>Figure 20 Cold fluid temperature contour</figcaption>
+        </figure>
+        <figure style="text-align: center; max-width: 45%;">
+          <img src="assets/images/hotfluidtemperature.png" alt="Hot Fluid temperature contour" style="width: 100%; height: auto;">
+          <figcaption>Figure 21 Hot Fluid temperature contour</figcaption>
+        </figure>
+      </div>
+
+      <h4>Flow Visualization</h4>
+      <p>To further inspect the fluid behavior, velocity streamlines were generated. These streamlines illustrate the "swirling" motion induced by the gyroid cells, which promotes turbulent mixing and significantly enhances the convective heat transfer coefficient without a proportional increase in pumping power.</p>
+
+      <figure style="text-align: center; margin: 30px auto;">
+        <img src="assets/images/hex_streamlines.gif" alt="Velocity streamlines" style="max-width: 80%; height: auto; display: block; margin: 0 auto;">
+        <figcaption>Figure 22 Velocity streamlines</figcaption>
+      </figure>
     `
   },
 
