@@ -213,7 +213,7 @@ const projectsData = [
       <h2>2. Analysis and Selection of Additive Manufacturing Technology</h2>
       <p>Laser Powder Bed Fusion (LPBF) was selected as the preferred technology for the realization of the final component, as it is the most appropriate process for producing complex geometries like the gyroid, ensuring maximum structural density and dimensional precision. The mechanism involves spreading a thin layer of metal powder onto the build platform, followed by a high-power laser beam selectively scanning the part's cross-section, completely melting the powder. This process is repeated layer by layer until the component is complete. LPBF is the only metal AM process capable of achieving densities above 99.5% without the need for post-densification processes, making it ideal for critical applications. The post-process includes component removal from the build plate, cleaning of all residual powders, and, critically, performing stress relief heat treatments.</p>
       <figure>
-        <img src="assets/images/3_hex.jpg" alt="Figure 3. LPBF Process Schematic" style="max-width: 80%; display: block; margin: 0 auto;">
+        <img src="assets/images/3_hex.jpg" alt="Figure 3. LPBF Process Schematic" style="max-width: 60%; display: block; margin: 0 auto;">
         <figcaption>Figure 3. LPBF Process Schematic.</figcaption>
       </figure>
       
@@ -225,7 +225,7 @@ const projectsData = [
       <h4>Binder Jetting (BJ)</h4>
       <p>In Binder Jetting (BJ), a printhead passes over the powder bed, selectively depositing a liquid binder onto the metal powder layers. This technique is valued for its potential scalability and economic advantages resulting from high jetting speed. However, the main difficulty lies in ensuring homogeneous density and constant binder saturation. The "green part" can therefore exhibit differential shrinkage (anisotropic) during the thermal sintering phase. Furthermore, the green parts are intrinsically fragile and vulnerable to damage during the delicate, time-consuming, and labor-intensive part retrieval phase.</p>
       <figure>
-        <img src="assets/images/4_hex.jpg" alt="Figure 4. Binder Jetting process" style="max-width: 80%; display: block; margin: 0 auto;">
+        <img src="assets/images/4_hex.jpg" alt="Figure 4. Binder Jetting process" style="max-width: 60%; display: block; margin: 0 auto;">
         <figcaption>Figure 4. Binder Jetting process.</figcaption>
       </figure>
 
@@ -247,11 +247,11 @@ const projectsData = [
       <h2>4. Material Selection and Thermo-Mechanical Requirements</h2>
       <p>Material selection was based on specific property constraints applied to the Ansys Granta materials database. The constraints required a minimum density of 2700 kg/m³, a Young's modulus of 60 GPa, an elastic limit of 160 MPa, and, critically for the application, a minimum thermal conductivity of 100 W/mK. The materials identified were predominantly Commercial and Specialty Aluminum Alloys, as aluminum is the only material that simultaneously satisfies the need for low density and high thermal conductivity. The proposed alloy offering the best compromise between cost and performance for mass production is AlSi10Mg.</p>
       <figure>
-        <img src="assets/images/6_hex.jpg" alt="Figure 6. Ashby diagram Price per unit volume over Tensile Strength" style="max-width: 80%; display: block; margin: 0 auto;">
+        <img src="assets/images/6_hex.jpg" alt="Figure 6. Ashby diagram Price per unit volume over Tensile Strength" style="max-width: 60%; display: block; margin: 0 auto;">
         <figcaption>Figure 6. Ashby diagram Price per unit volume over Tensile Strength.</figcaption>
       </figure>
       <figure>
-        <img src="assets/images/7_hex.jpg" alt="Figure 7. Ashby diagram Price per unit volume over Thermal Conductivity" style="max-width: 80%; display: block; margin: 0 auto;">
+        <img src="assets/images/7_hex.jpg" alt="Figure 7. Ashby diagram Price per unit volume over Thermal Conductivity" style="max-width: 60%; display: block; margin: 0 auto;">
         <figcaption>Figure 7. Ashby diagram Price per unit volume over Thermal Conductivity.</figcaption>
       </figure>
 
@@ -298,7 +298,7 @@ const projectsData = [
           <img src="assets/images/2dpacking.png" alt="2D packing in Netfabb" style="width: 100%; height: auto;">
           <figcaption>Figure 11 2D packing in Netfabb</figcaption>
         </figure>
-        <figure style="text-align: center; max-width: 45%;">
+        <figure style="text-align: center; max-width: 60%;">
           <img src="assets/images/Laser.gif" alt="Toolpath visualization" style="width: 100%; height: auto;">
           <figcaption>Figure 12 Toolpath visualization</figcaption>
         </figure>
