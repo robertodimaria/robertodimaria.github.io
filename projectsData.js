@@ -787,7 +787,6 @@ const projectsData = [
           <li>In the Notched specimen, the presence of the curvature radius induces a triaxiality factor value that is initially higher than the Smooth one, accelerating the accumulation of damage and leading to a premature fracture in terms of global deformation.</li>
           <li>The use of the subroutine allowed for the physical visualization of the specimen's fracture in the software, with the central elements "turning off" first, faithfully simulating the initiation of ductile fracture that starts from the core of the specimen (where the TF is maximum) and propagates outwards.</li>
         </ul>
-        <p>This advanced numerical approach confirms that the correct calibration of damage on different specimens is essential for predicting the failure of complex structural components made of MTC-1300T material.</p>
       </div>
     `
   }
