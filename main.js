@@ -12,7 +12,7 @@ function loadProjects() {
         
         projectCard.innerHTML = `
             <a href="project-detail.html?id=${encodeURIComponent(project.id)}" 
-               class="tw-relative tw-p-10 tw-transition-all tw-duration-300 tw-group/card tw-gap-5 tw-flex 
+               class="project-card-shell tw-relative tw-p-10 tw-transition-all tw-duration-300 tw-group/card tw-gap-5 tw-flex 
                       tw-flex-col tw-w-full tw-h-full tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl 
                       hover:tw-scale-[1.02]">
                 <div class="tw-overflow-hidden tw-w-full tw-min-h-[180px] tw-h-[180px] tw-rounded-xl">
@@ -44,15 +44,23 @@ if (document.readyState === 'loading') {
  */
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to(".reveal-up", {
-    opacity: 0,
-    y: "100%",
-});
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (reducedMotion) {
+    gsap.set(".reveal-up", { opacity: 1, y: "0%" });
+} else {
+    gsap.to(".reveal-up", {
+        opacity: 0,
+        y: "70%",
+    });
+}
 
 // Reveal section animations
 const sections = gsap.utils.toArray("section");
 
 sections.forEach((sec) => {
+    if (reducedMotion) return;
+
     const revealUptimeline = gsap.timeline({
         paused: true, 
         scrollTrigger: {
@@ -64,8 +72,9 @@ sections.forEach((sec) => {
 
     revealUptimeline.to(sec.querySelectorAll(".reveal-up"), {
         opacity: 1,
-        duration: 0.8,
+        duration: 0.65,
         y: "0%",
+        ease: "power3.out",
         stagger: 0.2,
     });
 });
