@@ -48,19 +48,23 @@
                 width: 250px;
                 height: fit-content;
                 padding: 1.5rem;
-                background-color: #171717;
+                background-color: rgba(255, 255, 255, 0.72);
                 border-radius: 12px;
-                border: 1px solid #2a2a2a;
+                border: 1px solid rgba(15, 23, 42, 0.1);
                 flex-shrink: 0;
+                -webkit-backdrop-filter: blur(20px) saturate(145%);
+                backdrop-filter: blur(20px) saturate(145%);
+                box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1);
             }
             
             .table-of-contents h3 {
                 font-size: 1.25rem;
                 font-weight: 600;
-                color: #ffffff;
+                color: #0f172a;
                 margin-bottom: 1rem;
                 padding-bottom: 0.5rem;
                 border-bottom: 2px solid #6366f1;
+                letter-spacing: -0.01em;
             }
             
             .table-of-contents ul {
@@ -74,7 +78,7 @@
             }
             
             .table-of-contents a {
-                color: #b0b0b0;
+                color: #334155;
                 text-decoration: none;
                 transition: color 0.3s, padding-left 0.3s;
                 display: block;
@@ -107,6 +111,8 @@
                 font-size: 2.5rem;
                 font-weight: 600;
                 margin-bottom: 2rem;
+                letter-spacing: -0.02em;
+                line-height: 1.1;
             }
             
             .project-content h2 {
@@ -115,6 +121,7 @@
                 margin-top: 3rem;
                 margin-bottom: 1.5rem;
                 padding-bottom: 0.5rem;
+                letter-spacing: -0.015em;
             }
             
             .project-content h3 {
@@ -122,6 +129,7 @@
                 font-weight: 600;
                 margin-top: 2rem;
                 margin-bottom: 1rem;
+                letter-spacing: -0.01em;
             }
             
             .project-content h4 {
@@ -129,6 +137,7 @@
                 font-weight: 600;
                 margin-top: 1.5rem;
                 margin-bottom: 0.75rem;
+                letter-spacing: -0.005em;
             }
             
             .project-content p {
@@ -196,7 +205,8 @@
             }
             
             .project-content figure img {
-                border: 1px solid #e0e0e0;
+                border: 1px solid #e2e8f0;
+                box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
             }
             
             /* Dark mode overrides */
@@ -215,7 +225,7 @@
             .tw-dark .project-content ul,
             .tw-dark .project-content ol,
             .tw-dark .project-content li {
-                color: #ffffff;
+                color: #e2e8f0;
             }
             
             .tw-dark .project-content strong {
@@ -227,7 +237,45 @@
             }
             
             .tw-dark .project-content figure img {
-                border: 1px solid #3a3a3a;
+                border: 1px solid rgba(148, 163, 184, 0.25);
+                box-shadow: 0 12px 30px rgba(2, 6, 23, 0.52);
+            }
+
+            .tw-dark .table-of-contents {
+                background-color: rgba(15, 23, 42, 0.62);
+                border-color: rgba(148, 163, 184, 0.24);
+                box-shadow: 0 18px 42px rgba(2, 6, 23, 0.58);
+            }
+
+            .tw-dark .table-of-contents h3 {
+                color: #f8fafc;
+            }
+
+            .tw-dark .table-of-contents a {
+                color: #cbd5e1;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .back-button {
+                    transition-duration: 120ms;
+                }
+
+                .back-button:hover,
+                .back-button:active {
+                    transform: none;
+                }
+            }
+
+            @media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+                .table-of-contents {
+                    -webkit-backdrop-filter: none;
+                    backdrop-filter: none;
+                    background-color: rgba(255, 255, 255, 0.96);
+                }
+
+                .tw-dark .table-of-contents {
+                    background-color: rgba(15, 23, 42, 0.92);
+                }
             }
             
             .back-button {
@@ -239,14 +287,19 @@
                 color: white;
                 border-radius: 0.5rem;
                 text-decoration: none;
-                transition: all 0.3s;
+                transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1), background-color 220ms ease-out, box-shadow 220ms ease-out;
                 margin-top: 4rem;
                 margin-bottom: 2rem;
+                box-shadow: 0 10px 22px rgba(79, 70, 229, 0.24);
             }
             
             .back-button:hover {
                 background-color: #4f46e5;
-                transform: translateX(-5px);
+                transform: translateX(-3px);
+            }
+
+            .back-button:active {
+                transform: scale(0.97);
             }
             
             /* Ensure flex containers with images work responsively */
@@ -322,7 +375,7 @@
     </head>
     <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fcfcfc] tw-text-black dark:tw-bg-black dark:tw-text-white">
         <header
-            class="lg:tw-px-4 tw-max-w-[100vw] tw-max-w-lg:tw-mr-auto max-lg:tw-top-0 tw-fixed tw-top-4 lg:tw-left-1/2 lg:tw--translate-x-1/2 tw-z-20 tw-flex tw-h-[60px] tw-w-full 
+            class="glass-nav lg:tw-px-4 tw-max-w-[100vw] tw-max-w-lg:tw-mr-auto max-lg:tw-top-0 tw-fixed tw-top-4 lg:tw-left-1/2 lg:tw--translate-x-1/2 tw-z-20 tw-flex tw-h-[60px] tw-w-full 
                     tw-text-gray-700 tw-bg-white dark:tw-text-gray-200 dark:tw-bg-[#17181b] tw-px-[3%] tw-rounded-md lg:tw-max-w-5xl tw-shadow-md dark:tw-shadow-gray-700
                     lg:tw-justify-around lg:!tw-backdrop-blur-lg lg:tw-opacity-[0.99]"
         >
@@ -494,6 +547,8 @@
                     // Update active link on page load
                     updateActiveLink();
                     
+                    const useReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
                     // Smooth scroll for TOC links
                     tocLinks.forEach(link => {
                         link.addEventListener('click', (e) => {
@@ -504,7 +559,7 @@
                                 const offsetTop = targetSection.offsetTop - 80;
                                 window.scrollTo({
                                     top: offsetTop,
-                                    behavior: 'smooth'
+                                    behavior: useReducedMotion ? 'auto' : 'smooth'
                                 });
                             }
                         });
