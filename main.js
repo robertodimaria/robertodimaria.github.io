@@ -1,71 +1,119 @@
-// Portfolio main JavaScript
-// Theme and navigation utilities are loaded from utils.js
+import {
+  animateEntranceGroup,
+  attach3DTiltAndSpotlight,
+  attachMagneticPull,
+  markMotionReady,
+  setupHeader,
+  setupParallax,
+  setupScrollReveals
+} from "./utils.js";
 
-// Load projects from projectsData.js
+const THUMBNAIL_DIMENSIONS = {
+  "rf-antenna": { width: 369, height: 285 },
+  "ccsu-thesis": { width: 1598, height: 684 },
+  "gyroid-heatexchanger": { width: 450, height: 337 },
+  "onera-m6-wing": { width: 627, height: 340 },
+  "mtc1300t-damage-modeling": { width: 1061, height: 462 }
+};
+
+// 12-Column Asymmetric Apple Keynote Mosaic pattern (8+4 = 12, 5+7 = 12, 12 flagship panorama)
+const BENTO_MOSAIC_SPANS = [
+  { spanClass: "project-span-8", tiltMax: "7", tiltScale: "1.018" },
+  { spanClass: "project-span-4", tiltMax: "8", tiltScale: "1.02" },
+  { spanClass: "project-span-5", tiltMax: "8", tiltScale: "1.02" },
+  { spanClass: "project-span-7", tiltMax: "7", tiltScale: "1.018" },
+  { spanClass: "project-span-12", tiltMax: "5.5", tiltScale: "1.014" }
+];
+
 function loadProjects() {
-    const projectsGrid = document.getElementById('projects-grid');
-    if (!projectsGrid || !projectsData) return;
+  const projectsGrid = document.getElementById("projects-grid");
+  if (!projectsGrid || typeof projectsData === "undefined" || !Array.isArray(projectsData)) {
+    return;
+  }
 
-    projectsData.forEach(project => {
-        const projectCard = document.createElement('div');
-        projectCard.className = 'reveal-up tw-w-[320px] tw-h-[500px] tw-flex max-md:tw-w-full';
-        
-        projectCard.innerHTML = `
-            <a href="project-detail.html?id=${encodeURIComponent(project.id)}" 
-               class="tw-relative tw-p-10 tw-transition-all tw-duration-300 tw-group/card tw-gap-5 tw-flex 
-                      tw-flex-col tw-w-full tw-h-full tw-bg-[#f6f7fb] dark:tw-bg-[#171717] tw-rounded-3xl 
-                      hover:tw-scale-[1.02]">
-                <div class="tw-overflow-hidden tw-w-full tw-min-h-[180px] tw-h-[180px] tw-rounded-xl">
-                    <img src="${project.thumbnail}" 
-                         class="tw-w-full tw-h-full tw-object-cover" 
-                         alt="${project.title}">
-                </div>
-                <h2 class="tw-text-3xl max-md:tw-text-2xl tw-font-medium">${project.title}</h2>
-                <div class="tw-flex tw-items-center tw-gap-2 tw-mt-auto">
-                    <span>Learn more</span>
-                    <i class="bi bi-arrow-right tw-transform tw-transition-transform tw-duration-300 group-hover/card:tw-translate-x-2"></i>
-                </div>
-            </a>
-        `;
-        
-        projectsGrid.appendChild(projectCard);
-    });
+  projectsGrid.innerHTML = "";
+
+  for (let i = 0; i < projectsData.length; i++) {
+    const project = projectsData[i];
+    const dims = THUMBNAIL_DIMENSIONS[project.id] || { width: 800, height: 450 };
+    const mosaic = BENTO_MOSAIC_SPANS[i % BENTO_MOSAIC_SPANS.length];
+
+    const item = document.createElement("article");
+    item.className = `project-bento-item ${mosaic.spanClass} motion-init`;
+
+    const link = document.createElement("a");
+    link.href = `project-detail.html?id=${encodeURIComponent(project.id)}`;
+    link.className = "bento-card bento-interactive project-bento-link";
+    link.setAttribute("data-tilt-card", "");
+    link.setAttribute("data-tilt-max", mosaic.tiltMax);
+    link.setAttribute("data-tilt-scale", mosaic.tiltScale);
+
+    const mediaWrap = document.createElement("div");
+    mediaWrap.className = "project-media-wrap";
+
+    const img = document.createElement("img");
+    img.src = project.thumbnail;
+    img.alt = project.title;
+    img.width = dims.width;
+    img.height = dims.height;
+    img.loading = "lazy";
+    img.decoding = "async";
+    img.className = "project-media-img";
+    img.setAttribute("data-parallax-img", "");
+    mediaWrap.appendChild(img);
+
+    const body = document.createElement("div");
+    body.className = "project-card-body";
+
+    const title = document.createElement("h3");
+    title.className = "card-title";
+    title.textContent = project.title;
+    body.appendChild(title);
+
+    if (project.shortDescription) {
+      const desc = document.createElement("p");
+      desc.className = "project-card-desc";
+      desc.textContent = project.shortDescription;
+      body.appendChild(desc);
+    }
+
+    const cta = document.createElement("div");
+    cta.className = "project-card-cta";
+
+    const ctaText = document.createElement("span");
+    ctaText.textContent = "Learn more";
+
+    const ctaIcon = document.createElement("i");
+    ctaIcon.className = "bi bi-arrow-right";
+    ctaIcon.setAttribute("aria-hidden", "true");
+
+    cta.appendChild(ctaText);
+    cta.appendChild(ctaIcon);
+    body.appendChild(cta);
+
+    link.appendChild(mediaWrap);
+    link.appendChild(body);
+    item.appendChild(link);
+    projectsGrid.appendChild(item);
+  }
 }
 
-// Load projects when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadProjects);
+function initHomepage() {
+  markMotionReady();
+  setupHeader();
+  loadProjects();
+
+  const heroItems = document.querySelectorAll("#hero-section .motion-init");
+  animateEntranceGroup(heroItems);
+
+  setupScrollReveals(document);
+  attach3DTiltAndSpotlight(document);
+  attachMagneticPull(document);
+  setupParallax(document);
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initHomepage);
 } else {
-    loadProjects();
+  initHomepage();
 }
-
-/**
- * Animations with GSAP
- */
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.to(".reveal-up", {
-    opacity: 0,
-    y: "100%",
-});
-
-// Reveal section animations
-const sections = gsap.utils.toArray("section");
-
-sections.forEach((sec) => {
-    const revealUptimeline = gsap.timeline({
-        paused: true, 
-        scrollTrigger: {
-            trigger: sec,
-            start: "10% 80%",
-            end: "20% 90%",
-        }
-    });
-
-    revealUptimeline.to(sec.querySelectorAll(".reveal-up"), {
-        opacity: 1,
-        duration: 0.8,
-        y: "0%",
-        stagger: 0.2,
-    });
-});
