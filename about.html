@@ -3,11 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#000000" />
         <title>About - Roberto Di Maria</title>
         <meta name="description" content="About Roberto Di Maria - Mechanical Engineering Student" />
         <link rel="shortcut icon" href="./new/assets/logo/logo.png" type="image/x-icon" />
 
-        <link rel="stylesheet" href="new/css/tailwind-build.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+        <link rel="stylesheet" href="new/css/tailwind-build.css" />
         <link rel="stylesheet" href="new/css/index.css" />
 
         <link
@@ -17,300 +22,53 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        
-        <style>
-            body {
-                padding-top: 80px;
-            }
-            
-            .about-container {
-                display: flex;
-                max-width: 1400px;
-                margin: 0 auto;
-                gap: 2rem;
-                padding: 2rem;
-            }
-            
-            .table-of-contents {
-                position: sticky;
-                top: 100px;
-                width: 250px;
-                height: fit-content;
-                padding: 1.5rem;
-                background-color: #171717;
-                border-radius: 12px;
-                border: 1px solid #2a2a2a;
-                flex-shrink: 0;
-            }
-            
-            .table-of-contents h3 {
-                font-size: 1.25rem;
-                font-weight: 600;
-                color: #ffffff;
-                margin-bottom: 1rem;
-                padding-bottom: 0.5rem;
-                border-bottom: 2px solid #6366f1;
-            }
-            
-            .table-of-contents ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-            
-            .table-of-contents li {
-                margin-bottom: 0.75rem;
-            }
-            
-            .table-of-contents a {
-                color: #b0b0b0;
-                text-decoration: none;
-                transition: color 0.3s, padding-left 0.3s;
-                display: block;
-                padding: 0.5rem 0;
-                font-size: 0.95rem;
-            }
-            
-            .table-of-contents a:hover {
-                color: #6366f1;
-                padding-left: 0.5rem;
-            }
-            
-            .table-of-contents a.active {
-                color: #6366f1;
-                font-weight: 600;
-                padding-left: 0.5rem;
-                border-left: 3px solid #6366f1;
-            }
-            
-            .about-content {
-                flex: 1;
-                max-width: 1000px;
-            }
-            
-            .about-section {
-                margin-bottom: 4rem;
-                scroll-margin-top: 100px;
-            }
-            
-            .about-section h2 {
-                font-size: 2.5rem;
-                font-weight: 600;
-                margin-bottom: 2rem;
-                color: #ffffff;
-                border-bottom: 3px solid #6366f1;
-                padding-bottom: 0.75rem;
-            }
-            
-            .about-section h3 {
-                font-size: 1.75rem;
-                font-weight: 600;
-                margin-top: 1.5rem;
-                margin-bottom: 1rem;
-                color: #e0e0e0;
-            }
-            
-            .about-section p {
-                line-height: 1.8;
-                margin-bottom: 1.5rem;
-                color: #b0b0b0;
-                font-size: 1.1rem;
-            }
-            
-            .certification-card {
-                background-color: #171717;
-                border-radius: 12px;
-                padding: 1.5rem;
-                margin-bottom: 1.5rem;
-                border: 1px solid #2a2a2a;
-                transition: all 0.3s;
-            }
-            
-            .certification-card:hover {
-                border-color: #6366f1;
-                box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
-            }
-            
-            .cert-header {
-                display: flex;
-                align-items: flex-start;
-                gap: 1rem;
-                margin-bottom: 1rem;
-            }
-            
-            .cert-logo {
-                width: 48px;
-                height: 48px;
-                flex-shrink: 0;
-            }
-            
-            .cert-info {
-                flex: 1;
-            }
-            
-            .cert-title {
-                font-size: 1.25rem;
-                font-weight: 600;
-                color: #ffffff;
-                margin-bottom: 0.25rem;
-            }
-            
-            .cert-issuer {
-                font-size: 1rem;
-                color: #b0b0b0;
-                margin-bottom: 0.5rem;
-            }
-            
-            .cert-date {
-                font-size: 0.9rem;
-                color: #888888;
-                margin-bottom: 0.5rem;
-            }
-            
-            .cert-id {
-                font-size: 0.85rem;
-                color: #777777;
-                margin-bottom: 1rem;
-            }
-            
-            .cert-skills {
-                margin-top: 1rem;
-                padding-top: 1rem;
-                border-top: 1px solid #2a2a2a;
-            }
-            
-            .cert-skills-label {
-                font-size: 0.9rem;
-                color: #888888;
-                margin-bottom: 0.5rem;
-            }
-            
-            .cert-skills-list {
-                font-size: 0.95rem;
-                color: #b0b0b0;
-            }
-            
-            .show-credential-btn {
-                display: inline-flex;
-                align-items: center;
-                gap: 0.5rem;
-                padding: 0.75rem 1.5rem;
-                background-color: transparent;
-                color: #6366f1;
-                border: 2px solid #6366f1;
-                border-radius: 20px;
-                text-decoration: none;
-                font-weight: 600;
-                transition: all 0.3s;
-            }
-            
-            .show-credential-btn:hover {
-                background-color: #6366f1;
-                color: white;
-                transform: translateY(-2px);
-            }
-            
-            .education-item {
-                margin-bottom: 2.5rem;
-            }
-            
-            .education-item h3 {
-                font-size: 1.5rem;
-                font-weight: 600;
-                color: #ffffff;
-                margin-bottom: 0.5rem;
-            }
-            
-            .education-item .degree {
-                font-size: 1.25rem;
-                color: #e0e0e0;
-                margin-bottom: 0.5rem;
-            }
-            
-            .education-item .date {
-                font-size: 1rem;
-                color: #888888;
-                margin-bottom: 1rem;
-            }
-            
-            .education-item p {
-                margin-bottom: 0.75rem;
-            }
-            
-            @media (max-width: 768px) {
-                body {
-                    padding-top: 60px;
-                }
-                
-                .about-container {
-                    flex-direction: column;
-                    padding: 1rem;
-                }
-                
-                .table-of-contents {
-                    position: static;
-                    width: 100%;
-                }
-                
-                .about-content {
-                    padding: 1rem;
-                }
-                
-                .about-section {
-                    scroll-margin-top: 80px;
-                }
-                
-                .about-section h2 {
-                    font-size: 2rem;
+
+        <script type="importmap">
+            {
+                "imports": {
+                    "motion": "./assets/js/motion.js"
                 }
             }
-        </style>
+        </script>
     </head>
-    <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fcfcfc] tw-text-black dark:tw-bg-black dark:tw-text-white">
-        <header
-            class="lg:tw-px-4 tw-max-w-[100vw] tw-max-w-lg:tw-mr-auto max-lg:tw-top-0 tw-fixed tw-top-4 lg:tw-left-1/2 lg:tw--translate-x-1/2 tw-z-20 tw-flex tw-h-[60px] tw-w-full 
-                    tw-text-gray-700 tw-bg-white dark:tw-text-gray-200 dark:tw-bg-[#17181b] tw-px-[3%] tw-rounded-md lg:tw-max-w-5xl tw-shadow-md dark:tw-shadow-gray-700
-                    lg:tw-justify-around lg:!tw-backdrop-blur-lg lg:tw-opacity-[0.99]"
-        >
-            <a class="tw-flex tw-p-[4px] tw-gap-2 tw-place-items-center" href="index.html">
-                <span class="tw-uppercase tw-text-base tw-font-medium">Roberto Di Maria</span>
-            </a>
-            <div
-                class="collapsible-header animated-collapse max-lg:tw-shadow-md"
-                id="collapsed-header-items"
-            >
-                <nav
-                    class="tw-relative tw-flex tw-h-full max-lg:tw-h-max tw-w-max tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col 
-                                max-lg:tw-gap-5 lg:tw-mx-auto tw-place-items-center"
-                >
-                    <a class="header-links" href="about.html"> About </a>
-                    <a class="header-links" href="index.html#projects"> Projects </a>
-                    <a class="header-links" href="index.html#contact"> Contact </a>
-                </nav>
-                <div
-                    class="lg:tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full 
-                            max-md:tw-flex-col max-md:tw-place-content-center"
-                >
-                    <button type="button" onclick="toggleMode()" class="header-links tw-text-gray-600 dark:tw-text-gray-300" title="toggle-theme" 
-                            id="theme-toggle"> 
-                        <i class="bi bi-sun" id="toggle-mode-icon"></i>
-                    </button>
+    <body>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+
+        <header class="site-header">
+            <div class="site-header-inner">
+                <a class="brand-link" href="index.html" data-magnetic data-magnetic-strength="5">
+                    <span>Roberto Di Maria</span>
+                </a>
+
+                <div class="nav-menu-wrapper" id="collapsed-header-items">
+                    <nav class="site-nav" aria-label="Primary">
+                        <a class="header-links" href="about.html" aria-current="page" data-magnetic data-magnetic-strength="5">About</a>
+                        <a class="header-links" href="index.html#projects" data-magnetic data-magnetic-strength="5">Projects</a>
+                        <a class="header-links" href="index.html#contact" data-magnetic data-magnetic-strength="5">Contact</a>
+                    </nav>
                 </div>
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    aria-label="menu"
+                    aria-expanded="false"
+                    aria-controls="collapsed-header-items"
+                    id="collapse-btn"
+                >
+                    <i class="bi bi-list" aria-hidden="true"></i>
+                </button>
             </div>
-            <button
-                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-gray-500 lg:tw-hidden"
-                onclick="toggleHeader()"
-                aria-label="menu"
-                id="collapse-btn"
-            ></button>
         </header>
 
-        <main class="tw-mb-[50px]">
-            <div class="about-container">
-                <!-- Table of Contents -->
-                <nav class="table-of-contents">
-                    <h3>Contents</h3>
-                    <ul id="toc-list">
+        <main id="main-content" class="page-main">
+            <h1 class="sr-only">About - Roberto Di Maria</h1>
+
+            <div class="sidebar-layout">
+                <!-- 320px Sticky Design Sidebar TOC -->
+                <nav class="toc-panel motion-init" id="about-toc" aria-label="Contents">
+                    <p class="toc-heading">Contents</p>
+                    <ul id="toc-list" class="toc-list">
                         <li><a href="#professional-summary">Professional Summary</a></li>
                         <li><a href="#Experience">Experience</a></li>
                         <li><a href="#certifications">Certifications</a></li>
@@ -318,340 +76,443 @@
                         <li><a href="#international-experience">International Academic Experience</a></li>
                     </ul>
                 </nav>
-                
-                <div class="about-content">
+
+                <div class="content-column">
                     <!-- Professional Summary -->
-                    <section class="about-section" id="professional-summary">
-                        <h2>Professional Summary</h2>
-                        <p>
-                            Analytical and simulation-driven Mechanical Engineering M.S. student with a solid academic foundation in Industrial Engineering. 
-                            Possesses practical experience in CFD and FEA modeling, backed by a comprehensive suite of professional ANSYS certifications. 
-                            Currently expanding technical expertise within the automotive sector, focusing on flow and structural simulations, process automation, and optimization methodologies.
-                        </p>
+                    <section class="about-section" id="professional-summary" data-reveal-group>
+                        <h2 class="about-section-title motion-init">Professional Summary</h2>
+                        <div class="motion-init">
+                            <div
+                                class="bento-card bento-pad-lg"
+                                data-tilt-card
+                                data-tilt-max="5"
+                                data-tilt-scale="1.012"
+                            >
+                                <p class="body-lead">
+                                    Analytical and simulation-driven Mechanical Engineering M.S. student with a solid academic foundation in Industrial Engineering.
+                                    Possesses practical experience in CFD and FEA modeling, backed by a comprehensive suite of professional ANSYS certifications.
+                                    Currently expanding technical expertise within the automotive sector, focusing on flow and structural simulations, process automation, and optimization methodologies.
+                                </p>
+                            </div>
+                        </div>
                     </section>
 
                     <!-- Experience -->
-                    <section class="about-section" id="Experience">
-                        <h2>Experience</h2>
-                        <div class="certification-card">
-                            <div class="cert-header">
-                                <div class="cert-info">
-                                    <div class="cert-title">Intern in Research and Development - Simulation CFD/FEM</div>
-                                    <div class="cert-issuer">Porsche AG - Stuttgart, Germany</div>
-                                    <div class="cert-date">April 2026 - Present</div>
-                                </div>
+                    <section class="about-section" id="Experience" data-reveal-group>
+                        <h2 class="about-section-title motion-init">Experience</h2>
+                        <div class="motion-init">
+                            <article
+                                class="bento-card cert-bento-card is-spotlight"
+                                data-tilt-card
+                                data-tilt-max="6"
+                                data-tilt-scale="1.015"
+                            >
+                                <div class="cert-title">Intern in Research and Development - Simulation CFD/FEM</div>
+                                <div class="cert-issuer">Porsche AG - Stuttgart, Germany</div>
+                                <div class="cert-date">April 2026 - Present</div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Licenses & Certifications (12-Column Asymmetric Bento Mosaic: 7/5, 5/7, 7/5, 5/7, 8/4) -->
+                    <section class="about-section" id="certifications" data-reveal-group>
+                        <h2 class="about-section-title motion-init">Licenses &amp; Certifications</h2>
+
+                        <div class="about-bento-12">
+                            <!-- DataCamp Certification 1 (Span 7) -->
+                            <div class="bento-span-7 motion-init">
+                                <article
+                                    class="bento-card cert-bento-card"
+                                    data-tilt-card
+                                    data-tilt-max="7"
+                                    data-tilt-scale="1.02"
+                                >
+                                    <div class="cert-title">Object-Oriented Programming in Python</div>
+                                    <div class="cert-issuer">DataCamp</div>
+                                    <div class="cert-date">Issued Mar 2026</div>
+                                    <div class="cert-id">Credential ID: f9d750ea4bd2e137c9a0bdc836a95c047cc120f4</div>
+                                    <div class="cert-actions">
+                                        <a
+                                            href="https://www.datacamp.com/completed/statement-of-accomplishment/course/f9d750ea4bd2e137c9a0bdc836a95c047cc120f4"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="apple-btn apple-btn-secondary apple-btn-sm"
+                                            data-magnetic
+                                            data-magnetic-strength="5"
+                                        >
+                                            <span>Show credential</span>
+                                            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- DataCamp Certification 2 (Span 5) -->
+                            <div class="bento-span-5 motion-init">
+                                <article
+                                    class="bento-card cert-bento-card"
+                                    data-tilt-card
+                                    data-tilt-max="8"
+                                    data-tilt-scale="1.02"
+                                >
+                                    <div class="cert-title">Intermediate Python</div>
+                                    <div class="cert-issuer">DataCamp</div>
+                                    <div class="cert-date">Issued Nov 2025</div>
+                                    <div class="cert-id">Credential ID: 8726c98c4615562f895780718e345a3c71b34540</div>
+                                    <div class="cert-actions">
+                                        <a
+                                            href="https://www.datacamp.com/completed/statement-of-accomplishment/course/8726c98c4615562f895780718e345a3c71b34540"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="apple-btn apple-btn-secondary apple-btn-sm"
+                                            data-magnetic
+                                            data-magnetic-strength="5"
+                                        >
+                                            <span>Show credential</span>
+                                            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Ansys Certification 1 (Span 5) -->
+                            <div class="bento-span-5 motion-init">
+                                <article
+                                    class="bento-card cert-bento-card"
+                                    data-tilt-card
+                                    data-tilt-max="8"
+                                    data-tilt-scale="1.02"
+                                >
+                                    <div class="cert-title">Ansys Associate Certification: Foundations in Fluid Dynamics using Ansys Fluent</div>
+                                    <div class="cert-issuer">Ansys</div>
+                                    <div class="cert-date">Issued Jul 2025</div>
+                                    <div class="cert-actions">
+                                        <a
+                                            href="https://innovation.ansys.com/badges/badge/Zm91bmRhdGlvbnMtaW4tZmx1aWQtZHluYW1pY3MtdXNpbmctYW5zeXMtZmx1ZW50LTQ="
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="apple-btn apple-btn-secondary apple-btn-sm"
+                                            data-magnetic
+                                            data-magnetic-strength="5"
+                                        >
+                                            <span>Show credential</span>
+                                            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="cert-skills">
+                                        <div class="cert-skills-label">Skills:</div>
+                                        <div class="cert-skills-list">Fluid Dynamics · Viscous Flows · Ansys Fluent</div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Ansys Certification 2 (Span 7) -->
+                            <div class="bento-span-7 motion-init">
+                                <article
+                                    class="bento-card cert-bento-card"
+                                    data-tilt-card
+                                    data-tilt-max="7"
+                                    data-tilt-scale="1.02"
+                                >
+                                    <div class="cert-title">Ansys Associate Certification: Foundations in Linear Dynamics using Ansys Mechanical</div>
+                                    <div class="cert-issuer">Ansys</div>
+                                    <div class="cert-date">Issued Jul 2025</div>
+                                    <div class="cert-actions">
+                                        <a
+                                            href="https://innovation.ansys.com/badges/badge/Zm91bmRhdGlvbnMtaW4tbGluZWFyLWR5bmFtaWNzLXVzaW5nLWFuc3lzLW1lY2hhbmljYWwtNQ=="
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="apple-btn apple-btn-secondary apple-btn-sm"
+                                            data-magnetic
+                                            data-magnetic-strength="5"
+                                        >
+                                            <span>Show credential</span>
+                                            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="cert-skills">
+                                        <div class="cert-skills-label">Skills:</div>
+                                        <div class="cert-skills-list">Structural Dynamics · Mode Superposition</div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Ansys Certification 3 (Span 7) -->
+                            <div class="bento-span-7 motion-init">
+                                <article
+                                    class="bento-card cert-bento-card"
+                                    data-tilt-card
+                                    data-tilt-max="7"
+                                    data-tilt-scale="1.02"
+                                >
+                                    <div class="cert-title">Ansys Associate Certification: Foundations in Stress Analysis using Ansys Mechanical</div>
+                                    <div class="cert-issuer">Ansys</div>
+                                    <div class="cert-date">Issued Jul 2025</div>
+                                    <div class="cert-actions">
+                                        <a
+                                            href="https://innovation.ansys.com/badges/badge/Zm91bmRhdGlvbnMtaW4tc3RyZXNzLWFuYWx5c2lzLXVzaW5nLWFuc3lzLW1lY2hhbmljYWwtNw=="
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="apple-btn apple-btn-secondary apple-btn-sm"
+                                            data-magnetic
+                                            data-magnetic-strength="5"
+                                        >
+                                            <span>Show credential</span>
+                                            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="cert-skills">
+                                        <div class="cert-skills-label">Skills:</div>
+                                        <div class="cert-skills-list">Linear Elastic Materials · Thermal Strain</div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Ansys Certification 4 (Span 5) -->
+                            <div class="bento-span-5 motion-init">
+                                <article
+                                    class="bento-card cert-bento-card"
+                                    data-tilt-card
+                                    data-tilt-max="8"
+                                    data-tilt-scale="1.02"
+                                >
+                                    <div class="cert-title">Ansys Associate Certification: Foundations in Structural Nonlinearities using Ansys Mechanical</div>
+                                    <div class="cert-issuer">Ansys</div>
+                                    <div class="cert-date">Issued Jul 2025</div>
+                                    <div class="cert-actions">
+                                        <a
+                                            href="https://innovation.ansys.com/badges/badge/Zm91bmRhdGlvbnMtaW4tc3RydWN0dXJhbC1ub25saW5lYXJpdGllcy11c2luZy1hbnN5cy1tZWNoYW5pY2FsLTY="
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="apple-btn apple-btn-secondary apple-btn-sm"
+                                            data-magnetic
+                                            data-magnetic-strength="5"
+                                        >
+                                            <span>Show credential</span>
+                                            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="cert-skills">
+                                        <div class="cert-skills-label">Skills:</div>
+                                        <div class="cert-skills-list">Large Deformation · Nonlinearities · Plasticity · Hyperelasticity</div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Ansys Certification 5 (Span 5) -->
+                            <div class="bento-span-5 motion-init">
+                                <article
+                                    class="bento-card cert-bento-card"
+                                    data-tilt-card
+                                    data-tilt-max="8"
+                                    data-tilt-scale="1.02"
+                                >
+                                    <div class="cert-title">Ansys Associate Certification: Foundations of Heat Transfer using Ansys Mechanical</div>
+                                    <div class="cert-issuer">Ansys</div>
+                                    <div class="cert-date">Issued Jul 2025</div>
+                                    <div class="cert-actions">
+                                        <a
+                                            href="https://innovation.ansys.com/badges/badge/Zm91bmRhdGlvbnMtb2YtaGVhdC10cmFuc2Zlci11c2luZy1hbnN5cy1tZWNoYW5pY2FsLTQ="
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="apple-btn apple-btn-secondary apple-btn-sm"
+                                            data-magnetic
+                                            data-magnetic-strength="5"
+                                        >
+                                            <span>Show credential</span>
+                                            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="cert-skills">
+                                        <div class="cert-skills-label">Skills:</div>
+                                        <div class="cert-skills-list">Heat Transfer · Conductivity · Convection · Thermal Capacitance · Radiation</div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Ansys Certification 6 (Span 7) -->
+                            <div class="bento-span-7 motion-init">
+                                <article
+                                    class="bento-card cert-bento-card"
+                                    data-tilt-card
+                                    data-tilt-max="7"
+                                    data-tilt-scale="1.02"
+                                >
+                                    <div class="cert-title">Ansys Associate Certification: Fundamentals of Compressible Flows</div>
+                                    <div class="cert-issuer">Ansys</div>
+                                    <div class="cert-date">Issued Jul 2025</div>
+                                    <div class="cert-actions">
+                                        <a
+                                            href="https://innovation.ansys.com/badges/badge/ZnVuZGFtZW50YWxzLW9mLWNvbXByZXNzaWJsZS1mbG93cy0z"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="apple-btn apple-btn-secondary apple-btn-sm"
+                                            data-magnetic
+                                            data-magnetic-strength="5"
+                                        >
+                                            <span>Show credential</span>
+                                            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="cert-skills">
+                                        <div class="cert-skills-label">Skills:</div>
+                                        <div class="cert-skills-list">Compressible Flows · Shock Expansion · Ansys Fluent</div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Ansys Certification 7 Professional (Span 8) -->
+                            <div class="bento-span-8 motion-init">
+                                <article
+                                    class="bento-card cert-bento-card is-spotlight"
+                                    data-tilt-card
+                                    data-tilt-max="7"
+                                    data-tilt-scale="1.018"
+                                >
+                                    <div class="cert-title">Ansys Professional Certification: Getting Started with Ansys Fluent</div>
+                                    <div class="cert-issuer">Ansys</div>
+                                    <div class="cert-date">Issued Jul 2025</div>
+                                    <div class="cert-actions">
+                                        <a
+                                            href="https://innovation.ansys.com/badges/badge/Z2V0dGluZy1zdGFydGVkLXdpdGgtYW5zeXMtZmx1ZW50LTg="
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="apple-btn apple-btn-primary apple-btn-sm"
+                                            data-magnetic
+                                            data-magnetic-strength="5"
+                                        >
+                                            <span>Show credential</span>
+                                            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- Ansys Certification 8 (Span 4) -->
+                            <div class="bento-span-4 motion-init">
+                                <article
+                                    class="bento-card cert-bento-card"
+                                    data-tilt-card
+                                    data-tilt-max="8"
+                                    data-tilt-scale="1.02"
+                                >
+                                    <div class="cert-title">Ansys Associate Certification: Heat Transfer for Structures</div>
+                                    <div class="cert-issuer">Ansys</div>
+                                    <div class="cert-date">Issued Jun 2025</div>
+                                    <div class="cert-actions">
+                                        <a
+                                            href="https://innovation.ansys.com/badges/badge/aGVhdC10cmFuc2Zlci1mb3Itc3RydWN0dXJlcy02NA=="
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="apple-btn apple-btn-secondary apple-btn-sm"
+                                            data-magnetic
+                                            data-magnetic-strength="5"
+                                        >
+                                            <span>Show credential</span>
+                                            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                    <div class="cert-skills">
+                                        <div class="cert-skills-label">Skills:</div>
+                                        <div class="cert-skills-list">Heat Transfer · Conductivity · Convection · Thermal Capacitance · Radiation</div>
+                                    </div>
+                                </article>
                             </div>
                         </div>
                     </section>
 
-                    <!-- Licenses & Certifications -->
-                    <section class="about-section" id="certifications">
-                        <h2>Licenses & Certifications</h2>
-                
-                <!-- DataCamp Certification -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-info">
-                            <div class="cert-title">Object-Oriented Programming in Python</div>
-                            <div class="cert-issuer">DataCamp</div>
-                            <div class="cert-date">Issued Mar 2026</div>
-                            <div class="cert-id">Credential ID: f9d750ea4bd2e137c9a0bdc836a95c047cc120f4</div>
-                            <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/f9d750ea4bd2e137c9a0bdc836a95c047cc120f4" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="show-credential-btn">
-                                <span>Show credential</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                    <!-- Education (12-Col Asymmetric: 7 + 5) -->
+                    <section class="about-section" id="education" data-reveal-group>
+                        <h2 class="about-section-title motion-init">Education</h2>
 
-                <!-- DataCamp Certification -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-info">
-                            <div class="cert-title">Intermediate Python</div>
-                            <div class="cert-issuer">DataCamp</div>
-                            <div class="cert-date">Issued Nov 2025</div>
-                            <div class="cert-id">Credential ID: 8726c98c4615562f895780718e345a3c71b34540</div>
-                            <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/8726c98c4615562f895780718e345a3c71b34540" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="show-credential-btn">
-                                <span>Show credential</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                        <div class="about-bento-12">
+                            <div class="bento-span-7 motion-init">
+                                <article
+                                    class="bento-card edu-card"
+                                    data-tilt-card
+                                    data-tilt-max="7"
+                                    data-tilt-scale="1.018"
+                                >
+                                    <h3 class="edu-institution">UNIVERSITÀ DEGLI STUDI DI CATANIA | CATANIA, ITALY</h3>
+                                    <div class="edu-degree">Master of Science (M.S.) in Mechanical Engineering</div>
+                                    <div class="edu-date">Sep 2024 – Oct 2026</div>
+                                    <p><strong>Expected Completion:</strong> October 2026</p>
+                                    <p><strong>Academic Merit:</strong> Awarded for achieving the highest GPA (30/30 average) among all first-year students in the Mechanical Engineering program (2024-2025).</p>
+                                </article>
+                            </div>
 
-                <!-- Ansys Certification 1 -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-info">
-                            <div class="cert-title">Ansys Associate Certification: Foundations in Fluid Dynamics using Ansys Fluent</div>
-                            <div class="cert-issuer">Ansys</div>
-                            <div class="cert-date">Issued Jul 2025</div>
-                            <a href="https://innovation.ansys.com/badges/badge/Zm91bmRhdGlvbnMtaW4tZmx1aWQtZHluYW1pY3MtdXNpbmctYW5zeXMtZmx1ZW50LTQ=" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="show-credential-btn">
-                                <span>Show credential</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                            <div class="cert-skills">
-                                <div class="cert-skills-label">Skills:</div>
-                                <div class="cert-skills-list">Fluid Dynamics · Viscous Flows · Ansys Fluent</div>
+                            <div class="bento-span-5 motion-init">
+                                <article
+                                    class="bento-card edu-card"
+                                    data-tilt-card
+                                    data-tilt-max="8"
+                                    data-tilt-scale="1.02"
+                                >
+                                    <div class="edu-degree">Bachelor of Science (B.S.) in Industrial Engineering</div>
+                                    <div class="edu-date">Sep 2021 – Jul 2024</div>
+                                    <p><strong>Final Degree Mark:</strong> 110/110 </p>
+                                    <p><strong>Thesis:</strong> CO2 Recovery – Awarded Best Thesis by the Order of Engineers of Catania.</p>
+                                </article>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Ansys Certification 2 -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-info">
-                            <div class="cert-title">Ansys Associate Certification: Foundations in Linear Dynamics using Ansys Mechanical</div>
-                            <div class="cert-issuer">Ansys</div>
-                            <div class="cert-date">Issued Jul 2025</div>
-                            <a href="https://innovation.ansys.com/badges/badge/Zm91bmRhdGlvbnMtaW4tbGluZWFyLWR5bmFtaWNzLXVzaW5nLWFuc3lzLW1lY2hhbmljYWwtNQ==" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="show-credential-btn">
-                                <span>Show credential</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                            <div class="cert-skills">
-                                <div class="cert-skills-label">Skills:</div>
-                                <div class="cert-skills-list">Structural Dynamics · Mode Superposition</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ansys Certification 3 -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-info">
-                            <div class="cert-title">Ansys Associate Certification: Foundations in Stress Analysis using Ansys Mechanical</div>
-                            <div class="cert-issuer">Ansys</div>
-                            <div class="cert-date">Issued Jul 2025</div>
-                            <a href="https://innovation.ansys.com/badges/badge/Zm91bmRhdGlvbnMtaW4tc3RyZXNzLWFuYWx5c2lzLXVzaW5nLWFuc3lzLW1lY2hhbmljYWwtNw==" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="show-credential-btn">
-                                <span>Show credential</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                            <div class="cert-skills">
-                                <div class="cert-skills-label">Skills:</div>
-                                <div class="cert-skills-list">Linear Elastic Materials · Thermal Strain</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ansys Certification 4 -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-info">
-                            <div class="cert-title">Ansys Associate Certification: Foundations in Structural Nonlinearities using Ansys Mechanical</div>
-                            <div class="cert-issuer">Ansys</div>
-                            <div class="cert-date">Issued Jul 2025</div>
-                            <a href="https://innovation.ansys.com/badges/badge/Zm91bmRhdGlvbnMtaW4tc3RydWN0dXJhbC1ub25saW5lYXJpdGllcy11c2luZy1hbnN5cy1tZWNoYW5pY2FsLTY=" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="show-credential-btn">
-                                <span>Show credential</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                            <div class="cert-skills">
-                                <div class="cert-skills-label">Skills:</div>
-                                <div class="cert-skills-list">Large Deformation · Nonlinearities · Plasticity · Hyperelasticity</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ansys Certification 5 -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-info">
-                            <div class="cert-title">Ansys Associate Certification: Foundations of Heat Transfer using Ansys Mechanical</div>
-                            <div class="cert-issuer">Ansys</div>
-                            <div class="cert-date">Issued Jul 2025</div>
-                            <a href="https://innovation.ansys.com/badges/badge/Zm91bmRhdGlvbnMtb2YtaGVhdC10cmFuc2Zlci11c2luZy1hbnN5cy1tZWNoYW5pY2FsLTQ=" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="show-credential-btn">
-                                <span>Show credential</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                            <div class="cert-skills">
-                                <div class="cert-skills-label">Skills:</div>
-                                <div class="cert-skills-list">Heat Transfer · Conductivity · Convection · Thermal Capacitance · Radiation</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ansys Certification 6 -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-info">
-                            <div class="cert-title">Ansys Associate Certification: Fundamentals of Compressible Flows</div>
-                            <div class="cert-issuer">Ansys</div>
-                            <div class="cert-date">Issued Jul 2025</div>
-                            <a href="https://innovation.ansys.com/badges/badge/ZnVuZGFtZW50YWxzLW9mLWNvbXByZXNzaWJsZS1mbG93cy0z" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="show-credential-btn">
-                                <span>Show credential</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                            <div class="cert-skills">
-                                <div class="cert-skills-label">Skills:</div>
-                                <div class="cert-skills-list">Compressible Flows · Shock Expansion · Ansys Fluent</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ansys Certification 7 -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-info">
-                            <div class="cert-title">Ansys Professional Certification: Getting Started with Ansys Fluent</div>
-                            <div class="cert-issuer">Ansys</div>
-                            <div class="cert-date">Issued Jul 2025</div>
-                            <a href="https://innovation.ansys.com/badges/badge/Z2V0dGluZy1zdGFydGVkLXdpdGgtYW5zeXMtZmx1ZW50LTg=" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="show-credential-btn">
-                                <span>Show credential</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ansys Certification 8 -->
-                <div class="certification-card">
-                    <div class="cert-header">
-                        <div class="cert-info">
-                            <div class="cert-title">Ansys Associate Certification: Heat Transfer for Structures</div>
-                            <div class="cert-issuer">Ansys</div>
-                            <div class="cert-date">Issued Jun 2025</div>
-                            <a href="https://innovation.ansys.com/badges/badge/aGVhdC10cmFuc2Zlci1mb3Itc3RydWN0dXJlcy02NA==" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               class="show-credential-btn">
-                                <span>Show credential</span>
-                                <i class="bi bi-arrow-right"></i>
-                            </a>
-                            <div class="cert-skills">
-                                <div class="cert-skills-label">Skills:</div>
-                                <div class="cert-skills-list">Heat Transfer · Conductivity · Convection · Thermal Capacitance · Radiation</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                    </section>
-
-                    <!-- Education -->
-                    <section class="about-section" id="education">
-                        <h2>Education</h2>
-                
-                <div class="education-item">
-                    <h3>UNIVERSITÀ DEGLI STUDI DI CATANIA | CATANIA, ITALY</h3>
-                    <div class="degree">Master of Science (M.S.) in Mechanical Engineering</div>
-                    <div class="date">Sep 2024 – Oct 2026</div>
-                    <p><strong>Expected Completion:</strong> October 2026</p>
-                    <p><strong>Academic Merit:</strong> Awarded for achieving the highest GPA (30/30 average) among all first-year students in the Mechanical Engineering program (2024-2025).</p>
-                </div>
-
-                <div class="education-item">
-                    <div class="degree">Bachelor of Science (B.S.) in Industrial Engineering</div>
-                    <div class="date">Sep 2021 – Jul 2024</div>
-                    <p><strong>Final Degree Mark:</strong> 110/110 </p>
-                    <p><strong>Thesis:</strong> CO2 Recovery – Awarded Best Thesis by the Order of Engineers of Catania.</p>
-                </div>
                     </section>
 
                     <!-- International Academic Experience -->
-                    <section class="about-section" id="international-experience">
-                        <h2>International Academic Experience</h2>
-                
-                <div class="education-item">
-                    <h3>DALARNA UNIVERSITY | DALARNA, SWEDEN | 2025</h3>
-                    <div class="degree">Blended Intensive Programme (BIP): Positive Energy Districts</div>
-                    <p>• Selected to participate in an intensive, international program focused on the integration of renewable energy and efficiency within urban environments.</p>
-                    <p>• Collaborated with a diverse team of European students to analyze strategies for creating sustainable, energy-positive districts.</p>
-                </div>
+                    <section class="about-section" id="international-experience" data-reveal-group>
+                        <h2 class="about-section-title motion-init">International Academic Experience</h2>
+
+                        <div class="motion-init">
+                            <article
+                                class="bento-card edu-card"
+                                data-tilt-card
+                                data-tilt-max="5"
+                                data-tilt-scale="1.012"
+                            >
+                                <h3 class="edu-institution">DALARNA UNIVERSITY | DALARNA, SWEDEN | 2025</h3>
+                                <div class="edu-degree">Blended Intensive Programme (BIP): Positive Energy Districts</div>
+                                <p>• Selected to participate in an intensive, international program focused on the integration of renewable energy and efficiency within urban environments.</p>
+                                <p>• Collaborated with a diverse team of European students to analyze strategies for creating sustainable, energy-positive districts.</p>
+                            </article>
+                        </div>
                     </section>
                 </div>
             </div>
         </main>
 
-        <footer
-            class="tw-mt-auto tw-flex tw-flex-col tw-w-full tw-gap-4 tw-text-sm tw-pt-[5%] tw-pb-10 tw-px-[10%] 
-                    tw-text-black dark:tw-text-white max-md:tw-flex-col"
-        >
-            <hr class="tw-mt-8">
-            <div class="tw-mt-2 tw-flex tw-gap-2 tw-flex-col tw-text-gray-700 dark:tw-text-gray-300 tw-place-items-center 
-                    tw-text-[12px] tw-w-full tw-text-center tw-place-content-around">
-                <span>Copyright &#169; 2024-2025 Roberto Di Maria</span>
-                <span>Mechanical Engineering Portfolio</span>
+        <footer class="site-footer">
+            <div class="site-footer-inner">
+                <div class="footer-meta">
+                    <span>Copyright &#169; 2024-2025 Roberto Di Maria</span>
+                    <span>Mechanical Engineering Portfolio</span>
+                </div>
             </div>
         </footer>
 
-        <script src="./utils.js"></script>
-        <script>
-            // Scroll spy for table of contents
-            const sections = document.querySelectorAll('.about-section');
-            const tocLinks = document.querySelectorAll('.table-of-contents a');
-            
-            function updateActiveLink() {
-                let current = '';
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (window.scrollY >= sectionTop - 150) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                
-                tocLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-            
-            // Update active link on scroll
-            window.addEventListener('scroll', updateActiveLink);
-            
-            // Update active link on page load
-            updateActiveLink();
-            
-            // Smooth scroll for TOC links
-            tocLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetId = link.getAttribute('href');
-                    const targetSection = document.querySelector(targetId);
-                    if (targetSection) {
-                        const offsetTop = targetSection.offsetTop - 80;
-                        window.scrollTo({
-                            top: offsetTop,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
+        <script type="module">
+            import {
+                animateEntranceGroup,
+                attach3DTiltAndSpotlight,
+                attachMagneticPull,
+                markMotionReady,
+                setupHeader,
+                setupScrollReveals,
+                setupTocScrollSpy
+            } from "./utils.js";
+
+            markMotionReady();
+            setupHeader();
+
+            const tocPanel = document.getElementById("about-toc");
+            const summaryItems = document.querySelectorAll("#professional-summary .motion-init, #Experience .motion-init");
+            animateEntranceGroup([tocPanel, ...summaryItems]);
+
+            setupScrollReveals(document);
+            attach3DTiltAndSpotlight(document);
+            attachMagneticPull(document);
+
+            const sections = document.querySelectorAll(".about-section");
+            const tocLinks = document.querySelectorAll("#toc-list a");
+            setupTocScrollSpy(sections, tocLinks);
         </script>
     </body>
 </html>

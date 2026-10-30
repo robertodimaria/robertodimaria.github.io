@@ -21,12 +21,29 @@ test/tmp
 test/version_tmp
 tmp
 .DS_Store
+Thumbs.db
 *.swp
 *.swo
 *~
 .ruby-version
 .ruby-gemset
 node_modules/
+package.json
+package-lock.json
 new/package-lock.json
 new/node_modules/
 .screenshots/
+
+# AI Agents, Skills & MCP local configs
+.agents/
+.copilot/
+.gemini/
+.claude/
+.cursor/
+.mcp.json
+skills-lock.json
+
+# Environment & local logs
+.env
+.env.*
+*.log
